@@ -1,14 +1,14 @@
 export const SITE = {
-	name: 'AstroWind',
+	name: "Bluff's Little Thinkers",
 
 	origin: 'https://astrowind.vercel.app',
 	basePathname: '/',
 
-	title: 'AstroWind — Your website with Astro + Tailwind CSS',
-	description: '🚀 AstroWind is a free and ready to start template to make your website using Astro and Tailwind CSS.',
+	title: 'Siouxlands Premier Childcare Provider',
+	description: "Bluff's Little Thinkers is an amazing childcare facility located in Sergeant Bluff, Iowa.",
 
 	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-	googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
+	googleSiteVerificationId: '',
 };
 
 export const BLOG = {
