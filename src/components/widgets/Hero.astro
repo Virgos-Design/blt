@@ -3,20 +3,55 @@ import { Icon } from 'astro-icon';
 import Picture from '~/components/core/Picture.astro';
 ---
 
-<section>
-	<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<section id="hero" class="relative" >
+	<!-- <div class="max-w-6xl mx-auto px-4 sm:px-6">
 		<div class="py-12 md:py-20">
-			logomark
+			<Icon name="logomark" class="h-24 text-white md:h-32" />
 			<div class="text-center pb-10 md:pb-16">
 				<h2 class="font-['AwesomeNewbie'] text-6xl md:text-[3.50rem] font-bold leading-tighter tracking-wider mb-4 font-heading">
 					<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
-						Learning today, leading tomorrow.
+						Learning Today, Leading Tomorrow.
 					</span> 
-					<!-- <span class="inline sm:hidden">.</span>
-						<span class="hidden sm:inline">Text to disappear on small screens</span> -->
 				</h2>
 			</div>
 			Enroll Today Button
 		</div>
-	</div>
+	</div> -->
+
+	<div class="relative px-12 pt-20 grid h-full sm:grid-cols-2 place-items-center overflow-visible ">
+    <div
+      class="flex flex-col self-end gap-2 sm:gap-4 sm:self-auto sm:justify-self-end"
+    >
+      <Icon name="logomark" class="h-24 text-white md:h-32" />
+      <h2 class="font-['AwesomeNewbie'] text-6xl md:text-[3.50rem] font-bold leading-tighter tracking-wider mb-4 font-heading" >
+				<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
+					Learning Today, Leading Tomorrow.
+				</span> 
+      </h2>
+    </div>
+		<Picture
+			src={import('~/assets/images/stock_kid.png')}
+			class="w-full mx-auto -mb-12"
+			widths={[]}
+			sizes=" (max-width: 767px) 400px, 768px"
+			alt="Hero Image"
+		/>
+    <!-- <picture
+      class="self-start w-2/3 max-w-3xl sm:w-10/12 sm:self-auto sm:justify-self-start"
+    >
+      <source type="image/avif" srcset={avifSrcset} sizes={sizes} />
+      <source type="image/webp" srcset={webpSrcset} sizes={sizes} />
+      <source type="image/png" srcset={pngSrcset} sizes={sizes} />
+      <img
+        class="object-cover w-full h-full"
+        src={png[0].url}
+        width={png[0].width}
+        height={png[0].height}
+        alt="A floating astronaut in a space suit"
+      />
+    </picture> -->
+  </div>
 </section>
+
+<!-- <span class="inline sm:hidden">.</span>
+	<span class="hidden sm:inline">Text to disappear on small screens</span> -->

@@ -9,7 +9,7 @@ const { meta } = Astro.props;
 <Layout {meta}>
 	<Header />
 	<slot name="hero"/>
-	<main class="mx-7 mb-8 rounded shadow-lg shadow-gray-500">
+	<main class="mb-8 max-w-6xl mx-auto rounded shadow-lg shadow-gray-500">
 		<slot />
 	</main>
 	<Footer />
