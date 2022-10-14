@@ -35,10 +35,22 @@ const items = [
 		},
 	],
 ];
+
+import Picture from '~/components/core/Picture.astro';
 ---
 
-<section id="interesting" class="scroll-mt-16" >
-	<div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20 bg-[#e1b7fe] dark:bg-slate-800">
+<section id="interesting" class="relative scroll-mt-16" >
+	<div class="px-4 pb-16 mx-auto max-w-6xl lg:px-8 lg:py-20 bg-[#e1b7fe] dark:bg-slate-800">
+		<!-- <div class="relative px-12 pt-10 grid h-full sm:grid-cols-2 place-items-center overflow-visible ">
+			<div></div>
+		<Picture
+			src={import('~/assets/images/stock_kid.png')}
+			class=" -translate-y-full -mb-[2]"
+			widths={[400, 768]}
+			sizes=" (max-width: 767px) 400px, 768px"
+			alt="Hero Image"
+		/>
+	</div> -->
 		<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
 			<p class="text-base text-primary-600 dark:text-primary-200 font-semibold tracking-wide uppercase">Features</p>
 			<h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
