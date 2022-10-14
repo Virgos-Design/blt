@@ -38,19 +38,24 @@ const items = [
 
 import Picture from '~/components/core/Picture.astro';
 ---
-
+<section id="intro" class="relative scroll-mt-16 px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl bg-[#e1b7fe] rounded-t-lg">
+	<div class="px-4 pb-16 mx-auto max-w-6xl lg:px-8">
+		<div class="flex flex-col items-center gap-4 space-y-8">
+			<h2
+				class="text-6xl font-extrabold tracking-wide text-center font-['AwesomeNewbie']"
+			>
+				Our Story
+			</h2>
+		</div>
+		<p class="max-w-xl text-2xl font-extrabold text-center">
+			Our focus is to provide a stimulating early childhood care and educational experience which promotes each child’s social, emotional, physical, and cognitive development. Our goal is to support children’s desire to become lifelong learners.
+		</p>
+		<slot />
+	</div>
+</section>
+<!-- 
 <section id="interesting" class="relative scroll-mt-16" >
 	<div class="px-4 pb-16 mx-auto max-w-6xl lg:px-8 lg:py-20 bg-[#e1b7fe] dark:bg-slate-800">
-		<!-- <div class="relative px-12 pt-10 grid h-full sm:grid-cols-2 place-items-center overflow-visible ">
-			<div></div>
-		<Picture
-			src={import('~/assets/images/stock_kid.png')}
-			class=" -translate-y-full -mb-[2]"
-			widths={[400, 768]}
-			sizes=" (max-width: 767px) 400px, 768px"
-			alt="Hero Image"
-		/>
-	</div> -->
 		<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
 			<p class="text-base text-primary-600 dark:text-primary-200 font-semibold tracking-wide uppercase">Features</p>
 			<h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
@@ -64,37 +69,5 @@ import Picture from '~/components/core/Picture.astro';
 				quae.
 			</p>
 		</div>
-		<div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
-			{
-				items.map((subitems) => (
-					<div class="space-y-8 sm:px-8">
-						{subitems.map(({ title, description }) => (
-							<div class="flex flex-row max-w-md">
-								<div class="mb-4 mr-4">
-									<div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary-500">
-										<svg class="w-12 h-12 p-0.5" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-											<g fill="none" fill-rule="evenodd">
-												<rect class="fill-current text-primary-600" width="64" height="64" rx="32" />
-												<g stroke-linecap="square" stroke-width="2">
-													<path class="stroke-current text-white" d="M20.571 20.571h13.714v17.143H20.571z" />
-													<path
-														class="stroke-current text-primary-300"
-														d="M38.858 26.993l6.397 1.73-4.473 16.549-13.24-3.58"
-													/>
-												</g>
-											</g>
-										</svg>
-									</div>
-								</div>
-								<div>
-									<h3 class="mb-3 text-xl font-bold">{title}</h3>
-									<p>{description}</p>
-								</div>
-							</div>
-						))}
-					</div>
-				))
-			}
-		</div>
 	</div>
-</section>
+</section> -->

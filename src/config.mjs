@@ -4,8 +4,11 @@ export const SITE = {
 	origin: 'https://astrowind.vercel.app',
 	basePathname: '/',
 
-	title: 'Siouxlands Premier Childcare Provider',
+	title: 'BLT | Siouxlands Premier Childcare Provider',
 	description: "Bluff's Little Thinkers is an amazing childcare facility located in Sergeant Bluff, Iowa.",
+
+	location: 'Sergeant Bluff, IA',
+  latlng: [-33.86785, 151.20732],
 
 	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
 	googleSiteVerificationId: '',
