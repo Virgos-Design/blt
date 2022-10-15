@@ -1,0 +1,84 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/widgets/ContentSection.astro";
+import Picture from '~/components/core/Picture.astro';
+
+const items = [
+		{
+			icon: 'ant-design:trophy-filled',
+			color: '#FF81A3',
+			title: 'Commitment to Excellence',
+			description:
+				'FOO Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+		},
+		{
+			icon: 'mdi:shield-home',
+			color: '#087BB8',
+			title: 'Security',
+			description:
+				'BAR Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+		},
+		{
+			icon: 'fluent:building-retail-24-filled',
+			color: '#2E8E00',
+			title: 'Facility',
+			description:
+				'Our recently rennovated state-of-the-art facility ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+		},
+		{
+			icon: 'mdi:account-group',
+			color: '#321A81',
+			title: 'Staff',
+			description:
+				'BAZ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+		},
+];
+---
+
+<ContentSection title="Why Choose BlT" id="whyBLT" styles='bg-[#e1b7fe]'>
+	<div class="grid px-4 md:px-8 gap-6 row-gap-10 md:grid-cols-2">
+		<div class="md:pb-6 md:pr-16">
+			{
+				items.map((item) => (
+					<div class="flex">
+						<div class="flex flex-col items-center mr-4">
+							<div>
+								<div class={`flex items-center justify-center w-12 h-12 rounded-full border-[${item.color}] border-2`}>
+									<Icon name={item.icon} class="w-6 h-6 text-gray-600 dark:text-slate-200 icon-bold" />
+								</div>
+							</div>
+							<div class="w-px h-full bg-gray-300 dark:bg-slate-500"></div>
+						</div>
+						<div class="pt-1 pb-8">
+							<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">{item.title}</p>
+							<p>{item.description}</p>
+						</div>
+					</div>
+				))
+			}
+			<div class="flex">
+				<div class="flex flex-col items-center mr-4">
+					<div>
+						<div class="flex items-center justify-center w-10 h-10 rounded-full border-[#FF81A3] border-2">
+							<Icon name="tabler:check" class="w-6 h-6 text-gray-600 dark:text-slate-200 icon-bold" />
+						</div>
+					</div>
+				</div>
+				<div class="pt-1">
+					<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">Enroll Today!</p>
+					<p class="text-gray-700"></p>
+				</div>
+			</div>
+		</div>
+		<div class="relative">
+			<Picture
+				class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
+				src={import('~/assets/images/astronaut.jpg')}
+				widths={[400, 768]}
+				sizes="(max-width: 768px) 100vw, 432px"
+				alt="Astronaut"
+				aspectRatio="432:768"
+			/>
+		</div>
+	</div>
+</ContentSection>
