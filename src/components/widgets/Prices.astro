@@ -1,15 +1,15 @@
 ---
-import { Icon } from "astro-icon";
 import ContentSection from "~/components/widgets/ContentSection.astro";
 ---
 
-<ContentSection title="Our Prices" id="pricing" styles='bg-[#e1b7fe] rounded-t-lg'>
+<ContentSection title="Our Prices" id="pricing" styles='bg-[#e1b7fe]'>
   <Fragment slot="lead">
     We try to keep our prices competitive, but this is childcare in America, here are our ridiculous prices.
   </Fragment>
+	<!-- Infants -->
 	<div class="lg:w-4/5 mx-auto flex flex-wrap">
 		<div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-			<h2 class="text-gray-900 text-3xl title-font font-medium mb-4">Infants</h2>
+			<h2 class="text-gray-900 text-center text-3xl title-font font-large mb-4">Infants</h2>
 			<p class="leading-relaxed mb-4">For our little thinkers between 6 weeks and 15 months. 1:4 child to instructor ratio. Max of 12 children</p>
 			<div class="flex border-t border-gray-200 py-2">
 				<span class="text-gray-500">Full-time</span>
@@ -20,9 +20,91 @@ import ContentSection from "~/components/widgets/ContentSection.astro";
 				<span class="ml-auto text-gray-900">$150 per week</span>
 			</div>
 			<div class="flex">
-				<button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+				<button class="flex mx-auto mt-6 text-white bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded">Enroll your infant!
+				</button>
 			</div>
 		</div>
 		<img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
 	</div>
+	<!-- Year One -->
+	<div class="lg:w-4/5 mx-auto flex flex-wrap">
+		<img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+		<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mb-6 lg:mb-0">
+			<h2 class="text-gray-900 text-center text-3xl title-font font-large mb-4">Infants</h2>
+			<p class="leading-relaxed mb-4">For our little thinkers between 6 weeks and 15 months. 1:4 child to instructor ratio. Max of 12 children</p>
+			<div class="flex border-t border-gray-200 py-2">
+				<span class="text-gray-500">Full-time</span>
+				<span class="ml-auto text-gray-900">$190 per week</span>
+			</div>
+			<div class="flex border-t border-gray-200 py-2">
+				<span class="text-gray-500">Part-time</span>
+				<span class="ml-auto text-gray-900">$150 per week</span>
+			</div>
+			<div class="flex">
+				<button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Enroll your infant!
+				</button>
+			</div>
+		</div>
+	</div>
+	<!-- Year Two -->
+	<div class="lg:w-4/5 mx-auto flex flex-wrap">
+		<div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+			<h2 class="text-gray-900 text-center text-3xl title-font font-large mb-4">Infants</h2>
+			<p class="leading-relaxed mb-4">For our little thinkers between 6 weeks and 15 months. 1:4 child to instructor ratio. Max of 12 children</p>
+			<div class="flex border-t border-gray-200 py-2">
+				<span class="text-gray-500">Full-time</span>
+				<span class="ml-auto text-gray-900">$190 per week</span>
+			</div>
+			<div class="flex border-t border-gray-200 py-2">
+				<span class="text-gray-500">Part-time</span>
+				<span class="ml-auto text-gray-900">$150 per week</span>
+			</div>
+			<div class="flex">
+				<button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Enroll your infant!
+				</button>
+			</div>
+		</div>
+		<img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+	</div>
+	<!-- Year Three -->
+	<div class="lg:w-4/5 mx-auto flex flex-wrap">
+		<img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+		<div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mb-6 lg:mb-0">
+			<h2 class="text-gray-900 text-center text-3xl title-font font-large mb-4">Infants</h2>
+			<p class="leading-relaxed mb-4">For our little thinkers between 6 weeks and 15 months. 1:4 child to instructor ratio. Max of 12 children</p>
+			<div class="flex border-t border-gray-200 py-2">
+				<span class="text-gray-500">Full-time</span>
+				<span class="ml-auto text-gray-900">$190 per week</span>
+			</div>
+			<div class="flex border-t border-gray-200 py-2">
+				<span class="text-gray-500">Part-time</span>
+				<span class="ml-auto text-gray-900">$150 per week</span>
+			</div>
+			<div class="flex">
+				<button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Enroll your infant!
+				</button>
+			</div>
+		</div>
+	</div>
+	<!-- Preschool -->
+	<div class="lg:w-4/5 mx-auto flex flex-wrap">
+		<div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+			<h2 class="text-gray-900 text-center text-3xl title-font font-large mb-4">Infants</h2>
+			<p class="leading-relaxed mb-4">For our little thinkers between 6 weeks and 15 months. 1:4 child to instructor ratio. Max of 12 children</p>
+			<div class="flex border-t border-gray-200 py-2">
+				<span class="text-gray-500">Full-time</span>
+				<span class="ml-auto text-gray-900">$190 per week</span>
+			</div>
+			<div class="flex border-t border-gray-200 py-2">
+				<span class="text-gray-500">Part-time</span>
+				<span class="ml-auto text-gray-900">$150 per week</span>
+			</div>
+			<div class="flex">
+				<button class="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Enroll your infant!
+				</button>
+			</div>
+		</div>
+		<img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="https://dummyimage.com/400x400">
+	</div>
+
 </ContentSection>
