@@ -30,9 +30,9 @@ export default defineConfig({
 		image(),
 
 		/* Disable this integration if you don't use Google Analytics (or other external script). */
-		partytown({
+		/* partytown({
 			config: { forward: ['dataLayer.push'] },
-		}),
+		}), */
 	],
 
 	vite: {
