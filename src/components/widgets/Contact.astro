@@ -6,7 +6,7 @@ var bgPattern = `background-color: #ffffff;
 	background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c56cfe' fill-opacity='0.51'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`;
 ---
 
-<ContentSection title="Contact Us" id="contact" styles="rounded-b-lg" pattern={bgPattern}>
+<ContentSection title="Contact Us" id="contact" styles="rounded-b-lg">
 	<Fragment slot="lead">
 		Questions, suggestions? We love to hear from you.
 		<!--   <span class="text-primary">modern</span> web.
@@ -15,7 +15,7 @@ var bgPattern = `background-color: #ffffff;
 	</Fragment>
 	<div class="container flex sm:flex-nowrap flex-wrap">
 		<div class="md:w-1/2 sm:mr-10 flex flex-col">
-			<div class="bg-[#FF81A3] mb-4 flex flex-wrap text-center justify-center py-6 rounded shadow-md shadow-black">
+			<div class="bg-[#FF81A3] mb-4 flex flex-wrap text-center justify-center py-6 rounded shadow shadow-black">
 				<div class="px-6">
 					<h2 class="title-font font-semibold text-white tracking-widest">ADDRESS</h2>
 					<p class="mt-1 text-[#321A81] font-bold">306 1st St #3, Sergeant Bluff, IA 51054</p>
@@ -29,12 +29,12 @@ var bgPattern = `background-color: #ffffff;
 			</div>
 
 			<div
-				class="bg-gray-300 h-full rounded-lg overflow-hidden p-10 flex items-end justify-start relative shadow-md shadow-black"
+				class="bg-gray-300 h-full rounded-lg overflow-hidden p-10 flex items-end justify-start relative shadow shadow-black"
 			>
 				<iframe
 					width="100%"
 					height="100%"
-					class="absolute inset-0"
+					class="absolute inset-0 h-full"
 					frameborder="0"
 					title="map"
 					marginheight="0"
@@ -86,7 +86,7 @@ var bgPattern = `background-color: #ffffff;
 				></textarea>
 			</div>
 			<button
-				class="shadow-md shadow-black text-white bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
+				class="shadow shadow-black text-white bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
 				>Submit</button
 			>
 		</div>
