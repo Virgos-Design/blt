@@ -8,7 +8,7 @@ export const SITE = {
 	description: "Bluff's Little Thinkers is an amazing childcare facility located in Sergeant Bluff, Iowa.",
 
 	location: 'Sergeant Bluff, IA',
-  latlng: [-33.86785, 151.20732],
+	latlng: [-33.86785, 151.20732],
 
 	googleAnalyticsId: false, // or "G-XXXXXXXXXX",
 	googleSiteVerificationId: '',
@@ -25,7 +25,7 @@ export const BLOG = {
 
 	post: {
 		disabled: false,
-		pathname: '', // empty for /some-post, value for /pathname/some-post 
+		pathname: '', // empty for /some-post, value for /pathname/some-post
 	},
 
 	category: {

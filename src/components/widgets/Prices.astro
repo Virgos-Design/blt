@@ -1,256 +1,290 @@
 ---
-import ContentSection from "~/components/widgets/ContentSection.astro";
+import ContentSection from '~/components/widgets/ContentSection.astro';
 
 var bgPattern = `background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232e8e00' fill-opacity='0.47'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`
-
+background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232e8e00' fill-opacity='0.47'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`;
 ---
 
-<ContentSection title="Our Prices" id="pricing" styles="bg-gradient-to-b from-sky-50 to-sky-200" >
-  <Fragment slot="lead">
-    We try to keep our prices competitive, but this is childcare in America, here are our ridiculous prices.
-  </Fragment>
+<ContentSection title="Our Prices" id="pricing" styles="bg-gradient-to-b from-sky-50 to-sky-200">
+	<Fragment slot="lead">
+		We try to keep our prices competitive, but this is childcare in America, here are our ridiculous prices.
+	</Fragment>
 	<div class="m-auto w-full px-6 md:px-12 lg:px-20">
 		<div class="m-auto items-center justify-center space-y-6">
 			<div class="relative group m-auto">
-					<div aria-hidden="true" class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-lg transition duration-500 group-hover:scale-105 lg:group-hover:scale-110"></div>
-					<div class="relative sm:flex">
-
-							<div id="infantCard" class="p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6">
-									<div>Foo</div>
-									<div class="flex items-center justify-between mx-4">
-										<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
-										<div class="relative flex justify-around">
-												<div class="flex">
-													<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
-													<span class="text-4xl text-gray-800 font-bold leading-0">150</span>
-												</div>
-										</div>
-									</div>
-									<div class="flex items-center justify-between mx-4">
-										<h5 class="text-xl text-gray-700 font-semibold">Full-Time</h5>
-										<div class="relative flex justify-around">
-												<div class="flex">
-													<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
-													<span class="text-4xl text-gray-800 font-bold leading-0">190</span>
-												</div>
-										</div>
-									</div>
-								
-									
-									<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
-											<button type="submit" title="Submit" class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600">
-													<span class="text-white font-semibold">
-														Enroll Today!
-													</span>
-											</button>
-									</div>
+				<div
+					aria-hidden="true"
+					class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-lg transition duration-500 group-hover:scale-105 lg:group-hover:scale-110"
+				>
+				</div>
+				<div class="relative sm:flex">
+					<div id="infantCard" class="p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6">
+						<div>Foo</div>
+						<div class="flex items-center justify-between mx-4">
+							<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
+							<div class="relative flex justify-around">
+								<div class="flex">
+									<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
+									<span class="text-4xl text-gray-800 font-bold leading-0">150</span>
+								</div>
 							</div>
-
-							<div id="oneYearCard" class="hidden p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6">
-								<div>Bar</div>
-								<div class="flex items-center justify-between mx-4">
-									<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
-									<div class="relative flex justify-around">
-											<div class="flex">
-												<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
-												<span class="text-4xl text-gray-800 font-bold leading-0">150</span>
-											</div>
-									</div>
-								</div>
-								<div class="flex items-center justify-between mx-4">
-									<h5 class="text-xl text-gray-700 font-semibold">Full-Time</h5>
-									<div class="relative flex justify-around">
-											<div class="flex">
-												<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
-												<span class="text-4xl text-gray-800 font-bold leading-0">190</span>
-											</div>
-									</div>
-								</div>
-							
-								
-								<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
-										<button type="submit" title="Submit" class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600">
-												<span class="text-white font-semibold">
-													Enroll Today!
-												</span>
-										</button>
-								</div>
 						</div>
-
-						<div id="twoYearCard" class="hidden p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6">
-							<div>Baz</div>
-							<div class="flex items-center justify-between mx-4">
-								<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
-								<div class="relative flex justify-around">
-										<div class="flex">
-											<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
-											<span class="text-4xl text-gray-800 font-bold leading-0">140</span>
-										</div>
+						<div class="flex items-center justify-between mx-4">
+							<h5 class="text-xl text-gray-700 font-semibold">Full-Time</h5>
+							<div class="relative flex justify-around">
+								<div class="flex">
+									<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
+									<span class="text-4xl text-gray-800 font-bold leading-0">190</span>
 								</div>
-							</div>
-							<div class="flex items-center justify-between mx-4">
-								<h5 class="text-xl text-gray-700 font-semibold">Full-Time</h5>
-								<div class="relative flex justify-around">
-										<div class="flex">
-											<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
-											<span class="text-4xl text-gray-800 font-bold leading-0">180</span>
-										</div>
-								</div>
-							</div>
-						
-							
-							<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
-									<button type="submit" title="Submit" class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600">
-											<span class="text-white font-semibold">
-												Enroll Today!
-											</span>
-									</button>
 							</div>
 						</div>
 
-						<div id="threeYearCard" class="hidden p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6">
-							<div>Faz</div>
-							<div class="flex items-center justify-between mx-4">
-								<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
-								<div class="relative flex justify-around">
-										<div class="flex">
-											<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
-											<span class="text-4xl text-gray-800 font-bold leading-0">130</span>
-										</div>
-								</div>
-							</div>
-							<div class="flex items-center justify-between mx-4">
-								<h5 class="text-xl text-gray-700 font-semibold">Full-Time</h5>
-								<div class="relative flex justify-around">
-										<div class="flex">
-											<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
-											<span class="text-4xl text-gray-800 font-bold leading-0">160</span>
-										</div>
-								</div>
-							</div>
-						
-							
-							<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
-									<button type="submit" title="Submit" class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600">
-											<span class="text-white font-semibold">
-												Enroll Today!
-											</span>
-									</button>
-							</div>
+						<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
+							<button
+								type="submit"
+								title="Submit"
+								class="block w-full py-3 px-6 text-center rounded-lg transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600 max-w-sm mx-auto"
+							>
+								<span class="text-white font-semibold"> Learn more</span>
+							</button>
 						</div>
-
-						<div id="fourYearCard" class="hidden p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6">
-							<div>Fubar</div>
-							<div class="flex items-center justify-between mx-4">
-								<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
-								<div class="relative flex justify-around">
-										<div class="flex">
-											<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
-											<span class="text-4xl text-gray-800 font-bold leading-0">125</span>
-										</div>
-								</div>
-							</div>
-							<div class="flex items-center justify-between mx-4">
-								<h5 class="text-xl text-gray-700 font-semibold">Full-Time</h5>
-								<div class="relative flex justify-around">
-										<div class="flex">
-											<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
-											<span class="text-4xl text-gray-800 font-bold leading-0">150</span>
-										</div>
-								</div>
-							</div>
-						
-							
-							<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
-									<button type="submit" title="Submit" class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600">
-											<span class="text-white font-semibold">
-												Enroll Today!
-											</span>
-									</button>
-							</div>
-						</div>
-
-
-							<div class="-mt-16 pb-20 sm:w-5/12 sm:mt-0 sm:pb-0">
-									<div class="relative h-full sm:pt-0
-															before:absolute before:left-0 before:top-1 before:w-full before:h-0.5 before:my-auto before:rounded-full before:bg-gray-200 sm:before:inset-y-0 sm:before:h-[85%] sm:before:w-0.5">
-											<div class="relative h-full -mt-1 pt-7 pb-6 overflow-x-auto sm:-ml-1 sm:pl-1">
-													<ul class="w-max h-full flex justify-center px-6 space-x-2 sm:w-full sm:flex-col sm:space-x-0 sm:space-y-6 sm:px-8">
-															<li>
-																<div class="text-center px-6 space-x-2">
-																	<span class="mx-auto text-lg font-semibold">Child Age</span>
-																</div>
-															</li>
-															<li>
-																	<div class="relative">
-																			<input checked hidden class="peer" type="radio" name="age" id="infant">
-																			<label for="infant" class="block w-full cursor-pointer py-2 px-4 text-center text-sky-800 rounded-full bg-sky-50 peer-checked:ring-1 peer-checked:ring-sky-500 peer-checked:text-sky-600">
-																					<span class="mx-auto text-sm font-semibold">
-																						6 weeks - 12+ months
-																					</span>
-																			</label>
-																			<div aria-hidden="true" class="absolute z-[1] top-[-2.20rem] inset-x-0 mx-auto w-6 h-6 rounded-full border-8 border-white bg-sky-500 transition scale-0 peer-checked:scale-100 sm:left-[-2.70rem] sm:inset-y-0 sm:ml-0 sm:my-auto"></div>
-																	</div>
-															</li>
-															<li>
-																	<div class="relative">
-																			<input hidden class="peer" type="radio" name="age" id="one-year">
-																			<label for="one-year" class="block cursor-pointer py-2 px-4 text-center text-sky-800 rounded-full bg-sky-50 peer-checked:ring-1 peer-checked:ring-sky-500 peer-checked:text-sky-600">
-																					<span class="block w-max mx-auto text-sm font-semibold">
-																						12+ months - 2 years
-																					</span>
-																			</label>
-																			<div aria-hidden="true" class="absolute z-[1] top-[-2.20rem] inset-x-0 mx-auto w-6 h-6 rounded-full border-8 border-white bg-sky-500 transition scale-0 peer-checked:scale-100 sm:left-[-2.70rem] sm:inset-y-0 sm:ml-0 sm:my-auto"></div>
-																	</div>
-															</li>
-															<li>
-																	<div class="relative">
-																			<input hidden class="peer" type="radio" name="age" id="two-year">
-																			<label for="two-year" class="block cursor-pointer py-2 px-4 text-center text-sky-800 rounded-full bg-sky-50 peer-checked:ring-1 peer-checked:ring-sky-500 peer-checked:text-sky-600">
-																					<span class="block w-max mx-auto text-sm font-semibold">
-																						2 years - 3 years
-																					</span>
-																			</label>
-																			<div aria-hidden="true" class="absolute z-[1] top-[-2.20rem] inset-x-0 mx-auto w-6 h-6 rounded-full border-8 border-white bg-sky-500 transition scale-0 peer-checked:scale-100 sm:left-[-2.70rem] sm:inset-y-0 sm:ml-0 sm:my-auto"></div>
-																	</div>
-															</li>
-															<li>
-																	<div class="relative">
-																			<input hidden class="peer" type="radio" name="age" id="three-year">
-																			<label for="three-year" class="block cursor-pointer py-2 px-4 text-center text-sky-800 rounded-full bg-sky-50 peer-checked:ring-1 peer-checked:ring-sky-500 peer-checked:text-sky-600">
-																					<span class="block w-max mx-auto text-sm font-semibold">
-																						3 years - 4 years
-																					</span>
-																			</label>
-																			<div aria-hidden="true" class="absolute z-[1] top-[-2.20rem] inset-x-0 mx-auto w-6 h-6 rounded-full border-8 border-white bg-sky-500 transition scale-0 peer-checked:scale-100 sm:left-[-2.70rem] sm:inset-y-0 sm:ml-0 sm:my-auto"></div>
-																	</div>
-															</li>
-															<li>
-																<div class="relative">
-																		<input hidden class="peer" type="radio" name="age" id="four-year">
-																		<label for="four-year" class="block cursor-pointer py-2 px-4 text-center text-sky-800 rounded-full bg-sky-50 peer-checked:ring-1 peer-checked:ring-sky-500 peer-checked:text-sky-600">
-																				<span class="block w-max mx-auto text-sm font-semibold">
-																					4 years - 5 years
-																				</span>
-																		</label>
-																		<div aria-hidden="true" class="absolute z-[1] top-[-2.20rem] inset-x-0 mx-auto w-6 h-6 rounded-full border-8 border-white bg-sky-500 transition scale-0 peer-checked:scale-100 sm:left-[-2.70rem] sm:inset-y-0 sm:ml-0 sm:my-auto"></div>
-																</div>
-														</li>
-													</ul>
-											</div>
-									</div>
-							</div>
 					</div>
+
+					<div id="oneYearCard" class="hidden p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6">
+						<div>Bar</div>
+						<div class="flex items-center justify-between mx-4">
+							<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
+							<div class="relative flex justify-around">
+								<div class="flex">
+									<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
+									<span class="text-4xl text-gray-800 font-bold leading-0">150</span>
+								</div>
+							</div>
+						</div>
+						<div class="flex items-center justify-between mx-4">
+							<h5 class="text-xl text-gray-700 font-semibold">Full-Time</h5>
+							<div class="relative flex justify-around">
+								<div class="flex">
+									<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
+									<span class="text-4xl text-gray-800 font-bold leading-0">190</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
+							<button
+								type="submit"
+								title="Submit"
+								class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600"
+							>
+								<span class="text-white font-semibold"> Enroll Today!</span>
+							</button>
+						</div>
+					</div>
+
+					<div id="twoYearCard" class="hidden p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6">
+						<div>Baz</div>
+						<div class="flex items-center justify-between mx-4">
+							<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
+							<div class="relative flex justify-around">
+								<div class="flex">
+									<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
+									<span class="text-4xl text-gray-800 font-bold leading-0">140</span>
+								</div>
+							</div>
+						</div>
+						<div class="flex items-center justify-between mx-4">
+							<h5 class="text-xl text-gray-700 font-semibold">Full-Time</h5>
+							<div class="relative flex justify-around">
+								<div class="flex">
+									<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
+									<span class="text-4xl text-gray-800 font-bold leading-0">180</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
+							<button
+								type="submit"
+								title="Submit"
+								class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600"
+							>
+								<span class="text-white font-semibold"> Enroll Today!</span>
+							</button>
+						</div>
+					</div>
+
+					<div id="threeYearCard" class="hidden p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6">
+						<div>Faz</div>
+						<div class="flex items-center justify-between mx-4">
+							<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
+							<div class="relative flex justify-around">
+								<div class="flex">
+									<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
+									<span class="text-4xl text-gray-800 font-bold leading-0">130</span>
+								</div>
+							</div>
+						</div>
+						<div class="flex items-center justify-between mx-4">
+							<h5 class="text-xl text-gray-700 font-semibold">Full-Time</h5>
+							<div class="relative flex justify-around">
+								<div class="flex">
+									<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
+									<span class="text-4xl text-gray-800 font-bold leading-0">160</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
+							<button
+								type="submit"
+								title="Submit"
+								class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600"
+							>
+								<span class="text-white font-semibold"> Enroll Today!</span>
+							</button>
+						</div>
+					</div>
+
+					<div id="fourYearCard" class="hidden p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6">
+						<div>Fubar</div>
+						<div class="flex items-center justify-between mx-4">
+							<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
+							<div class="relative flex justify-around">
+								<div class="flex">
+									<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
+									<span class="text-4xl text-gray-800 font-bold leading-0">125</span>
+								</div>
+							</div>
+						</div>
+						<div class="flex items-center justify-between mx-4">
+							<h5 class="text-xl text-gray-700 font-semibold">Full-Time</h5>
+							<div class="relative flex justify-around">
+								<div class="flex">
+									<span class="-ml-6 mr-1 text-xl text-sky-500 font-bold">$</span>
+									<span class="text-4xl text-gray-800 font-bold leading-0">150</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
+							<button
+								type="submit"
+								title="Submit"
+								class="block w-full py-3 px-6 text-center rounded-xl transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600"
+							>
+								<span class="text-white font-semibold"> Enroll Today!</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="-mt-16 pb-20 sm:w-5/12 sm:mt-0 sm:pb-0">
+						<div
+							class="relative h-full sm:pt-0 before:absolute before:left-0 before:top-1 before:w-full before:h-0.5 before:my-auto before:rounded-full before:bg-gray-200 sm:before:inset-y-0 sm:before:h-[85%] sm:before:w-0.5"
+						>
+							<div class="relative h-full -mt-1 pt-7 pb-6 overflow-x-auto sm:-ml-1 sm:pl-1">
+								<ul
+									class="w-max h-full flex justify-center px-6 space-x-2 sm:w-full sm:flex-col sm:space-x-0 sm:space-y-6 sm:px-8"
+								>
+									<li>
+										<div class="text-center px-6 space-x-2">
+											<span class="mx-auto text-lg font-semibold">Child Age</span>
+										</div>
+									</li>
+									<li>
+										<div class="relative">
+											<input checked hidden class="peer" type="radio" name="age" id="infant" />
+											<label
+												for="infant"
+												class="block w-full cursor-pointer py-2 px-4 text-center text-sky-800 rounded-full bg-sky-50 peer-checked:ring-1 peer-checked:ring-sky-500 peer-checked:text-sky-600"
+											>
+												<span class="mx-auto text-sm font-semibold"> 6 weeks - 12+ months</span>
+											</label>
+											<div
+												aria-hidden="true"
+												class="absolute z-[1] top-[-2.20rem] inset-x-0 mx-auto w-6 h-6 rounded-full border-8 border-white bg-sky-500 transition scale-0 peer-checked:scale-100 sm:left-[-2.70rem] sm:inset-y-0 sm:ml-0 sm:my-auto"
+											>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="relative">
+											<input hidden class="peer" type="radio" name="age" id="one-year" />
+											<label
+												for="one-year"
+												class="block cursor-pointer py-2 px-4 text-center text-sky-800 rounded-full bg-sky-50 peer-checked:ring-1 peer-checked:ring-sky-500 peer-checked:text-sky-600"
+											>
+												<span class="block w-max mx-auto text-sm font-semibold"> 12+ months - 2 years</span>
+											</label>
+											<div
+												aria-hidden="true"
+												class="absolute z-[1] top-[-2.20rem] inset-x-0 mx-auto w-6 h-6 rounded-full border-8 border-white bg-sky-500 transition scale-0 peer-checked:scale-100 sm:left-[-2.70rem] sm:inset-y-0 sm:ml-0 sm:my-auto"
+											>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="relative">
+											<input hidden class="peer" type="radio" name="age" id="two-year" />
+											<label
+												for="two-year"
+												class="block cursor-pointer py-2 px-4 text-center text-sky-800 rounded-full bg-sky-50 peer-checked:ring-1 peer-checked:ring-sky-500 peer-checked:text-sky-600"
+											>
+												<span class="block w-max mx-auto text-sm font-semibold"> 2 years - 3 years</span>
+											</label>
+											<div
+												aria-hidden="true"
+												class="absolute z-[1] top-[-2.20rem] inset-x-0 mx-auto w-6 h-6 rounded-full border-8 border-white bg-sky-500 transition scale-0 peer-checked:scale-100 sm:left-[-2.70rem] sm:inset-y-0 sm:ml-0 sm:my-auto"
+											>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="relative">
+											<input hidden class="peer" type="radio" name="age" id="three-year" />
+											<label
+												for="three-year"
+												class="block cursor-pointer py-2 px-4 text-center text-sky-800 rounded-full bg-sky-50 peer-checked:ring-1 peer-checked:ring-sky-500 peer-checked:text-sky-600"
+											>
+												<span class="block w-max mx-auto text-sm font-semibold"> 3 years - 4 years</span>
+											</label>
+											<div
+												aria-hidden="true"
+												class="absolute z-[1] top-[-2.20rem] inset-x-0 mx-auto w-6 h-6 rounded-full border-8 border-white bg-sky-500 transition scale-0 peer-checked:scale-100 sm:left-[-2.70rem] sm:inset-y-0 sm:ml-0 sm:my-auto"
+											>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="relative">
+											<input hidden class="peer" type="radio" name="age" id="four-year" />
+											<label
+												for="four-year"
+												class="block cursor-pointer py-2 px-4 text-center text-sky-800 rounded-full bg-sky-50 peer-checked:ring-1 peer-checked:ring-sky-500 peer-checked:text-sky-600"
+											>
+												<span class="block w-max mx-auto text-sm font-semibold"> 4 years - 5 years</span>
+											</label>
+											<div
+												aria-hidden="true"
+												class="absolute z-[1] top-[-2.20rem] inset-x-0 mx-auto w-6 h-6 rounded-full border-8 border-white bg-sky-500 transition scale-0 peer-checked:scale-100 sm:left-[-2.70rem] sm:inset-y-0 sm:ml-0 sm:my-auto"
+											>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div> 
+	</div>
 </ContentSection>
 
 <script>
 	const infantTab = document.querySelector("[for='infant']");
 	const infantCard = document.querySelector('#infantCard');
-  infantTab.addEventListener('click', () => {
+	infantTab.addEventListener('click', () => {
 		infantCard.classList.remove('hidden');
 		oneYearCard.classList.add('hidden');
 		twoYearCard.classList.add('hidden');
@@ -260,7 +294,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox=
 
 	const oneYearTab = document.querySelector("[for='one-year']");
 	const oneYearCard = document.querySelector('#oneYearCard');
-  oneYearTab.addEventListener('click', () => {
+	oneYearTab.addEventListener('click', () => {
 		oneYearCard.classList.remove('hidden');
 		infantCard.classList.add('hidden');
 		twoYearCard.classList.add('hidden');
@@ -270,7 +304,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox=
 
 	const twoYearTab = document.querySelector("[for='two-year']");
 	const twoYearCard = document.querySelector('#twoYearCard');
-  twoYearTab.addEventListener('click', () => {
+	twoYearTab.addEventListener('click', () => {
 		twoYearCard.classList.remove('hidden');
 		infantCard.classList.add('hidden');
 		oneYearCard.classList.add('hidden');
@@ -280,7 +314,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox=
 
 	const threeYearTab = document.querySelector("[for='three-year']");
 	const threeYearCard = document.querySelector('#threeYearCard');
-  threeYearTab.addEventListener('click', () => {
+	threeYearTab.addEventListener('click', () => {
 		threeYearCard.classList.remove('hidden');
 		infantCard.classList.add('hidden');
 		oneYearCard.classList.add('hidden');
@@ -290,12 +324,11 @@ background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox=
 
 	const fourYearTab = document.querySelector("[for='four-year']");
 	const fourYearCard = document.querySelector('#fourYearCard');
-  fourYearTab.addEventListener('click', () => {
+	fourYearTab.addEventListener('click', () => {
 		fourYearCard.classList.remove('hidden');
 		infantCard.classList.add('hidden');
 		oneYearCard.classList.add('hidden');
 		twoYearCard.classList.add('hidden');
 		threeYearCard.classList.add('hidden');
 	});
-  
 </script>

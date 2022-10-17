@@ -1,62 +1,94 @@
 ---
-import { Icon } from "astro-icon";
-import ContentSection from "~/components/widgets/ContentSection.astro";
+import { Icon } from 'astro-icon';
+import ContentSection from '~/components/widgets/ContentSection.astro';
 
 var bgPattern = `background-color: #ffffff;
-	background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c56cfe' fill-opacity='0.51'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`
+	background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c56cfe' fill-opacity='0.51'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`;
 ---
 
-<ContentSection title="Contact Us" id="contact" styles='rounded-b-lg' pattern={bgPattern}>
-  <Fragment slot="lead">
-    Questions, suggestions? We love to hear from you.
-  <!--   <span class="text-primary">modern</span> web.
+<ContentSection title="Contact Us" id="contact" styles="rounded-b-lg" pattern={bgPattern}>
+	<Fragment slot="lead">
+		Questions, suggestions? We love to hear from you.
+		<!--   <span class="text-primary">modern</span> web.
     <span class="text-primary">Lightning-fast</span>
     performance meets <span class="text-primary">powerful</span> developer experience. -->
-  </Fragment>
+	</Fragment>
 	<div class="container flex sm:flex-nowrap flex-wrap">
-
-	<div class="md:w-1/2 sm:mr-10 flex flex-col">
-
-		<div class="bg-[#FF81A3] mb-4 flex flex-wrap text-center justify-center py-6 rounded shadow-md shadow-black">
-			<div class="px-6">
-				<h2 class="title-font font-semibold text-white tracking-widest">ADDRESS</h2>
-				<p class="mt-1 text-[#321A81] font-bold">306 1st St #3, Sergeant Bluff, IA 51054</p>
+		<div class="md:w-1/2 sm:mr-10 flex flex-col">
+			<div class="bg-[#FF81A3] mb-4 flex flex-wrap text-center justify-center py-6 rounded shadow-md shadow-black">
+				<div class="px-6">
+					<h2 class="title-font font-semibold text-white tracking-widest">ADDRESS</h2>
+					<p class="mt-1 text-[#321A81] font-bold">306 1st St #3, Sergeant Bluff, IA 51054</p>
+				</div>
+				<div class="px-6 mt-4 lg:mt-0">
+					<h2 class="title-font font-semibold text-white tracking-widest mt-2">EMAIL</h2>
+					<a class="mt-1 text-[#321A81] font-bold tracking-wide">kelseyandersenteach@gmail.com</a>
+					<h2 class="title-font font-semibold text-white tracking-widest mt-2">PHONE</h2>
+					<p class="mt-1 text-[#321A81] font-bold">(712) 943-2603</p>
+				</div>
 			</div>
-			<div class="px-6 mt-4 lg:mt-0">
-				<h2 class="title-font font-semibold text-white tracking-widest mt-2">EMAIL</h2>
-				<a class="mt-1 text-[#321A81] font-bold tracking-wide">kelseyandersenteach@gmail.com</a>
-				<h2 class="title-font font-semibold text-white tracking-widest mt-2">PHONE</h2>
-				<p class="mt-1 text-[#321A81] font-bold">(712) 943-2603</p>
+
+			<div
+				class="bg-gray-300 h-full rounded-lg overflow-hidden p-10 flex items-end justify-start relative shadow-md shadow-black"
+			>
+				<iframe
+					width="100%"
+					height="100%"
+					class="absolute inset-0"
+					frameborder="0"
+					title="map"
+					marginheight="0"
+					marginwidth="0"
+					scrolling="no"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2946.3246791184615!2d-96.36304728448934!3d42.3995307791841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878dff0eb4585019%3A0xd75ca2ba48d3521e!2sBLUFF'S%20LITTLE%20THINKERS!5e0!3m2!1sen!2sus!4v1665860836409!5m2!1sen!2sus"
+					style="filter: contrast(1.2) opacity(0.8);"></iframe>
 			</div>
 		</div>
 
-		<div class="bg-gray-300 h-full rounded-lg overflow-hidden p-10 flex items-end justify-start relative shadow-md shadow-black">
-			<iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2946.3246791184615!2d-96.36304728448934!3d42.3995307791841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x878dff0eb4585019%3A0xd75ca2ba48d3521e!2sBLUFF&#39;S%20LITTLE%20THINKERS!5e0!3m2!1sen!2sus!4v1665860836409!5m2!1sen!2sus" style="filter: contrast(1.2) opacity(0.8);"></iframe>
+		<div class="md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+			<h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+			<p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+			<div class="relative mb-4">
+				<label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+				<input
+					type="text"
+					id="name"
+					name="name"
+					minlength="3"
+					maxlength="25"
+					class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+				/>
+			</div>
+			<div class="relative mb-4">
+				<label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+				/>
+			</div>
+			<div class="relative mb-4">
+				<label for="tel" class="leading-7 text-sm text-gray-600">Phone</label>
+				<input
+					type="tel"
+					id="phone"
+					name="phone"
+					class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+				/>
+			</div>
+			<div class="relative mb-4">
+				<label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+				<textarea
+					id="message"
+					name="message"
+					class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+				></textarea>
+			</div>
+			<button
+				class="shadow-md shadow-black text-white bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
+				>Submit</button
+			>
 		</div>
-	
 	</div>
-
-
-	<div class="md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-		<h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
-		<p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
-		<div class="relative mb-4">
-			<label for="name" class="leading-7 text-sm text-gray-600">Name</label>
-			<input type="text" id="name" name="name" minlength="3" maxlength="25" class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-		</div>
-		<div class="relative mb-4">
-			<label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-			<input type="email" id="email" name="email" class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-		</div>
-		<div class="relative mb-4">
-			<label for="tel" class="leading-7 text-sm text-gray-600">Phone</label>
-			<input type="tel" id="phone" name="phone" class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-		</div>
-		<div class="relative mb-4">
-			<label for="message" class="leading-7 text-sm text-gray-600">Message</label>
-			<textarea id="message" name="message" class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-		</div>
-		<button class="shadow-md shadow-black text-white bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg">Submit</button>
-	</div>
-</div>
 </ContentSection>

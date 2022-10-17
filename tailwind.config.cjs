@@ -12,7 +12,7 @@ module.exports = {
 			fontFamily: {
 				sans: ["'quicksand'", ...defaultTheme.fontFamily.sans],
 			},
-		}
+		},
 	},
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	darkMode: 'class',

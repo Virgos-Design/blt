@@ -1,41 +1,64 @@
 ---
-import { Icon } from "astro-icon";
-import ContentSection from "~/components/widgets/ContentSection.astro";
+import { Icon } from 'astro-icon';
+import ContentSection from '~/components/widgets/ContentSection.astro';
 
 var bgPattern = `background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e1b7fe' fill-opacity='0.83' fill-rule='evenodd'/%3E%3C/svg%3E");`
+background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e1b7fe' fill-opacity='0.83' fill-rule='evenodd'/%3E%3C/svg%3E");`;
 ---
 
 <ContentSection title="Our Facility" id="facility" pattern={bgPattern}>
-  <Fragment slot="lead">
-    Located just off of the I-29 in Sergeant Bluff, IA
-		Our newly updated 8,000 square foot state of the art facility includes
-		this room, that room, new playground equipment with turf, sensory room, etc.
-   <!--  <span class="text-primary">modern</span> web.
+	<Fragment slot="lead">
+		Located just off of the I-29 in Sergeant Bluff, IA Our newly updated 8,000 square foot state of the art facility
+		includes this room, that room, new playground equipment with turf, sensory room, etc.
+		<!--  <span class="text-primary">modern</span> web.
     <span class="text-primary">Lightning-fast</span>
     performance meets <span class="text-primary">powerful</span> -->
-  </Fragment>
+	</Fragment>
 	<div class="flex flex-wrap md:-m-2 -m-1">
 		<div class="flex flex-wrap w-1/2">
 			<div class="md:p-2 p-1 w-1/2">
-				<img alt="gallery" class="rounded-md w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300">
+				<img
+					alt="gallery"
+					class="rounded-md w-full object-cover h-full object-center block"
+					src="https://dummyimage.com/500x300"
+				/>
 			</div>
 			<div class="md:p-2 p-1 w-1/2">
-				<img alt="gallery" class="rounded-md w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301">
+				<img
+					alt="gallery"
+					class="rounded-md w-full object-cover h-full object-center block"
+					src="https://dummyimage.com/501x301"
+				/>
 			</div>
 			<div class="md:p-2 p-1 w-full">
-				<img alt="gallery" class="rounded-md w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360">
+				<img
+					alt="gallery"
+					class="rounded-md w-full h-full object-cover object-center block"
+					src="https://dummyimage.com/600x360"
+				/>
 			</div>
 		</div>
 		<div class="flex flex-wrap w-1/2">
 			<div class="md:p-2 p-1 w-full">
-				<img alt="gallery" class="rounded-md w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361">
+				<img
+					alt="gallery"
+					class="rounded-md w-full h-full object-cover object-center block"
+					src="https://dummyimage.com/601x361"
+				/>
 			</div>
 			<div class="md:p-2 p-1 w-1/2">
-				<img alt="gallery" class="rounded-md w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302">
+				<img
+					alt="gallery"
+					class="rounded-md w-full object-cover h-full object-center block"
+					src="https://dummyimage.com/502x302"
+				/>
 			</div>
 			<div class="md:p-2 p-1 w-1/2">
-				<img alt="gallery" class="rounded-md w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303">
+				<img
+					alt="gallery"
+					class="rounded-md w-full object-cover h-full object-center block"
+					src="https://dummyimage.com/503x303"
+				/>
 			</div>
 		</div>
 	</div>

@@ -4,46 +4,22 @@ import Picture from '~/components/core/Picture.astro';
 import Foo from '~/assets/images/hero_gap_fill.svg';
 ---
 
-<section id="hero" class="relative " >
-	<!-- <div class="max-w-6xl mx-auto px-4 sm:px-6">
-		<div class="py-12 md:py-20">
-			<Icon name="logomark" class="h-24 text-white md:h-32" />
-			<div class="text-center pb-10 md:pb-16">
-				<h2 class="font-['AwesomeNewbie'] text-6xl md:text-[3.50rem] font-bold leading-tighter tracking-wider mb-4 font-heading">
-					<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
-						Learning Today, Leading Tomorrow.
-					</span> 
-				</h2>
-			</div>
-			Enroll Today Button
-		</div>
-	</div> -->
-
+<section id="hero" class="relative">
 	<div class="z-20 relative mt-14 mx-auto max-w-6xl lg:px-8 grid h-full sm:grid-cols-2 place-items-center">
-    <div
-      class="flex flex-col self-end sm:gap-4 sm:self-auto sm:justify-self-end"
-    >
-      <!-- <Icon name="logomark" class="hidden md:block md:h-32" /> -->
-      <h2 class="font-['AwesomeNewbie'] text-6xl md:text-7xl text-center font-bold leading-tighter tracking-wide mb-4 font-heading" >
-				<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
-					Learning Today,
-				</span>
-				<span class="bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-secondary-500">
-					Leading Tomorrow.
-				</span>  
-      </h2>
+		<div class="flex flex-col self-end sm:gap-4 sm:self-auto sm:justify-self-end">
+			<!-- <Icon name="logomark" class="hidden md:block md:h-32" /> -->
+			<h2
+				class="font-['AwesomeNewbie'] text-6xl md:text-7xl text-center font-bold leading-tighter tracking-wide mb-4 font-heading"
+			>
+				<span class="text-[#321A81]"> Learning Today,</span>
+				<span class="text-[#321A81]"> Leading Tomorrow.</span>
+			</h2>
 			<!-- <a href="/#enroll" class="flex items-center justify-center gap-3 px-6 py-4 rounded-full border-4 border-[#2E8E00]">
       <span>Enroll Today!</span>
     </a> -->
-    </div>
-		<Picture
-			src={Foo}
-			class="-mb-[11%]"
-			widths={[]}
-			sizes=" (max-width: 767px) 400px, 768px"
-			alt="Hero Image"
-		/>
-  </div>
+		</div>
+		<Picture src={Foo} class="-mb-[11%]" widths={[]} sizes=" (max-width: 767px) 400px, 768px" alt="Hero Image" />
+	</div>
 	<!-- <img src={Foo} class="w-full h-full" alt=""> -->
 	<!-- <div class="mx-auto max-w-6xl h-full place-items-center z-40">
 		<Picture
