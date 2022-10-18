@@ -13,13 +13,13 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 >
 	<div class="py-3 px-3 w-full md:flex md:justify-between md:px-4">
 		<div class="flex justify-between">
-			<a id="brand" class="hidden items-center gap-3" href={getHomePermalink()}>
+			<a id="brand" class="invisible items-center gap-3" href={getHomePermalink()}>
 				<h1 class="sr-only">Bluff's Little Thinkers</h1>
-				<Icon name="logomark" class="h-10 sm:hidden" />
+				<Icon name="monogram" class="h-10 sm:hidden" />
 				<Icon name="wordmark" class="hidden h-8 sm:block" />
 				<!-- <Logo /> -->
 			</a>
-			<div class="flex items-center md:hidden">
+			<div class="flex items-center md:hidden justify-self-end">
 				<!-- <ToggleTheme /> -->
 				<ToggleMenu />
 			</div>
@@ -101,11 +101,11 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 		const d = hero.offsetHeight - page.scrollTop;
 
     if ( d < 0 ) {
-      brand.classList.add("flex");
-      brand.classList.remove("hidden");
+      brand.classList.add("visible");
+      brand.classList.remove("invisible");
     } else {
-      brand.classList.add("hidden");
-      brand.classList.remove("flex");
+      brand.classList.add("invisible");
+      brand.classList.remove("visible");
     }
   });
 </script>

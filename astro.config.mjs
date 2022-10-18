@@ -27,7 +27,11 @@ export default defineConfig({
 			},
 		}),
 		sitemap(),
-		image(),
+		image({
+			serviceEntryPoint: '@astrojs/image/sharp',
+			// supported levels: 'debug' | 'info' | 'warn' | 'error' | 'silent'
+			logLevel: 'debug'
+		}),
 
 		/* Disable this integration if you don't use Google Analytics (or other external script). */
 		/* partytown({
