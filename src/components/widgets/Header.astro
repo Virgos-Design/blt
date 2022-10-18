@@ -8,11 +8,12 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 ---
 
 <header
+	id="page-header"
 	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0"
 >
 	<div class="py-3 px-3 w-full md:flex md:justify-between md:px-4">
 		<div class="flex justify-between">
-			<a class="flex items-center gap-3" href={getHomePermalink()}>
+			<a id="brand" class="hidden items-center gap-3" href={getHomePermalink()}>
 				<h1 class="sr-only">Bluff's Little Thinkers</h1>
 				<Icon name="logomark" class="h-10 sm:hidden" />
 				<Icon name="wordmark" class="hidden h-8 sm:block" />
@@ -90,3 +91,21 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 		</nav>
 	</div>
 </header>
+
+<script>
+  const brand: HTMLElement = document.getElementById("brand");
+	const hero: HTMLElement = document.getElementById("hero");
+  const page = document.documentElement;
+
+  document.addEventListener("scroll", () => {
+		const d = hero.offsetHeight - page.scrollTop;
+
+    if ( d < 0 ) {
+      brand.classList.add("flex");
+      brand.classList.remove("hidden");
+    } else {
+      brand.classList.add("hidden");
+      brand.classList.remove("flex");
+    }
+  });
+</script>
