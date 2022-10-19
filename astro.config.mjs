@@ -30,7 +30,7 @@ export default defineConfig({
 		image({
 			serviceEntryPoint: '@astrojs/image/sharp',
 			// supported levels: 'debug' | 'info' | 'warn' | 'error' | 'silent'
-			logLevel: 'debug'
+			logLevel: 'debug',
 		}),
 
 		/* Disable this integration if you don't use Google Analytics (or other external script). */

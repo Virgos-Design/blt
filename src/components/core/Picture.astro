@@ -7,9 +7,9 @@ const {
 	sizes,
 	widths,
 	aspectRatio = 1,
-	formats = ['avif', 'webp'],
-	loading = 'lazy',
-	decoding = 'async',
+	formats = ['avif', 'webp', 'png'],
+	loading = 'eager', //eager | lazy
+	decoding = 'sync', //async | sync
 	class: className = '',
 	...attrs
 } = Astro.props;
