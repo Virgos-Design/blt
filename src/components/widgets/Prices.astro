@@ -96,6 +96,8 @@ const prices = [
 								<span class="mx-1 font-bold ">max enrollment - {card.max} </span>
 							</div>
 
+							<div id="disclaimer">{card.name == 'four-year' && '* Child must be 4 years of age on or before September 15th of enrollment year'}</div>
+
 							<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
 								<button
 									type="submit"
@@ -188,11 +190,13 @@ const prices = [
 
 	const fourYearTab = document.querySelector("[for='four-year-button']");
 	const fourYearCard = document.querySelector('#four-year-card');
+	const disclaimer = document.getElementById("disclaimer");
 	fourYearTab.addEventListener('click', () => {
 		fourYearCard.classList.remove('hidden');
 		infantCard.classList.add('hidden');
 		oneYearCard.classList.add('hidden');
 		twoYearCard.classList.add('hidden');
 		threeYearCard.classList.add('hidden');
+		disclaimer.classList.remove('invisible');
 	});
 </script>
