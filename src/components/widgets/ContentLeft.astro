@@ -1,0 +1,66 @@
+---
+export interface Props {
+	title: string;
+	id: string;
+	styles?: string;
+	pattern?: string;
+	image: string;
+	imageAlt: string; 
+}
+import Picture from '~/components/core/Picture.astro';
+import { Image } from '@astrojs/image/components';
+import { colorize } from '~/utils/colorizer';
+const { title, id, styles, pattern, image, imageAlt } = Astro.props;
+const colTitle = colorize(title);
+---
+
+<section
+	id={id}
+	class={`flex flex-col gap-4 space-y-8 scroll-mt-16 px-4 pb-16 sm:px-6 mx-auto lg:px-8 lg:pb-20 ${styles}`}
+	style={pattern}
+>
+	<div class="flex flex-col items-center gap-4">
+		<slot name="eyebrow" />
+		<h2
+			id="foo"
+			class="text-6xl md:text-7xl font-extrabold tracking-wider text-center font-['AwesomeNewbie']"
+			set:html={colTitle}
+			style="text-shadow: 1px 1px 3px #6B7280;"
+		>
+		</h2>
+	</div>
+	<!-- <div class="m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+		<div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+			<div class="space-y-6 md:7/12 lg:w-6/12">
+				<div class="space-y-4">
+					<p class="text-2xl">
+						<slot name="lead" />
+					</p>
+				</div>
+				<a href="#" class="block w-full py-3 px-6 text-center rounded-full transition bg-blue-200 hover:bg-blue-100 active:bg-blue-300 focus:bg-blue-100 sm:w-max">
+					<span class="block text-blue-900 font-semibold text-sm">
+							Learn More
+					</span>
+				</a>
+			</div>
+			<div class="md:5/12 lg:w-6/12">
+				<Picture src={image} class="-mb-[11.7%]" widths={[]} sizes=" " alt={imageAlt} />
+			</div>
+		</div>
+	</div> -->
+	<div class="text-sky-900 mx-auto">
+		<div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:gap-6 lg:gap-12">
+			<div class="md:w-7/12 lg:w-6/12 text-2xl">
+				<p class="text-2xl md:mt-5 text-center md:text-right">
+					<slot name="lead" />
+				</p>
+			</div>
+			``
+			<div class="md:w-5/12 lg:w-6/12 h-full mx-auto">
+				<!-- <Picture src={image} class="-mb-[11.7%]" widths={[]} sizes=" " alt={imageAlt} /> -->
+				<Image src={image} alt="" class="rounded-md shadow-sm shadow-black h-full" />
+			</div>
+		</div>
+</div>
+</section>
+                                

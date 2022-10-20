@@ -9,6 +9,8 @@ import OurFacility from '~/components/widgets/OurFacility.astro';
 import WhyBLT from '~/components/widgets/WhyBLT.astro';
 import Prices from '~/components/widgets/Prices.astro';
 import Contact from '~/components/widgets/Contact.astro';
+import OurStory from '~/components/widgets/OurStory.astro';
+import SectionCap from '~/components/widgets/SectionCap.astro';
 
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -17,7 +19,6 @@ import HighlightedPosts from '~/components/blog/HighlightedPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Flex from '~/components/widgets/Flex.astro';
 
 const meta = {
 	title: SITE.title,
@@ -28,17 +29,11 @@ const meta = {
 
 <Layout {meta}>
 	<Hero slot="hero" />
-	<!-- <Flex />
-	<Intro />
-	<OurFacility /> -->
+	<Intro bgColor="bg-gradient-to-br from-cyan-50 to-green-100" />
+	<SectionCap topColor="green-100" />
+	<OurStory />
+	<OurFacility />
 	<Prices />
-	<!-- <WhyBLT />
-	<Contact /> -->
-	<!-- <Features2 />
-	<Features />
-	<Features3 />
-	<HighlightedPosts />
-	<FAQs />
-	<Stats />
-	<CallToAction /> -->
+	<WhyBLT />
+	<Contact />
 </Layout>

@@ -1,23 +1,35 @@
 ---
-import { Icon } from 'astro-icon';
-import ContentSection from '~/components/widgets/ContentSection.astro';
+import Picture from '~/components/core/Picture.astro';
+import twenty18 from '~/assets/images/2018.png';
+import twenty19 from '~/assets/images/2019.png';
+import twenty20 from '~/assets/images/2020.png';
+import twenty21 from '~/assets/images/2021.png';
+import twenty22 from '~/assets/images/2022.png';
+import ContentSection from './ContentSection.astro';
+
+const { bgColor } = Astro.props;
 ---
 
-<ContentSection title="Our Story" id="intro" styles="bg-purple-200">
-	<Icon slot="monogram" name="logomark" class="h-32" />
-	<Fragment slot="lead">
-		Bluff’s Little Thinkers was founded in 1975, with a mission to provide quality early childhood education to
-		Siouxland by promoting each child’s individual social, emotional, physical, and cognitive development. Our goal is
-		to support children’s desire to become lifelong learners.
-		<!-- <span class="text-primary">modern</span> web.
-		<span class="text-primary">Lightning-fast</span>
-		performance meets <span class="text-primary">powerful</span> -->
-	</Fragment>
-	<div class="custom-shape-divider-top-1666062513">
-		<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-			<path
-				d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-				class="shape-fill"></path>
-		</svg>
+<ContentSection title="Learning Today, Leading Tomorrow." id="intro" styles={`pt-16 lg:pt-20 ${bgColor}`}>
+	<div class="m-auto px-6 text-gray-500 md:px-12">
+		<div class="grid lg:grid-cols-7 gap-6">
+			<div class="lg:col-span-3">
+				<div class="fb-page" data-href="https://www.facebook.com/bluffsthinkers" data-tabs="timeline" data-width="500" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/bluffsthinkers" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/bluffsthinkers">Bluff&#039;s Little Thinkers Educational and Child Care Center</a></blockquote></div>
+			</div>
+			<div class="lg:col-span-4 lg:order-first">
+				<div class="bg-white rounded-xl shadow-lg px-8 space-y-4 py-12 sm:px-12 lg:px-8">
+					photos
+				</div>
+			</div>
+		</div>
 	</div>
 </ContentSection>
+
+
+						<!-- <div class="flex flex-wrap justify-center gap-6">
+							<Picture src={twenty18} class="" widths={[50, 100, 150]} sizes="" aspectRatio="" alt="best in siouxland 2018" />
+							<Picture src={twenty19} class="" widths={[50, 100, 150]} sizes="" aspectRatio="" alt="best in siouxland 2019" />
+							<Picture src={twenty20} class="" widths={[50, 100, 150]} sizes="" aspectRatio="" alt="best in siouxland 2020" />
+							<Picture src={twenty21} class="" widths={[50, 100, 150]} sizes="" aspectRatio="" alt="best in siouxland 2021" />
+							<Picture src={twenty22} class="" widths={[50, 100, 150]} sizes="" aspectRatio="" alt="best in siouxland 2022" />
+						</div> -->
