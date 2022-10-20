@@ -10,6 +10,8 @@ const prices = [
 		ages: "6 weeks - 12+ months",
 		ptPrice: "150",
 		ftPrice: "190",
+		ratio: "1:4",
+		max: "12",
 		default: true
 	},
 	{
@@ -17,6 +19,8 @@ const prices = [
 		ages: "12+ months - 2 years",
 		ptPrice: "150",
 		ftPrice: "190",
+		ratio: "1:4",
+		max: "12",
 		default: false
 	},
 	{
@@ -24,6 +28,8 @@ const prices = [
 		ages: "2 years - 3 years",
 		ptPrice: "140",
 		ftPrice: "180",
+		ratio: "1:7",
+		max: "12",
 		default: false
 	},
 	{
@@ -31,6 +37,8 @@ const prices = [
 		ages: "3 years - 4 years",
 		ptPrice: "130",
 		ftPrice: "160",
+		ratio: "1:10",
+		max: "12",
 		default: false
 	},
 	{
@@ -38,6 +46,8 @@ const prices = [
 		ages: "4 years - 5 years",
 		ptPrice: "125",
 		ftPrice: "150",
+		ratio: "1:12",
+		max: "20",
 		default: false
 	}
 ]
@@ -58,7 +68,7 @@ const prices = [
 					{ prices.map(card => (
 						<div id={`${card.name}-card`} class={`p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6 ${card.default || 'hidden'}`}>
 							
-							<div class="flex items-center justify-between mx-4">
+							<div class="flex flex-col sm:flex-row items-center justify-between mx-4">
 								<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
 								<div class="relative flex justify-around">
 									<div>
@@ -79,7 +89,12 @@ const prices = [
 									</div>
 								</div>
 							</div>
-	
+							
+							<div class="flex flex-col items-center justify-between mx-6">
+								<span class="mx-1 font-bold ">instructor to student ratio - {card.ratio} </span>
+								<span class="mx-1 font-bold ">maximum classroom size - {card.max} </span>
+							</div>
+
 							<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
 								<button
 									type="submit"
