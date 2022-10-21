@@ -36,7 +36,9 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 			aria-label="Main navigation"
 			id="menu"
 		>
-			<ul class="flex flex-col items-center pt-8 lg:pt-0 lg:flex-row lg:self-center collapse w-full lg:w-auto collapsed">
+			<ul
+				class="flex flex-col items-center pt-8 lg:pt-0 lg:flex-row lg:self-center collapse w-full lg:w-auto collapsed"
+			>
 				<li>
 					<a
 						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
@@ -101,7 +103,7 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 
 	<div aria-hidden="true" class="absolute inset-0 w-full h-full bg-purple-400 bg-opacity-30 backdrop-blur-sm"></div>
 	<div class="relative container m-auto px-6 md:px-12 lg:px-6">
-		<div class="mb-12 pt-28  space-y-14  md:mb-16 md:pt-40 lg:w-8/12 lg:mx-auto">
+		<div class="mb-12 pt-28 space-y-14 md:mb-16 md:pt-40 lg:w-8/12 lg:mx-auto">
 			<div class="flex justify-center">
 				<Icon name="logomark" class="h-40 md:h-56 lg:h-64" />
 			</div>
@@ -115,58 +117,23 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 		<div class="pb-20">
 			<div class="m-auto mt-8 md:w-11/12 lg:w-8/12 xl:w-7/12">
 				<div class="flex flex-wrap justify-center gap-6">
-						<div class="flex items-center">
-							<Picture
-								src={twenty18}
-								class=""
-								widths={[50, 85]}
-								sizes=""
-								aspectRatio=""
-								alt="best in siouxland 2018"
-							/>
-						</div>
-						<div class="flex items-center">
-							<Picture
-								src={twenty19}
-								class=""
-								widths={[50, 85]}
-								sizes=""
-								aspectRatio=""
-								alt="best in siouxland 2019"
-							/>
-						</div>
-						<div class="flex items-center">
-							<Picture
-								src={twenty20}
-								class=""
-								widths={[50, 85]}
-								sizes=""
-								aspectRatio=""
-								alt="best in siouxland 2020"
-							/>
-						</div>
-						<div class="flex items-center">
-							<Picture
-								src={twenty21}
-								class=""
-								widths={[50, 85]}
-								sizes=""
-								aspectRatio=""
-								alt="best in siouxland 2021"
-							/>
-						</div>
-						<div class="flex items-center">
-							<Picture
-								src={twenty22}
-								class=""
-								widths={[50, 85]}
-								sizes=""
-								aspectRatio=""
-								alt="best in siouxland 2022"
-							/>
-						</div>
+					<div class="flex items-center">
+						<Picture src={twenty18} class="" widths={[50, 85]} sizes="" aspectRatio="" alt="best in siouxland 2018" />
+					</div>
+					<div class="flex items-center">
+						<Picture src={twenty19} class="" widths={[50, 85]} sizes="" aspectRatio="" alt="best in siouxland 2019" />
+					</div>
+					<div class="flex items-center">
+						<Picture src={twenty20} class="" widths={[50, 85]} sizes="" aspectRatio="" alt="best in siouxland 2020" />
+					</div>
+					<div class="flex items-center">
+						<Picture src={twenty21} class="" widths={[50, 85]} sizes="" aspectRatio="" alt="best in siouxland 2021" />
+					</div>
+					<div class="flex items-center">
+						<Picture src={twenty22} class="" widths={[50, 85]} sizes="" aspectRatio="" alt="best in siouxland 2022" />
+					</div>
 				</div>
-		</div>
+			</div>
 		</div>
 	</div>
 </section>
