@@ -1,14 +1,16 @@
 ---
 import { Icon } from 'astro-icon';
 import ContentLeft from '~/components/widgets/ContentLeft.astro';
+import ContentColor from '~/components/widgets/ContentColor.astro';
 import Image from '~/assets/images/steps.jpg';
 ---
 
-<ContentLeft title="Our Story" id="story" styles="bg-purple-200" image={Image} imageAlt="intro image">
+<ContentColor title="Our Story" id="story" color="purple-200">
 	<Icon slot="monogram" name="logomark" class="h-32" />
 	<Fragment slot="lead">
 		Bluff’s Little Thinkers was founded in 1975, with a mission to provide quality early childhood education to
 		Siouxland by promoting each child’s individual social, emotional, physical, and cognitive development. Our goal is
 		to support children’s desire to become lifelong learners.
 	</Fragment>
-</ContentLeft>
+</ContentColor>
+
