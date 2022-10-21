@@ -1,37 +1,203 @@
 ---
 import { Icon } from 'astro-icon';
 import Picture from '~/components/core/Picture.astro';
-/* import { Picture, Image } from '@astrojs/image/components'; */
-import HeroImage from '~/assets/images/hero_medium.png';
+import twenty18 from '~/assets/images/2018.png';
+import twenty19 from '~/assets/images/2019.png';
+import twenty20 from '~/assets/images/2020.png';
+import twenty21 from '~/assets/images/2021.png';
+import twenty22 from '~/assets/images/2022.png';
+
+import { getPermalink, getHomePermalink, getBlogPermalink } from '~/utils/permalinks';
+
+import Logo from '~/components/atoms/Logo.astro';
+import ToggleTheme from '~/components/core/ToggleTheme.astro';
+import ToggleMenu from '~/components/core/ToggleMenu.astro';
 ---
 
-<section id="hero" class="relative bg-gradient-to-b from-pink-100 via-pink-50 to-white">
-	<div class="z-20 pt-8 lg:pt-14 px-4 lg:px-8 grid h-full sm:grid-cols-2 place-items-center">
-		<div class="mx-auto h-full flex flex-col self-end sm:gap-4 sm:self-auto sm:justify-self-end">
-			<div class="mb-8 sm:mb-0">
-				<div class="flex justify-center">
-					<Icon name="logomark" class="h-40 md:h-56 lg:h-64" />
-				</div>
-				<div class="mb-2">
-					<p class="text-lg md:text-2xl lg:text-3xl text-center font-bold text-[#321A81] whitespace-nowrap">
-						Learning Today, Leading Tomorrow.
-					</p>
-				</div>
-				<!-- <div class="flex justify-center">
-					<button
-						type="button"
-						title="enroll today"
-						class="max-w-xs md:max-w-full py-3 px-8 text-center rounded-full transition bg-[#321A81] hover:bg-yellow-100 active:bg-yellow-400 focus:bg-yellow-300 sm:w-max"
-					>
-						<span class="block text-white font-bold text-md"> Enroll Today!</span>
-					</button>
-				</div> -->
+<!-- <span class="inline sm:hidden">.</span>
+	<span class="hidden sm:inline">Text to disappear on small screens</span> -->
+<header id="page-header" class="fixed z-20 flex-none mx-auto w-full">
+	<div class="py-3 px-3 w-full md:flex md:justify-between md:px-4">
+		<div class="flex justify-between">
+			<a id="brand" aria-label="logo" class="invisible items-center gap-3 flex" href={getHomePermalink()}>
+				<h1 class="sr-only">Bluff's Little Thinkers</h1>
+				<Icon name="icon" class="h-7 sm:hidden" />
+				<Icon name="monogram" class="h-10 sm:hidden" />
+				<Icon name="wordmark" class="hidden h-10 sm:block" />
+				<!-- <Logo /> -->
+			</a>
+			<div class="flex items-center md:hidden justify-self-end">
+				<!-- <ToggleTheme /> -->
+				<ToggleMenu />
 			</div>
 		</div>
-		<div class="">
-			<Picture src={HeroImage} class="-mb-[11.7%]" widths={[]} sizes=" " alt="Hero Image" />
+		<nav
+			class="items-center w-full md:w-auto hidden md:flex text-white text-lg font-semibold tracking-wide h-screen md:h-auto"
+			aria-label="Main navigation"
+			id="menu"
+		>
+			<ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center collapse w-full md:w-auto collapsed">
+				<li>
+					<a
+						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href="#">Facility</a
+					>
+				</li>
+				<li>
+					<a
+						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href={getPermalink('useful-resources-to-create-websites', 'post')}
+						>Resources
+					</a>
+				</li>
+				<li>
+					<a
+						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href={getBlogPermalink()}>Enrollment</a
+					>
+				</li>
+				<li>
+					<a
+						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href={getBlogPermalink()}>Contact</a
+					>
+				</li>
+				<li class="md:hidden">
+					<a
+						class="font-bold hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						href="https://www.facebook.com/bluffsthinkers/"
+						target="_blank"
+					>
+						<Icon name="tabler:brand-facebook" class="w-5 h-5" />
+						Facebook
+					</a>
+				</li>
+			</ul>
+			<div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
+				<div class="hidden items-center md:flex">
+					<!-- <ToggleTheme iconClass="w-5 h-5" /> -->
+					<!-- <a
+						class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+						aria-label="RSS Feed"
+						href="/rss.xml"
+					>
+						<Icon name="tabler:rss" class="w-5 h-5" />
+					</a> -->
+					<a
+						href="https://www.facebook.com/bluffsthinkers/"
+						target="_blank"
+						class="inline-block dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+						aria-label="Bluff's Little Thinkers Facebook"
+					>
+						<Icon name="tabler:brand-facebook" class="w-5 h-5" />
+					</a>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+<section id="hero" class="relative min-h-screen">
+	<img class="absolute inset-0 w-full h-full object-cover object-top" src="/images/building.jpg" alt="" />
+
+	<div aria-hidden="true" class="absolute inset-0 w-full h-full bg-purple-400 bg-opacity-30 backdrop-blur-sm"></div>
+	<div class="relative container m-auto px-6 md:px-12 lg:px-6">
+		<div class="mb-12 pt-28  space-y-14  md:mb-16 md:pt-40 lg:w-8/12 lg:mx-auto">
+			<div class="flex justify-center">
+				<Icon name="logomark" class="h-40 md:h-56 lg:h-64" />
+			</div>
+			<div class="mb-2">
+				<p class="text-lg md:text-2xl lg:text-3xl text-center font-bold text-white whitespace-nowrap">
+					Learning Today, Leading Tomorrow.
+				</p>
+			</div>
+		</div>
+
+		<div class="pb-20">
+			<div class="m-auto mt-8 md:w-11/12 lg:w-8/12 xl:w-7/12">
+				<div class="flex flex-wrap justify-center gap-6">
+						<div class="flex items-center">
+							<Picture
+								src={twenty18}
+								class=""
+								widths={[50, 85]}
+								sizes=""
+								aspectRatio=""
+								alt="best in siouxland 2018"
+							/>
+						</div>
+						<div class="flex items-center">
+							<Picture
+								src={twenty19}
+								class=""
+								widths={[50, 85]}
+								sizes=""
+								aspectRatio=""
+								alt="best in siouxland 2019"
+							/>
+						</div>
+						<div class="flex items-center">
+							<Picture
+								src={twenty20}
+								class=""
+								widths={[50, 85]}
+								sizes=""
+								aspectRatio=""
+								alt="best in siouxland 2020"
+							/>
+						</div>
+						<div class="flex items-center">
+							<Picture
+								src={twenty21}
+								class=""
+								widths={[50, 85]}
+								sizes=""
+								aspectRatio=""
+								alt="best in siouxland 2021"
+							/>
+						</div>
+						<div class="flex items-center">
+							<Picture
+								src={twenty22}
+								class=""
+								widths={[50, 85]}
+								sizes=""
+								aspectRatio=""
+								alt="best in siouxland 2022"
+							/>
+						</div>
+				</div>
+		</div>
 		</div>
 	</div>
 </section>
-<!-- <span class="inline sm:hidden">.</span>
-	<span class="hidden sm:inline">Text to disappear on small screens</span> -->
+
+<script>
+	const header: HTMLElement = document.getElementById('page-header');
+	const nav: HTMLElement = document.getElementById('menu');
+	const menuToggle: HTMLElement = document.getElementById('menu-toggle');
+	const brand: HTMLElement = document.getElementById('brand');
+	const hero: HTMLElement = document.getElementById('hero');
+	const page = document.documentElement;
+
+	document.addEventListener('scroll', () => {
+		const d = hero.offsetHeight - page.scrollTop;
+
+		if (d < 0) {
+			brand.classList.add('visible');
+			brand.classList.remove('invisible');
+			header.classList.add('backdrop-blur-md', 'bg-white/30', 'border-b', 'border-white');
+			nav.classList.remove('text-white');
+			nav.classList.add('text-[#321A81]');
+			menuToggle.classList.remove('text-white');
+			menuToggle.classList.add('text-[#321A81]');
+		} else {
+			brand.classList.add('invisible');
+			brand.classList.remove('visible');
+			header.classList.remove('backdrop-blur-md', 'bg-white/30', 'border-b', 'border-white');
+			nav.classList.remove('text-[#321A81]');
+			nav.classList.add('text-white');
+			menuToggle.classList.remove('text-[#321A81]');
+			menuToggle.classList.add('text-white');
+		}
+	});
+</script>
