@@ -19,8 +19,9 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 <header id="page-header" class="fixed z-20 flex-none mx-auto w-full">
 	<div class="py-3 px-3 w-full md:flex md:justify-between md:px-4">
 		<div class="flex justify-between">
-			<a id="brand" aria-label="logo" class="invisible items-center gap-3" href={getHomePermalink()}>
+			<a id="brand" aria-label="logo" class="invisible items-center gap-3 flex" href={getHomePermalink()}>
 				<h1 class="sr-only">Bluff's Little Thinkers</h1>
+				<Icon name="icon" class="h-7 sm:hidden" />
 				<Icon name="monogram" class="h-10 sm:hidden" />
 				<Icon name="wordmark" class="hidden h-10 sm:block" />
 				<!-- <Logo /> -->
@@ -95,12 +96,12 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 		</nav>
 	</div>
 </header>
-<section id="hero" class="relative">
+<section id="hero" class="relative min-h-screen">
 	<img class="absolute inset-0 w-full h-full object-cover object-top" src="/images/building.jpg" alt="" />
 
 	<div aria-hidden="true" class="absolute inset-0 w-full h-full bg-purple-400 bg-opacity-30 backdrop-blur-sm"></div>
 	<div class="relative container m-auto px-6 md:px-12 lg:px-6">
-		<div class="mb-12 pt-40 space-y-16 md:mb-20 md:pt-56 lg:w-8/12 lg:mx-auto">
+		<div class="mb-12 pt-28  space-y-14  md:mb-16 md:pt-40 lg:w-8/12 lg:mx-auto">
 			<div class="flex justify-center">
 				<Icon name="logomark" class="h-40 md:h-56 lg:h-64" />
 			</div>
@@ -112,14 +113,13 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 		</div>
 
 		<div class="pb-20">
-			<div class="md:px-12">
-				<div class="mt-8 -mx-6 px-6 overflow-x-auto md:overflow-x-hidden">
-					<div class="w-max flex justify-center flex-wrap items-center gap-4 md:w-auto md:gap-6 lg:gap-8">
+			<div class="m-auto mt-8 md:w-11/12 lg:w-8/12 xl:w-7/12">
+				<div class="flex flex-wrap justify-center gap-6">
 						<div class="flex items-center">
 							<Picture
 								src={twenty18}
 								class=""
-								widths={[50, 100]}
+								widths={[50, 85]}
 								sizes=""
 								aspectRatio=""
 								alt="best in siouxland 2018"
@@ -129,7 +129,7 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 							<Picture
 								src={twenty19}
 								class=""
-								widths={[50, 100]}
+								widths={[50, 85]}
 								sizes=""
 								aspectRatio=""
 								alt="best in siouxland 2019"
@@ -139,7 +139,7 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 							<Picture
 								src={twenty20}
 								class=""
-								widths={[50, 100]}
+								widths={[50, 85]}
 								sizes=""
 								aspectRatio=""
 								alt="best in siouxland 2020"
@@ -149,7 +149,7 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 							<Picture
 								src={twenty21}
 								class=""
-								widths={[50, 100]}
+								widths={[50, 85]}
 								sizes=""
 								aspectRatio=""
 								alt="best in siouxland 2021"
@@ -159,15 +159,14 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 							<Picture
 								src={twenty22}
 								class=""
-								widths={[50, 100]}
+								widths={[50, 85]}
 								sizes=""
 								aspectRatio=""
 								alt="best in siouxland 2022"
 							/>
 						</div>
-					</div>
 				</div>
-			</div>
+		</div>
 		</div>
 	</div>
 </section>
