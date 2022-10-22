@@ -100,7 +100,7 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 
 	document.addEventListener('scroll', () => {
 		const d = hero.offsetHeight - (page.scrollTop + header.offsetHeight);
-		
+
 		if (d < 0) {
 			brand.classList.add('visible');
 			brand.classList.remove('invisible');
