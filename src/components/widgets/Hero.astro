@@ -148,7 +148,6 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 
 	document.addEventListener('scroll', () => {
 		const d = hero.offsetHeight - (page.scrollTop + header.offsetHeight);
-		console.log('FOO: ', d);
 
 		if (d < 0) {
 			brand.classList.add('visible');
