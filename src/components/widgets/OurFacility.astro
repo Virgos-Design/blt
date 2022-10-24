@@ -1,9 +1,9 @@
 ---
 import ContentPattern from '~/components/widgets/ContentPattern.astro';
-/* import Picture from '~/components/core/Picture.astro'; */
-import { Picture } from '@astrojs/image/components';
+import Picture from '~/components/core/Picture.astro';
+/* import { Picture } from '@astrojs/image/components'; */
 import playground from '~/assets/images/facility/playground_1.jpg';
-import Image from '~/assets/images/steps.jpg';
+import sensory from '~/assets/images/facility/sensory_1.jpg';
 import classroom from '~/assets/images/facility/classroom_1.jpg';
 ---
 
@@ -18,174 +18,141 @@ import classroom from '~/assets/images/facility/classroom_1.jpg';
     <span class="text-primary">Lightning-fast</span>
     performance meets <span class="text-primary">powerful</span> -->
 	</Fragment>
-	<!-- <div class="px-6 text-gray-600 md:px-12">
-		<div class="grid lg:grid-cols-2 gap-6">
-			<div class="bg-purple-200 border border-opacity-10 rounded-3xl shadow-xl p-8">
-				<div class="space-y-4 sm:space-y-0 sm:flex sm:space-x-8">
-					<div class="relative sm:w-5/12">
-						<Picture
-							class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-							src={import('~/assets/images/facility/playground_1.jpg')}
-							widths={[400, 768]}
-							sizes="(max-width: 768px) 100vw, 432px"
-							alt="Astronaut"
-							aspectRatio="432:768"
-						/>
-					</div>
-					<div class="space-y-4 py-4 sm:w-7/12">
-						<h3 class="text-2xl font-semibold text-gray-800">Newly Rennovated Classrooms</h3>
-						<p>
-							Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste
-							officia sed officiis! Incidunt ea animi officiis.
-						</p>
-
-						<ul class="ml-5 space-y-2 list-disc list-outside">
-							<li>Search Engine Optimization</li>
-							<li>Responsive Design</li>
-							<li>User friendly</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="relative">
-				<div
-					aria-hidden="true"
-					class="absolute inset-0 rounded-xl bg-pink-300 shadow-xl transition duration-300 group-hover:scale-105 lg:group-hover:scale-110"
-				>
-				</div>
-				<div class="relative text-center space-y-4 p-6 md:p-8">
-					<img
-						src="images/avatars/trowel.png"
-						class="w-16 m-auto"
-						width="512"
-						height="512"
-						alt="package-delivery illustration"
-					/>
-					<h4 class="text-2xl text-gray-800 font-medium transition group-hover:text-yellow-800">Close to the metal</h4>
-					<p class="text-gray-600">
-						Neque Dolor, alias quae, quibusdam accusantium, laudantium recusandae tenetur fugiat non cum doloribus
-						aperiam voluptates nostrum.
-					</p>
-				</div>
-			</div>
-			<div class="bg-purple-200 border border-opacity-10 rounded-3xl shadow-xl p-8">
-				<div class="space-y-4 sm:space-y-0 sm:flex sm:space-x-8">
-					<div class="space-y-4 py-4 sm:w-7/12">
-						<h3 class="text-2xl font-semibold text-gray-800">Sensory Room</h3>
-						<p>
-							Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste
-							officia sed officiis! Incidunt ea animi officiis.
-						</p>
-
-						<ul class="ml-5 space-y-2 list-disc list-outside">
-							<li>Search Engine Optimization</li>
-							<li>Responsive Design</li>
-							<li>User friendly</li>
-						</ul>
-					</div>
-					<div class="relative sm:w-5/12">
-					<Picture
-							class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-							src={import('~/assets/images/facility/sensory_1.jpg')}
-							widths={[400, 768]}
-							sizes="(max-width: 768px) 100vw, 432px"
-							alt="Astronaut"
-							aspectRatio="432:768"
-						/>
-					</div>
-				</div>
-			</div>
-			<div class="bg-lime-200 border border-opacity-10 rounded-3xl shadow-xl p-8">
-				<div class="space-y-4 sm:space-y-0 sm:flex sm:space-x-8">
-					<div class="relative sm:w-5/12">
-						<Picture
-							class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-							src={import('~/assets/images/facility/playground_1.jpg')}
-							widths={[400, 768]}
-							sizes="(max-width: 768px) 100vw, 432px"
-							alt="Astronaut"
-							aspectRatio="432:768"
-						/>
-					</div>
-					<div class="space-y-4 py-4 sm:w-7/12">
-						<h3 class="text-2xl font-semibold text-gray-800">Amazing Outdoor Playground</h3>
-						<p>
-							Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste
-							officia sed officiis! Incidunt ea animi officiis.
-						</p>
-						<ul class="ml-5 space-y-2 list-disc list-outside">
-							<li>Search Engine Optimization</li>
-							<li>Responsive Design</li>
-							<li>User friendly</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
 	<div class="m-auto text-gray-500 md:px-12 xl:px-0">
 		<div class="mx-auto grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-3">
 			<div class="bg-pink-300 rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
 				<div class="mb-12 space-y-4">
-					<h3 class="text-2xl font-semibold text-purple-900">Rennovated Classrooms</h3>
+					<h3 class="text-2xl font-semibold text-purple-900">Newly Rennovated Classrooms</h3>
 					<p class="mb-6">
 						Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste
 						officia sed officiis! Incidunt ea animi officiis.
 					</p>
-					<a href="#" class="block font-medium text-purple-600">Know more</a>
+					<a href="#" class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
 				</div>
 				<Picture
-					src={classroom}
-					widths={[200, 400, 800]}
-					sizes="(max-width: 800px) 100vw, 800px"
-					alt="descriptive text"
-				/>
-			</div>
-			<div class="bg-lime-200 rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
-				<div class="mb-12 space-y-4">
-					<h3 class="text-2xl font-semibold text-purple-900">New Playground</h3>
-					<p class="mb-6">
-						Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste
-						officia sed officiis! Incidunt ea animi officiis.
-					</p>
-					<a href="#" class="block font-medium text-purple-600">Know more</a>
-				</div>
-				<img
-					src="/images/playground_1.jpg"
-					class="rounded-md"
-					alt="illustration"
-					loading="lazy"
-					width="900"
-					height="600"
-				/>
-				<!-- <Picture
-							class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-							src={import('~/assets/images/facility/playground_1.jpg')}
+							class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
+							src={classroom}
 							widths={[400, 768]}
 							sizes="(max-width: 768px) 100vw, 432px"
 							alt="Astronaut"
-							aspectRatio=""
-						/> -->
+							aspectRatio="1:1"
+						/>
 			</div>
-			<div class="bg-purple-300 rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
+			<div class="bg-lime-200 rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
 				<div class="mb-12 space-y-4">
-					<h3 class="text-2xl font-semibold text-purple-900">Sensory Room</h3>
+					<h3 class="text-2xl font-semibold text-purple-900">New Playground Equipment</h3>
 					<p class="mb-6">
 						Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste
 						officia sed officiis! Incidunt ea animi officiis.
 					</p>
-					<a href="#" class="block font-medium text-purple-600">Know more</a>
+					<a href="#" class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
 				</div>
-				<img
-					src="/images/sensory_1.jpg"
-					class="rounded-md"
-					alt="illustration"
-					loading="lazy"
-					width="900"
-					height="600"
-				/>
+				<Picture
+							class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
+							src={playground}
+							widths={[400, 768]}
+							sizes="(max-width: 768px) 100vw, 432px"
+							alt="Astronaut"
+							aspectRatio="1:1"
+						/>
+			</div>
+			<div class="bg-purple-300 rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
+				<div class="mb-12 space-y-4">
+					<h3 class="text-2xl font-semibold text-purple-900">State-of-the-art Sensory Room</h3>
+					<p class="mb-6">
+						Obcaecati, quam? Eligendi, nulla numquam natus laborum porro at cum, consectetur ullam tempora ipsa iste
+						officia sed officiis! Incidunt ea animi officiis.
+					</p>
+					<a href="#" class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
+				</div>
+				<Picture
+							class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
+							src={sensory}
+							widths={[400, 768]}
+							sizes="(max-width: 768px) 100vw, 432px"
+							alt="Astronaut"
+							aspectRatio="1:1"
+						/>
 			</div>
 		</div>
 	</div>
+
+
+		<!-- <div class="container px-5 py-24 mx-auto">
+			<div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+				<div class="w-32 h-32 sm:w-40 sm:h-40 sm:mr-10 inline-flex items-center justify-center rounded-md bg-indigo-100 text-indigo-500 flex-shrink-0">
+					<Picture
+							class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
+							src={classroom}
+							widths={[400, 768]}
+							sizes="(max-width: 768px) 100vw, 432px"
+							alt="Astronaut"
+							aspectRatio="1:1"
+						/>
+				</div>
+				<div class="flex-grow sm:text-left text-center mt-6 sm:mt-0 bg-pink-200 rounded-lg p-8">
+					<h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
+					<p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+					<a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+				<div class="flex-grow sm:text-left text-center mt-6 sm:mt-0 bg-purple-300 rounded-lg p-8">
+					<h2 class="text-gray-900 text-lg title-font font-medium mb-2">The Catalyzer</h2>
+					<p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+					<a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
+				</div>
+				<div class="w-32 h-32 sm:w-40 sm:h-40 sm:order-none order-first sm:ml-10 inline-flex items-center justify-center rounded-md bg-indigo-100 text-indigo-500 flex-shrink-0">
+					<Picture
+							class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
+							src={sensory}
+							widths={[400, 768]}
+							sizes="(max-width: 768px) 100vw, 432px"
+							alt="Astronaut"
+							aspectRatio="1:1"
+						/>
+				</div>
+			</div>
+			<div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
+				<div class="w-32 h-32 sm:w-40 sm:h-40 sm:mr-10 inline-flex items-center justify-center rounded-md bg-indigo-100 text-indigo-500 flex-shrink-0">
+					<Picture
+							class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
+							src={playground}
+							widths={[400, 768]}
+							sizes="(max-width: 768px) 100vw, 432px"
+							alt="Astronaut"
+							aspectRatio="1:1"
+						/>
+				</div>
+				<div class="flex-grow sm:text-left text-center mt-6 sm:mt-0 bg-lime-300 rounded-lg p-8">
+					<h2 class="text-gray-900 text-lg title-font font-medium mb-2">The 400 Blows</h2>
+					<p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+					<a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div> -->
 </ContentPattern>
