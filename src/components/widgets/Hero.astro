@@ -42,7 +42,7 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 				<li>
 					<a
 						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
-						href="#">Facility</a
+						href="/#facility">Facility</a
 					>
 				</li>
 				<li>
@@ -147,7 +147,7 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 	const page = document.documentElement;
 
 	document.addEventListener('scroll', () => {
-		const d = hero.offsetHeight - page.scrollTop;
+		const d = hero.offsetHeight - (page.scrollTop + header.offsetHeight);
 
 		if (d < 0) {
 			brand.classList.add('visible');

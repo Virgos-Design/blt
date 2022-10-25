@@ -1,9 +1,6 @@
 ---
-import ContentSection from '~/components/widgets/ContentSection.astro';
+import ContentColor from '~/components/widgets/ContentColor.astro';
 import { Icon } from 'astro-icon';
-
-var bgPattern = `background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232e8e00' fill-opacity='0.47'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`;
 
 const prices = [
 	{
@@ -54,7 +51,7 @@ const prices = [
 ];
 ---
 
-<ContentSection title="Our Prices" id="pricing" styles="bg-gradient-to-b from-sky-50 to-sky-200">
+<ContentColor title="Our Prices" id="pricing" color="blue">
 	<Fragment slot="lead">
 		We try to keep our prices competitive, but this is childcare in America, here are our ridiculous prices.
 	</Fragment>
@@ -69,7 +66,10 @@ const prices = [
 				<div class="relative sm:flex">
 					{
 						prices.map((card) => (
-							<div id={`${card.name}-card`} class={`p-6 pb-20 space-y-8 sm:w-7/12 sm:pb-6 ${card.default || 'hidden'}`}>
+							<div
+								id={`${card.name}-card`}
+								class={`p-6 pt-8 pb-20 space-y-8 sm:w-7/12 sm:pb-6 ${card.default || 'hidden'}`}
+							>
 								<div class="flex flex-col sm:flex-row items-center justify-between mx-4">
 									<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
 									<div class="relative flex justify-around">
@@ -159,7 +159,7 @@ const prices = [
 			</div>
 		</div>
 	</div>
-</ContentSection>
+</ContentColor>
 
 <script>
 	const infantTab = document.querySelector("[for='infant-button']");

@@ -95,10 +95,11 @@ import { getPermalink, getBlogPermalink, getHomePermalink } from '~/utils/permal
 <script>
 	const brand: HTMLElement = document.getElementById('brand');
 	const hero: HTMLElement = document.getElementById('hero');
+	const header: HTMLElement = document.getElementById('page-header');
 	const page = document.documentElement;
 
 	document.addEventListener('scroll', () => {
-		const d = hero.offsetHeight - page.scrollTop;
+		const d = hero.offsetHeight - (page.scrollTop + header.offsetHeight);
 
 		if (d < 0) {
 			brand.classList.add('visible');

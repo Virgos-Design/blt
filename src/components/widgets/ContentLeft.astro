@@ -14,6 +14,16 @@ const { title, id, styles, pattern, image, imageAlt } = Astro.props;
 const colTitle = colorize(title);
 ---
 
+<div style="" class="-mt-24">
+	<svg xmlns="http://www.w3.org/2000/svg" class="w-full -mb-0.5" viewBox="0 0 1367.743 181.155">
+		<path
+			class="fill-purple-200"
+			id="wave"
+			data-name="wave"
+			d="M0,0S166.91-56.211,405.877-49.5,715.838,14.48,955.869,26.854,1366,0,1366,0V115H0Z"
+			transform="translate(1.743 66.155)"></path>
+	</svg>
+</div>
 <section
 	id={id}
 	class={`min-h-screen flex flex-col gap-4 space-y-8 scroll-mt-16 px-4 pt-4 pb-16 sm:px-6 mx-auto lg:px-8 lg:pb-20 ${styles}`}
@@ -22,7 +32,7 @@ const colTitle = colorize(title);
 	<div class="flex flex-col items-center gap-4">
 		<slot name="eyebrow" />
 		<h2
-			class="text-6xl md:text-7xl font-extrabold tracking-wider text-center font-['AwesomeNewbie']"
+			class="-mt-8 text-6xl md:text-7xl font-extrabold tracking-wider text-center font-['AwesomeNewbie']"
 			set:html={colTitle}
 			style="text-shadow: 1px 1px 3px #6B7280;"
 		>
@@ -41,3 +51,14 @@ const colTitle = colorize(title);
 		</div>
 	</div>
 </section>
+<div style="" class="">
+	<svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 1367.7 181.2">
+		<path
+			id="wave"
+			class="fill-purple-200"
+			id="wave"
+			data-name="wave"
+			d="M1367.7,131.1c0,0-166.9,56.2-405.9,49.5s-310-64-550-76.4S1.7,131.1,1.7,131.1v-115h1366V131.1z"
+			transform="translate(-1 -16.155)"></path>
+	</svg>
+</div>
