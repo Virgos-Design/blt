@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
 import ContentSection from '~/components/widgets/ContentSection.astro';
+import ContentPattern from '~/components/widgets/ContentPattern.astro';
 import Picture from '~/components/core/Picture.astro';
 
 const items = [
@@ -35,7 +36,8 @@ const items = [
 ];
 ---
 
-<ContentSection title="Why Choose BlT" id="whyBLT" styles="bg-[#e1b7fe]">
+<!-- <ContentSection title="Why Choose BlT" id="whyBLT" styles="bg-[#e1b7fe]"> -->
+<ContentPattern title="Why Choose BLT" id="whyBLT" pattern="dots" color="blue">
 	<div class="grid px-4 md:px-8 gap-6 row-gap-10 md:grid-cols-2">
 		<div class="md:pb-6 md:pr-16">
 			{
@@ -81,4 +83,5 @@ const items = [
 			/>
 		</div>
 	</div>
-</ContentSection>
+</ContentPattern>
+<!-- </ContentSection> -->
