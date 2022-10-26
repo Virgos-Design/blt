@@ -7,32 +7,54 @@ import Picture from '~/components/core/Picture.astro';
 ---
 
 <ContentColor title="Our Story" id="story" color="pink">
-<div class="container m-auto md:px-6">
-	<div class="space-y-6 md:space-y-0 md:flex md:flex-row md:gap-6 lg:items-center lg:gap-12">
-		<div class="space-y-6 md:w-8/12 lg:w-6/12">
-			<div class="space-y-4 text-2xl font-bold indent-8 px-4">
-				<p class="">Bluff’s Little Thinkers was founded in 1975, with a mission to provide quality early childhood education to Siouxland.</p>
-				<p class="mt-4">Our mission is to support children’s desire to become lifelong learners, by promoting each child’s individual social, emotional, physical, and cognitive development.</p>
+	<div class="container m-auto md:px-6">
+		<div class="space-y-6 md:space-y-0 md:flex md:flex-row md:gap-6 lg:items-center lg:gap-12">
+			<div class="space-y-6 md:w-8/12 lg:w-6/12">
+				<div class="space-y-4 text-2xl font-bold indent-8">
+					<p class="">
+						Bluff’s Little Thinkers was founded in 1975, with a mission to provide quality early childhood education to
+						Siouxland.
+					</p>
+					<p class="mt-4">
+						Our mission is to support children’s desire to become lifelong learners, by promoting each child’s
+						individual social, emotional, physical, and cognitive development.
+					</p>
+				</div>
 			</div>
-			<a href="#" class="inline-flex w-fit py-3 px-6 text-center rounded-full transition bg-blue-200 hover:bg-blue-100 active:bg-blue-300 focus:bg-blue-100 sm:w-max">
-				<span class="text-blue-900 font-semibold text-sm">
-						Learn More
-				</span>
-				<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-					<path d="M5 12h14M12 5l7 7-7 7"></path>
-				</svg>
-			</a>
-		</div>
-		<div class="md:w-4/12 lg:w-6/12">
-			<Picture
-							class="rounded-lg shadow-lg w-full h-auto bg-gray-400"
-							src={image}
-							widths={[400, 768]}
-							sizes="(max-width: 768px) 100vw, 432px"
-							alt="Astronaut"
-							aspectRatio="1:1"
+			<div class="md:w-4/12 lg:w-6/12">
+				<div class="grid grid-cols-5 grid-rows-4 gap-4 w-2/3 mx-auto md:w-full">
+					<div class="col-span-2 row-span-2">
+						<img
+							src="images/bubbles_boy.jpg"
+							class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+							width="640"
+							height="640"
+							alt="shoe"
+							loading="lazy"
 						/>
+					</div>
+					<div class="col-span-3 row-span-2">
+						<img
+							src="/images/scaled.jpg"
+							class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+							width="640"
+							height="427"
+							alt="1"
+							loading="lazy"
+						/>
+					</div>
+					<div class="col-span-3 row-span-2 row-start-3 col-start-2">
+						<img
+							src="/images/scaled.jpg"
+							class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+							width="640"
+							height="427"
+							alt="2"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
 </ContentColor>
