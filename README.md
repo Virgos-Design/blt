@@ -71,6 +71,7 @@ Now, your website is ready to be deployed. All generated files are located at
 prefer.
 
 <br>
-## License
+
+### License
 
 **Bluff's Little thinkers** © Virgos Design 2022

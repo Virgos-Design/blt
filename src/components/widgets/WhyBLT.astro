@@ -1,34 +1,33 @@
 ---
 import { Icon } from 'astro-icon';
-import ContentSection from '~/components/widgets/ContentSection.astro';
 import ContentPattern from '~/components/widgets/ContentPattern.astro';
 import Picture from '~/components/core/Picture.astro';
 
 const items = [
 	{
 		icon: 'ant-design:trophy-filled',
-		color: '#FF81A3',
+		color: 'FF81A3',
 		title: 'Commitment to Excellence',
 		description:
 			'FOO Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
 	},
 	{
 		icon: 'mdi:shield-home',
-		color: '#087BB8',
+		color: '087BB8',
 		title: 'Security',
 		description:
 			'BAR Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
 	},
 	{
 		icon: 'fluent:building-retail-24-filled',
-		color: '#2E8E00',
+		color: '2E8E00',
 		title: 'Facility',
 		description:
 			'Our recently rennovated state-of-the-art facility ... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
 	},
 	{
 		icon: 'mdi:account-group',
-		color: '#321A81',
+		color: '321A81',
 		title: 'Staff',
 		description:
 			'BAZ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
@@ -36,7 +35,6 @@ const items = [
 ];
 ---
 
-<!-- <ContentSection title="Why Choose BlT" id="whyBLT" styles="bg-[#e1b7fe]"> -->
 <ContentPattern title="Why Choose BLT" id="whyBLT" pattern="dots" color="blue">
 	<div class="grid px-4 md:px-8 gap-6 row-gap-10 md:grid-cols-2">
 		<div class="md:pb-6 md:pr-16">
@@ -45,7 +43,7 @@ const items = [
 					<div class="flex">
 						<div class="flex flex-col items-center mr-4">
 							<div>
-								<div class={`flex items-center justify-center w-12 h-12 rounded-full border-[${item.color}] border-2`}>
+								<div class={`flex items-center justify-center w-12 h-12 rounded-full border-[#${item.color}] border-2`}>
 									<Icon name={item.icon} class="w-6 h-6 text-gray-600 dark:text-slate-200 icon-bold" />
 								</div>
 							</div>
@@ -72,7 +70,7 @@ const items = [
 				</div>
 			</div>
 		</div>
-		<div class="relative">
+		<!-- <div class="relative">
 			<Picture
 				class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
 				src={import('~/assets/images/astronaut.jpg')}
@@ -81,7 +79,28 @@ const items = [
 				alt="Astronaut"
 				aspectRatio="432:768"
 			/>
+		</div> -->
+		<div class="grid grid-cols-5 grid-rows-4 gap-4 h-fit">
+			<div class="col-span-2 row-span-3">
+				<img
+					src="images/redwhiteblue_girl.jpg"
+					class="rounded-xl shadow-md shadow-gray-500"
+					width="640"
+					height="960"
+					alt="shoes"
+					loading="lazy"
+				/>
+			</div>
+			<div class="col-span-3 row-span-3 row-start-2 col-start-3">
+				<img
+					src="images/bubbles_boy.jpg"
+					class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+					width="640"
+					height="640"
+					alt="shoe"
+					loading="lazy"
+				/>
+			</div>
 		</div>
 	</div>
 </ContentPattern>
-<!-- </ContentSection> -->
