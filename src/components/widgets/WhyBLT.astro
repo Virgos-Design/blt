@@ -33,25 +33,32 @@ const items = [
 			'BAZ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
 	},
 ];
+
+const borderColors = {
+	blue: 'border-[#087BB8]',
+	indigo: 'border-[#321A81]',
+	pink: 'border-[#FF81A3]',
+	green: 'border-[#2E8E00]'
+};
 ---
 
 <ContentPattern title="Why Choose BLT" id="whyBLT" pattern="dots" color="blue">
 	<div class="grid px-4 md:px-8 gap-6 row-gap-10 md:grid-cols-2">
-		<div class="md:pb-6 md:pr-16">
+		<div class="md:pt-12 lg:mt-24 md:pb-6 md:pr-8">
 			{
 				items.map((item) => (
 					<div class="flex">
 						<div class="flex flex-col items-center mr-4">
 							<div>
-								<div class={`flex items-center justify-center w-12 h-12 rounded-full border-[#${item.color}] border-2`}>
-									<Icon name={item.icon} class="w-6 h-6 text-gray-600 dark:text-slate-200 icon-bold" />
+								<div class={`flex items-center justify-center w-12 h-12 rounded-full bg-white/40 border-gray-400 border-2`}>
+									<Icon name={item.icon} class={`w-6 h-6 text-[#${item.color}] icon-bold`} />
 								</div>
 							</div>
-							<div class="w-px h-full bg-gray-300 dark:bg-slate-500" />
+							<div class="w-0.5 h-full bg-gray-400" />
 						</div>
 						<div class="pt-1 pb-8">
-							<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">{item.title}</p>
-							<p>{item.description}</p>
+							<p class={`mb-2 text-2xl md:text-3xl lg:text-4xl font-bold text-[#${item.color}]`}>{item.title}</p>
+							<p class="text-lg md:text-xl font-semibold">{item.description}</p>
 						</div>
 					</div>
 				))
@@ -59,29 +66,78 @@ const items = [
 			<div class="flex">
 				<div class="flex flex-col items-center mr-4">
 					<div>
-						<div class="flex items-center justify-center w-10 h-10 rounded-full border-[#FF81A3] border-2">
+						<div class="flex items-center justify-center w-12 h-12 rounded-full border-[#FF81A3] border-2">
 							<Icon name="tabler:check" class="w-6 h-6 text-gray-600 dark:text-slate-200 icon-bold" />
 						</div>
 					</div>
 				</div>
 				<div class="pt-1">
-					<p class="mb-2 text-xl font-bold text-gray-900 dark:text-slate-300">Enroll Today!</p>
+					<p class="mb-2 text-xl font-bold text-gray-900">Enroll Today!</p>
 					<p class="text-gray-700"></p>
 				</div>
 			</div>
 		</div>
-		<!-- <div class="relative">
-			<Picture
-				class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-				src={import('~/assets/images/astronaut.jpg')}
-				widths={[400, 768]}
-				sizes="(max-width: 768px) 100vw, 432px"
-				alt="Astronaut"
-				aspectRatio="432:768"
-			/>
-		</div> -->
+	
+		<div class="photo-array">
 		<div class="grid grid-cols-5 grid-rows-4 gap-4 h-fit">
 			<div class="col-span-2 row-span-3">
+				A
+				<img
+					src="images/redwhiteblue_girl.jpg"
+					class="rounded-xl shadow-md shadow-gray-500"
+					width="640"
+					height="960"
+					alt="shoes"
+					loading="lazy"
+				/>
+			</div>
+			<div class="col-span-3 row-span-3 row-start-2 col-start-3">
+				B
+				<img
+					src="images/bubbles_boy.jpg"
+					class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+					width="640"
+					height="640"
+					alt="shoe"
+					loading="lazy"
+				/>
+			</div>
+		</div>
+		<div class="hidden md:grid grid-cols-5 grid-rows-4 gap-4 h-fit mt-4">
+      <div class="col-span-3 row-span-2">
+				C
+				<img
+					src="/images/scaled.jpg"
+					class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+					width="640"
+					height="427"
+					alt="2"
+					loading="lazy"
+				/>
+			</div>
+			<div class="col-span-2 row-span-2">
+				D
+				<img
+					src="images/bubbles_boy.jpg"
+					class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+					width="640"
+					height="640"
+					alt="shoe"
+					loading="lazy"
+				/>
+			</div>
+			<div class="col-span-3 row-span-2 row-start-3 col-start-2">
+				E
+				<img
+					src="/images/scaled.jpg"
+					class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+					width="640"
+					height="427"
+					alt="2"
+					loading="lazy"
+				/>
+			</div>
+			<!-- <div class="col-span-2 row-span-3">
 				<img
 					src="images/redwhiteblue_girl.jpg"
 					class="rounded-xl shadow-md shadow-gray-500"
@@ -100,7 +156,8 @@ const items = [
 					alt="shoe"
 					loading="lazy"
 				/>
-			</div>
+			</div> -->
+		</div>
 		</div>
 	</div>
 </ContentPattern>

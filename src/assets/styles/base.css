@@ -13,7 +13,7 @@
 
 @layer components {
 	.btn {
-		@apply inline-flex items-center justify-center rounded-full border border-transparent font-medium text-center text-base leading-snug transition py-3 px-6 shadow-lg;
+		@apply inline-flex items-center justify-center rounded-full border-none text-center text-base font-semibold leading-snug transition py-3 px-6 shadow-md shadow-gray-500;
 	}
 }
 
