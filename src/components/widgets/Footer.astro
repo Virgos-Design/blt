@@ -1,9 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
 import { getHomePermalink } from '~/utils/permalinks';
-
-var bgPattern = `background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238095f1' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`;
 ---
 
 <footer>
@@ -22,9 +19,10 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
 			<div class="grid grid-cols-8 gap-6 md:gap-0">
 				<div class="border-r col-span-8 lg:col-span-3">
 					<div class="block gap-6 items-center justify-between py-6 md:py-0 md:flex md:space-y-6 lg:block">
-						<a class="inline-block font-bold text-3xl text-[#321A81]" href={getHomePermalink()}>
+						<!-- <a class="inline-block font-bold text-3xl text-[#321A81]" href={getHomePermalink()}>
 							Bluff's Little Thinkers
-						</a>
+						</a> -->
+						<Icon name="wordmark" class="h-6 inline-block" />
 						<div class="flex gap-6">
 							<a
 								class="text-[#2E8E00] dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
@@ -53,42 +51,42 @@ background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox=
 				<div class="col-span-8 lg:col-span-5">
 					<div class="py-8 grid grid-cols-2 gap-6">
 						<div class="text-center">
-							<h6 class="text-xl font-medium text-[#321A81]">Site</h6>
-							<ul class="list-inside mt-4 space-y-4">
+							<h6 class="text-2xl font-medium text-[#321A81]">Site</h6>
+							<ul class="list-inside mt-4 space-y-4 text-[#321A81]">
 								<li>
-									<a href="#" class="hover:text-cyan-600 transition">About</a>
+									<a href="#" class="hover:text-[#097BB8] transition">Home</a>
 								</li>
 								<li>
-									<a href="#" class="hover:text-cyan-600 transition">Customers</a>
+									<a href="#about" class="hover:text-[#097BB8] transition">About</a>
 								</li>
 								<li>
-									<a href="#" class="hover:text-cyan-600 transition">Enterprise</a>
+									<a href="#prices" class="hover:text-[#097BB8] transition">Prices</a>
 								</li>
 								<li>
-									<a href="#" class="hover:text-cyan-600 transition">Partners</a>
+									<a href="#facility" class="hover:text-[#097BB8] transition">Facility</a>
 								</li>
 								<li>
-									<a href="#" class="hover:text-cyan-600 transition">Jobs</a>
+									<a href="#contact" class="hover:text-[#097BB8] transition">Contact</a>
 								</li>
 							</ul>
 						</div>
 						<div class="text-center">
-							<h6 class="text-xl font-medium text-[#321A81]">Resources</h6>
-							<ul class="list-inside mt-4 space-y-4">
+							<h6 class="text-2xl font-medium text-[#321A81]">Resources</h6>
+							<ul class="list-inside mt-4 space-y-4 text-[#321A81]">
 								<li>
-									<a href="#" class="hover:text-cyan-600 transition">About</a>
+									<a href="#" class="hover:text-[#097BB8] transition">About</a>
 								</li>
 								<li>
-									<a href="#" class="hover:text-cyan-600 transition">Customers</a>
+									<a href="#" class="hover:text-[#097BB8] transition">Customers</a>
 								</li>
 								<li>
-									<a href="#" class="hover:text-cyan-600 transition">Enterprise</a>
+									<a href="#" class="hover:text-[#097BB8] transition">Enterprise</a>
 								</li>
 								<li>
-									<a href="#" class="hover:text-cyan-600 transition">Partners</a>
+									<a href="#" class="hover:text-[#097BB8] transition">Partners</a>
 								</li>
 								<li>
-									<a href="#" class="hover:text-cyan-600 transition">Jobs</a>
+									<a href="#" class="hover:text-[#097BB8] transition">Jobs</a>
 								</li>
 							</ul>
 						</div>
