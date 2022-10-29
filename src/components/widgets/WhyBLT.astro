@@ -38,7 +38,7 @@ const borderColors = {
 	blue: 'border-[#087BB8]',
 	indigo: 'border-[#321A81]',
 	pink: 'border-[#FF81A3]',
-	green: 'border-[#2E8E00]'
+	green: 'border-[#2E8E00]',
 };
 ---
 
@@ -53,7 +53,9 @@ const borderColors = {
 					<div class="flex">
 						<div class="flex flex-col items-center mr-4">
 							<div>
-								<div class={`flex items-center justify-center w-12 h-12 rounded-full bg-white/40 border-gray-400 border-2`}>
+								<div
+									class={`flex items-center justify-center w-12 h-12 rounded-full bg-white/40 border-gray-400 border-2`}
+								>
 									<Icon name={item.icon} class={`w-6 h-6 text-[#${item.color}] icon-bold`} />
 								</div>
 							</div>
@@ -80,67 +82,67 @@ const borderColors = {
 				</div>
 			</div>
 		</div>
-	
+
 		<div class="photo-array">
-		<div class="xl:hidden grid grid-cols-5 grid-rows-4 gap-4 h-fit">
-			<div class="col-span-2 row-span-3">
-				A
-				<img
-					src="images/redwhiteblue_girl.jpg"
-					class="rounded-xl shadow-md shadow-gray-500"
-					width="640"
-					height="960"
-					alt="shoes"
-					loading="lazy"
-				/>
+			<div class="xl:hidden grid grid-cols-5 grid-rows-4 gap-4 h-fit">
+				<div class="col-span-2 row-span-3">
+					A
+					<img
+						src="images/redwhiteblue_girl.jpg"
+						class="rounded-xl shadow-md shadow-gray-500"
+						width="640"
+						height="960"
+						alt="shoes"
+						loading="lazy"
+					/>
+				</div>
+				<div class="col-span-3 row-span-3 row-start-2 col-start-3">
+					B
+					<img
+						src="images/bubbles_boy.jpg"
+						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+						width="640"
+						height="640"
+						alt="shoe"
+						loading="lazy"
+					/>
+				</div>
 			</div>
-			<div class="col-span-3 row-span-3 row-start-2 col-start-3">
-				B
-				<img
-					src="images/bubbles_boy.jpg"
-					class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-					width="640"
-					height="640"
-					alt="shoe"
-					loading="lazy"
-				/>
-			</div>
-		</div>
-		<div class="hidden lg:grid grid-cols-5 grid-rows-4 gap-4 h-fit mt-20 ">
-      <div class="col-span-3 row-span-2">
-				C
-				<img
-					src="/images/scaled.jpg"
-					class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-					width="640"
-					height="427"
-					alt="2"
-					loading="lazy"
-				/>
-			</div>
-			<div class="col-span-2 row-span-2">
-				D
-				<img
-					src="images/bubbles_boy.jpg"
-					class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-					width="640"
-					height="640"
-					alt="shoe"
-					loading="lazy"
-				/>
-			</div>
-			<div class="col-span-3 row-span-2 row-start-3 col-start-2">
-				E
-				<img
-					src="/images/scaled.jpg"
-					class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-					width="640"
-					height="427"
-					alt="2"
-					loading="lazy"
-				/>
-			</div>
-			<!-- <div class="col-span-2 row-span-3">
+			<div class="hidden lg:grid grid-cols-5 grid-rows-4 gap-4 h-fit mt-20">
+				<div class="col-span-3 row-span-2">
+					C
+					<img
+						src="/images/scaled.jpg"
+						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+						width="640"
+						height="427"
+						alt="2"
+						loading="lazy"
+					/>
+				</div>
+				<div class="col-span-2 row-span-2">
+					D
+					<img
+						src="images/bubbles_boy.jpg"
+						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+						width="640"
+						height="640"
+						alt="shoe"
+						loading="lazy"
+					/>
+				</div>
+				<div class="col-span-3 row-span-2 row-start-3 col-start-2">
+					E
+					<img
+						src="/images/scaled.jpg"
+						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
+						width="640"
+						height="427"
+						alt="2"
+						loading="lazy"
+					/>
+				</div>
+				<!-- <div class="col-span-2 row-span-3">
 				<img
 					src="images/redwhiteblue_girl.jpg"
 					class="rounded-xl shadow-md shadow-gray-500"
@@ -160,7 +162,7 @@ const borderColors = {
 					loading="lazy"
 				/>
 			</div> -->
-		</div>
+			</div>
 		</div>
 	</div>
 </ContentPattern>

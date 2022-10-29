@@ -27,7 +27,7 @@ const prices = [
 		ptPrice: '140',
 		ftPrice: '180',
 		ratio: '1:7',
-		max: '12',
+		max: '20',
 		default: false,
 	},
 	{
@@ -65,7 +65,9 @@ const prices = [
 						prices.map((card) => (
 							<div
 								id={`${card.name}-card`}
-								class={`p-6 pt-8 pb-20 space-y-8 sm:w-7/12 sm:pb-6 ${card.default || 'hidden'}`}
+								class={`relative flex flex-col place-content-center p-6 pt-8 pb-20 space-y-8 sm:w-7/12 sm:pb-6 ${
+									card.default || 'hidden'
+								}`}
 							>
 								<div class="flex flex-col sm:flex-row items-center justify-between mx-4">
 									<h5 class="text-xl text-gray-700 font-semibold">Part-Time</h5>
@@ -94,19 +96,11 @@ const prices = [
 									<span class="mx-1 font-bold ">max enrollment - {card.max} </span>
 								</div>
 
-								<div id="disclaimer">
-									{card.name == 'four-year' &&
-										'* Child must be 4 years of age on or before September 15th of enrollment year'}
-								</div>
-
 								<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
-									<button
-										type="submit"
-										title="Submit"
-										class="block w-full py-3 px-6 text-center rounded-lg transition bg-sky-600 hover:bg-sky-700 active:bg-sky-800 focus:bg-cyan-600 max-w-sm mx-auto"
-									>
-										<span class="text-white font-semibold">Learn more</span>
-									</button>
+									<div id="disclaimer">
+										{card.name == 'four-year' &&
+											'* Child must be 4 years of age on or before September 15th of enrollment year'}
+									</div>
 								</div>
 							</div>
 						))
