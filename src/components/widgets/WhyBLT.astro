@@ -1,6 +1,7 @@
 ---
 import { Icon } from 'astro-icon';
 import ContentPattern from '~/components/widgets/ContentPattern.astro';
+import ContentColor from '~/components/widgets/ContentColor.astro';
 import Picture from '~/components/core/Picture.astro';
 
 const items = [
@@ -35,7 +36,7 @@ const items = [
 ];
 ---
 
-<ContentPattern title="Why BLT" id="whyBLT" pattern="dots" color="blue">
+<ContentColor title="Why BLT" id="whyBLT" color="blue">
 	<Fragment slot="lead">
 		We strongly believe there's a thousand reasons to make us part of your family, but here's a few:
 	</Fragment>
@@ -47,7 +48,7 @@ const items = [
 						<div class="flex flex-col items-center mr-4">
 							<div>
 								<div
-									class={`flex items-center justify-center w-12 h-12 rounded-full bg-white/40 border-[#087BB8] border-2`}
+									class={`flex items-center justify-center w-12 h-12 rounded-full border-[#087BB8] border-2`}
 								>
 									<Icon name={item.icon} class={`w-7 h-7 text-[#${item.color}] icon-bold`} />
 								</div>
@@ -65,7 +66,7 @@ const items = [
 				<div class="flex flex-col items-center mr-4">
 					<div>
 						<div class="flex items-center justify-center w-12 h-12 rounded-full border-[#087BB8] border-2">
-							<Icon name="tabler:check" class="w-7 h-7 text-[#321A81] icon-bold" />
+							<Icon name="tabler:check" class="w-7 h-7 text-purple-700 icon-bold" />
 						</div>
 					</div>
 				</div>
@@ -157,4 +158,4 @@ const items = [
 			</div>
 		</div>
 	</div>
-</ContentPattern>
+</ContentColor>
