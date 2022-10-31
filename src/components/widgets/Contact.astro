@@ -4,19 +4,18 @@ import ContentPattern from '~/components/widgets/ContentPattern.astro';
 ---
 
 <ContentPattern title="Contact Us" id="contact" pattern="wiggles" color="purple">
-	<Fragment slot="lead">
-		Questions, suggestions? We love to hear from you.
-		<!--   <span class="text-primary">modern</span> web.
-    <span class="text-primary">Lightning-fast</span>
-    performance meets <span class="text-primary">powerful</span> developer experience. -->
-	</Fragment>
+	<Fragment slot="lead">Questions, suggestions? We love to hear from you.</Fragment>
 	<div class="container flex sm:flex-nowrap flex-wrap">
 		<div class="md:w-1/2 sm:mr-10 flex flex-col">
 			<div class="bg-[#FF81A3] mb-4 flex flex-wrap text-center justify-center py-6 rounded shadow shadow-black">
-				<address class="px-6">
-					<h2 class="title-font font-semibold text-white tracking-widest">ADDRESS</h2>
-					<p class="mt-1 text-[#321A81] font-bold">306 1st St #3, Sergeant Bluff, IA 51054</p>
-				</address>
+				<div class="px-6">
+					<address class="px-6">
+						<h2 class="title-font font-semibold text-white tracking-widest">ADDRESS</h2>
+						<p class="mt-1 text-[#321A81] font-bold">306 1st St #3, Sergeant Bluff, IA 51054</p>
+					</address>
+					<h2 class="title-font font-semibold text-white tracking-widest mt-2">FAX</h2>
+					<p class="mt-1 text-[#321A81] font-bold"><a href="tel:+7129432603">(712) 943-2928</a></p>
+				</div>
 				<div class="px-6 mt-4 lg:mt-0">
 					<h2 class="title-font font-semibold text-white tracking-widest mt-2">EMAIL</h2>
 					<a class="mt-1 text-[#321A81] font-bold tracking-wide" href="mailto:kelseyandersenteach@gmail.com"
@@ -51,8 +50,6 @@ import ContentPattern from '~/components/widgets/ContentPattern.astro';
 			data-netlify="true"
 			class="md:w-1/2 flex flex-col md:ml-auto w-full md:py-4 mt-8 md:mt-0"
 		>
-			<!-- <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
-			<p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p> -->
 			<div class="relative mb-4">
 				<label for="name" class="leading-7 text-md font-semibold text-gray-600">Name</label>
 				<input
