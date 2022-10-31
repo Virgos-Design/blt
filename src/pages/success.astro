@@ -1,20 +1,34 @@
 ---
 import { getHomePermalink } from '~/utils/permalinks';
+import { Icon } from 'astro-icon';
+import ContentPattern from '~/components/widgets/ContentPattern.astro';
+import Layout from '~/layouts/BaseLayout.astro';
 ---
 
-<section class="flex items-center h-screen p-16 bg-gradient-to-b from-sky-50 to-sky-200">
-	<div class="flex flex-col items-center justify-center px-5 mx-auto my-8">
-		<div class="max-w-md text-center">
-			<h2 class="mb-8 font-bold text-9xl">
-				<span class="sr-only">Error</span>
-				<span class="bg-clip-text text-transparent bg-[#087BB8]">404</span>
-			</h2>
-			<p class="text-3xl font-semibold md:text-3xl text-sky-900">Sorry, we couldn't find this page.</p>
+<Layout>
+	<ContentPattern title="Bluff's Little Thinkers" id="success" pattern="wiggles" color="pink">
+		<Fragment slot="lead">Thank you for reaching out, we will be in contact with you shortly.</Fragment>
+		<div class="flex flex-col items-center justify-center px-5 mx-auto my-4">
+			<class class="max-w-md text-center">
+				<p class="text-2xl font-semibold md:text-2xl">For updates and info, please like and follow us on FaceBook!</p>
+
+				<a
+					rel="noopener noreferrer"
+					href="https://www.facebook.com/bluffsthinkers/"
+					target="_blank"
+					class="btn text-white mt-4 bg-[#087BB8] hover:bg-blue-400 ml-4 tracking-wider"
+				>
+					<Icon name="prime:facebook" class="w-6 h-6 text-white icon-bold mr-2" />
+					Follow us!
+				</a>
+			</class>
 			<a
 				rel="noopener noreferrer"
 				href={getHomePermalink()}
-				class="btn text-white mt-8 bg-[#FF81A3] hover:bg-[#eb6085] ml-4">Back to homepage</a
+				class="btn text-white mt-8 bg-[#FF81A3] hover:bg-[#eb6085] ml-4 tracking-wider"
 			>
+				Back to homepage
+			</a>
 		</div>
-	</div>
-</section>
+	</ContentPattern>
+</Layout>
