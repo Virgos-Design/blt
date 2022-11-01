@@ -4,25 +4,27 @@ import ContentPattern from '~/components/widgets/ContentPattern.astro';
 ---
 
 <ContentPattern title="Contact Us" id="contact" pattern="wiggles" color="purple">
-	<Fragment slot="lead">Questions, suggestions? We love to hear from you.</Fragment>
+	<Fragment slot="lead">Questions, suggestions? We'd love to hear from you.</Fragment>
 	<div class="container flex sm:flex-nowrap flex-wrap">
 		<div class="md:w-1/2 sm:mr-10 flex flex-col">
-			<div class="bg-[#FF81A3] mb-4 flex flex-wrap md:flex-row text-center justify-center py-6 rounded shadow shadow-black">
+			<div
+				class="bg-[#FF81A3] mb-4 flex flex-wrap md:flex-row text-center justify-center py-6 rounded shadow shadow-black"
+			>
 				<div class="px-6">
 					<address class="">
 						<h2 class="title-font font-semibold text-white tracking-widest">ADDRESS</h2>
 						<p class="mt-1 text-[#321A81] font-bold tracking-wide">306 1st St #3, Sergeant Bluff, IA 51054</p>
 					</address>
+					<h2 class="title-font font-semibold text-white tracking-widest mt-2">PHONE</h2>
+					<p class="mt-1 text-[#321A81] font-bold"><a href="tel:+7129432603">(712) 943-2603</a></p>
+				</div>
+				<div class="px-6">
 					<h2 class="title-font font-semibold text-white tracking-widest mt-2">FAX</h2>
 					<p class="mt-1 text-[#321A81] font-bold"><a href="fax:+7129432603">(712) 943-2928</a></p>
-				</div>
-				<div class="px-6 mt-4 lg:mt-0">
 					<h2 class="title-font font-semibold text-white tracking-widest mt-2">EMAIL</h2>
 					<a class="mt-1 text-[#321A81] font-bold tracking-wide" href="mailto:kelseyandersenteach@gmail.com"
 						>kelseyandersenteach@gmail.com</a
 					>
-					<h2 class="title-font font-semibold text-white tracking-widest mt-2">PHONE</h2>
-					<p class="mt-1 text-[#321A81] font-bold"><a href="tel:+7129432603">(712) 943-2603</a></p>
 				</div>
 			</div>
 
@@ -89,7 +91,7 @@ import ContentPattern from '~/components/widgets/ContentPattern.astro';
 			</div>
 			<button
 				type="submit"
-				class="shadow shadow-black text-white bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
+				class="shadow shadow-black text-white font-semibold bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
 				>Submit</button
 			>
 		</form>
