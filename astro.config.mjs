@@ -41,8 +41,8 @@ export default defineConfig({
 
 	vite: {
 		ssr: {
-      external: ["@11ty/eleventy-img"],
-    },
+			external: ['@11ty/eleventy-img'],
+		},
 		resolve: {
 			alias: {
 				'~': path.resolve(__dirname, './src'),
