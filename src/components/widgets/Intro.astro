@@ -2,8 +2,10 @@
 import { Icon } from 'astro-icon';
 import ContentSection from '~/components/widgets/ContentSection.astro';
 import Picture from '~/components/core/Picture.astro';
+import { Image } from 'astro-eleventy-img';
 
 import bubbles from '~/assets/images/bubbles_boy.jpg';
+import boy_playground from '~/assets/images/a.jpeg';
 
 var bgPattern = `background-color: #ffffff;
 background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e1b7fe' fill-opacity='0.83' fill-rule='evenodd'/%3E%3C/svg%3E");`;
@@ -116,8 +118,8 @@ background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBo
 	</div> -->
 
 	<div class="container m-auto px-4 space-y-4 md:space-y-8 md:px-8 lg:px-12">
-		<div class="justify-center text-center gap-6 md:flex lg:items-center lg:gap-16">
-			<div class="order-last mb-6 space-y-4 md:space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
+		<div class="justify-center text-center gap-6 lg:flex lg:items-center lg:gap-16">
+			<div class="order-last mb-6 space-y-4 md:space-y-6 md:mb-0 lg:w-6/12">
 				<h1 class="text-4xl font-extrabold md:text-5xl bg-white/40 p-2 rounded-md">
 					Learning Today, Leading Tomorrow.
 				</h1>
@@ -147,36 +149,33 @@ background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBo
 					>
 				</div>
 			</div>
-			<div class="grid grid-cols-10 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
-				<div class="col-span-4 row-span-4 row-start-2">
-					A
+			<div class="grid grid-cols-10 grid-rows-5 gap-4 mx-auto md:mt-8 md:w-8/12 lg:w-6/12">
+				<div class="col-span-4 row-span-3 row-start-2">
 					<img
-						src="images/redwhiteblue_girl.jpg"
-						class="rounded-xl shadow-md shadow-gray-500"
+						src="/assets/images/a.jpeg"
+						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
 						width="640"
 						height="960"
-						alt="shoes"
+						alt="child on playground"
 						loading="lazy"
 					/>
 				</div>
 				<div class="col-span-4 row-span-2 col-start-6">
-					B
 					<img
-						src="images/bubbles_boy.jpg"
+						src="/assets/images/b.jpeg"
 						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-						width="640"
-						height="640"
+						width="280"
+						height="280"
 						alt="shoe"
 						loading="lazy"
 					/>
 				</div>
 				<div class="col-span-6 row-span-3">
-					C
 					<img
-						src="/images/scaled.jpg"
+						src="/assets/images/c.jpeg"
 						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-						width="640"
-						height="427"
+						width="357"
+						height="328"
 						alt="shoes"
 						loading="lazy"
 					/>
