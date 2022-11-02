@@ -1,6 +1,7 @@
 ---
 import ContentPattern from '~/components/widgets/ContentPattern.astro';
 import Picture from '~/components/core/Picture.astro';
+import { Image } from '@astrojs/image/components';
 /* import { Picture } from '@astrojs/image/components'; */
 import playground from '~/assets/images/facility/playground_1.jpg';
 import sensory from '~/assets/images/facility/sensory_1.jpg';
@@ -15,7 +16,7 @@ import classroom from '~/assets/images/facility/classroom_1.jpg';
 		classrooms, over 6,000 square feet of playground for children as little as 6 months and a sensory room for children
 		with special and unique needs.
 	</Fragment>
-	<div class="m-auto md:px-12 xl:px-0">
+	<!-- <div class="m-auto md:px-12 xl:px-0">
 		<div class="mx-auto grid gap-6 md:w-3/4 lg:w-full lg:grid-cols-3">
 			<div class="bg-pink-300 rounded-2xl shadow-xl px-8 py-12 sm:px-12 lg:px-8">
 				<div class="mb-12 space-y-8">
@@ -28,23 +29,6 @@ import classroom from '~/assets/images/facility/classroom_1.jpg';
 						development of each child to help them thrive. In 2021, classrooms were extensively renovated with all new
 						flooring, furnishings, rugs and many other learning environment additions.
 					</p>
-					<!-- <a
-						href="#"
-						class="inline-flex w-fit py-3 px-6 text-center rounded-full transition bg-blue-200 hover:bg-blue-100 active:bg-blue-300 focus:bg-blue-100 sm:w-max"
-					>
-						<span class="text-blue-900 font-semibold text-sm"> Learn More</span>
-						<svg
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							class="w-4 h-4 ml-2"
-							viewBox="0 0 24 24"
-						>
-							<path d="M5 12h14M12 5l7 7-7 7"></path>
-						</svg>
-					</a> -->
 				</div>
 				<Picture
 					class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
@@ -59,32 +43,13 @@ import classroom from '~/assets/images/facility/classroom_1.jpg';
 				<div class="mb-12 space-y-8">
 					<h3 class="text-2xl font-semibold text-purple-900">New Playground Equipment</h3>
 					<p class="mb-6 text-lg">
-						<!-- Our outdoor play area was expanded and upgraded in 2021. We added 6 foot privacy/security fencing, a custom
-						play structure designed by our admins to suit our specific needs. Infant equipment. And 100%
-						first-quality-turf coverage. -->
-						Our outdoor gross motor area was extensively renovated and expanded in 2021. We added high-quality custom-designed
-						equipment and fall surfacing geared towards children ages 6 months- 5 years old. Our playground helps children
-						develop gross motor skills, fine motor skills, balance, spatial awareness and coordination. We strive to provide
-						ample outside time to all children daily, allowing them to not only receive physical exercise but also unstructured
-						playtime that is essential for the development of self-regulation skills.
+						Our outdoor gross motor area was extensively renovated and expanded in 2021. We added high-quality
+						custom-designed equipment and fall surfacing geared towards children ages 6 months- 5 years old. Our
+						playground helps children develop gross motor skills, fine motor skills, balance, spatial awareness and
+						coordination. We strive to provide ample outside time to all children daily, allowing them to not only
+						receive physical exercise but also unstructured playtime that is essential for the development of
+						self-regulation skills.
 					</p>
-					<!-- <a
-						href="#"
-						class="inline-flex w-fit py-3 px-6 text-center rounded-full transition bg-blue-200 hover:bg-blue-100 active:bg-blue-300 focus:bg-blue-100 sm:w-max"
-					>
-						<span class="text-blue-900 font-semibold text-sm"> Learn More</span>
-						<svg
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							class="w-4 h-4 ml-2"
-							viewBox="0 0 24 24"
-						>
-							<path d="M5 12h14M12 5l7 7-7 7"></path>
-						</svg>
-					</a> -->
 				</div>
 				<Picture
 					class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
@@ -108,23 +73,6 @@ import classroom from '~/assets/images/facility/classroom_1.jpg';
 						other disorders have access to the sensory room as needed to calm and regulate their emotions to be
 						successful in our inclusive rich environment.
 					</p>
-					<!-- <a
-						href="#"
-						class="inline-flex w-fit py-3 px-6 text-center rounded-full transition bg-blue-200 hover:bg-blue-100 active:bg-blue-300 focus:bg-blue-100 sm:w-max"
-					>
-						<span class="text-blue-900 font-semibold text-sm"> Learn More</span>
-						<svg
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							class="w-4 h-4 ml-2"
-							viewBox="0 0 24 24"
-						>
-							<path d="M5 12h14M12 5l7 7-7 7"></path>
-						</svg>
-					</a> -->
 				</div>
 				<Picture
 					class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
@@ -136,71 +84,110 @@ import classroom from '~/assets/images/facility/classroom_1.jpg';
 				/>
 			</div>
 		</div>
+	</div> -->
+
+	<div class="py-2">
+		<div class="container max-w-4xl pl-12 pr-6 mx-auto">
+			<div class="bg-pink-300 p-6 rounded-2xl space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center">
+				<span class="md:float-left flex flex-col">
+					<Image
+						src={classroom}
+						width={320}
+						alt="bluffs little thinkers classroom"
+						class="rounded-lg shadow-md shadow-black mx-auto -mt-16 md:float-left md:mr-6 mb-2 md:-ml-12 md:-mt-12"
+					/>
+				</span>
+				<span>
+					<h3 class="text-3xl my-2 font-bold text-purple-900 text-center">Newly Rennovated Classrooms</h3>
+					<p class="text-lg font-semibold text-center md:text-start px-4 md:pt-6">
+						Bluff’s Little Thinkers is an early childhood educational program providing a safe and nurturing environment
+						while promoting the physical, social, emotional, and cognitive development of young children. To achieve
+						this latter, we provide high quality age appropriate items within our classrooms and our environment as a
+						whole. Teachers engage with children and use learning strategies that are tailored to the age and
+						development of each child to help them thrive. In 2021, classrooms were extensively renovated with all new
+						flooring, furnishings, rugs and many other learning environment additions.
+					</p>
+				</span>
+				<span class="hidden md:flex md:float-right flex-col">
+					<Image
+						src={classroom}
+						width={220}
+						alt="bluffs little thinkers classroom"
+						class="rounded-lg shadow-md shadow-black"
+					/>
+				</span>
+			</div>
+		</div>
 	</div>
 
-	<!-- <div class="container px-5 py-24 mx-auto">
-			<div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-				<div class="w-32 h-32 sm:w-40 sm:h-40 sm:mr-10 inline-flex items-center justify-center rounded-md bg-indigo-100 text-indigo-500 flex-shrink-0">
-					<Picture
-							class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
-							src={classroom}
-							widths={[400, 768]}
-							sizes="(max-width: 768px) 100vw, 432px"
-							alt="Astronaut"
-							aspectRatio="1:1"
-						/>
-				</div>
-				<div class="flex-grow sm:text-left text-center mt-6 sm:mt-0 bg-pink-200 rounded-lg p-8">
-					<h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
-					<p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-					<a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-							<path d="M5 12h14M12 5l7 7-7 7"></path>
-						</svg>
-					</a>
-				</div>
+	<div class="py-2">
+		<div class="container max-w-4xl pl-12 pr-6 mx-auto">
+			<div class="bg-lime-200 p-6 rounded-2xl space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center">
+				<span class="md:float-left flex flex-col">
+					<Image
+						src={classroom}
+						width={320}
+						alt="bluffs little thinkers classroom"
+						class="rounded-lg shadow-md shadow-black mx-auto -mt-16 md:float-left md:mr-6 mb-2 md:-ml-12 md:-mt-12"
+					/>
+				</span>
+				<span>
+					<h3 class="text-3xl my-2 font-bold text-purple-900 text-center">New Playground Equipment</h3>
+					<p class="text-lg font-semibold text-center md:text-start px-4 md:pt-6">
+						Our outdoor gross motor area was extensively renovated and expanded in 2021. We added high-quality
+						custom-designed equipment and fall surfacing geared towards children ages 6 months- 5 years old. Our
+						playground helps children develop gross motor skills, fine motor skills, balance, spatial awareness and
+						coordination. We strive to provide ample outside time to all children daily, allowing them to not only
+						receive physical exercise but also unstructured playtime that is essential for the development of
+						self-regulation skills.
+					</p>
+				</span>
+				<span class="hidden md:flex md:float-right flex-col">
+					<Image
+						src={classroom}
+						width={220}
+						alt="bluffs little thinkers classroom"
+						class="rounded-lg shadow-md shadow-black"
+					/>
+				</span>
 			</div>
-			<div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
-				<div class="flex-grow sm:text-left text-center mt-6 sm:mt-0 bg-purple-300 rounded-lg p-8">
-					<h2 class="text-gray-900 text-lg title-font font-medium mb-2">The Catalyzer</h2>
-					<p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-					<a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-							<path d="M5 12h14M12 5l7 7-7 7"></path>
-						</svg>
-					</a>
-				</div>
-				<div class="w-32 h-32 sm:w-40 sm:h-40 sm:order-none order-first sm:ml-10 inline-flex items-center justify-center rounded-md bg-indigo-100 text-indigo-500 flex-shrink-0">
-					<Picture
-							class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
-							src={sensory}
-							widths={[400, 768]}
-							sizes="(max-width: 768px) 100vw, 432px"
-							alt="Astronaut"
-							aspectRatio="1:1"
-						/>
-				</div>
+		</div>
+	</div>
+
+	<div class="py-2">
+		<div class="container max-w-4xl pl-12 pr-6 mx-auto">
+			<div class="bg-purple-300 p-6 rounded-2xl space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center">
+				<span class="md:float-left flex flex-col">
+					<Image
+						src={classroom}
+						width={320}
+						alt="bluffs little thinkers classroom"
+						class="rounded-lg shadow-md shadow-black mx-auto -mt-16 md:float-left md:mr-6 mb-2 md:-ml-12 md:-mt-12"
+					/>
+				</span>
+				<span>
+					<h3 class="text-3xl my-2 font-bold text-purple-900 text-center">State-of-the-art Sensory Room</h3>
+					<p class="text-lg font-semibold text-center md:text-start px-4 md:pt-6">
+						Our sensory room is a high quality, therapeutic space with a variety of equipment. The sensory room gives
+						the children a safe space to take a break from over stimulation, refocus and be prepared for learning and
+						interacting with others successfully. The sensory room is equipped with a range of specialized equipment–
+						projectors, bubble tubes, a marble wall and much more provide a visual and hands on soothing experience, a
+						vibrating platform that provides a relaxing and calming vibration to soothe the body during sensory overload
+						and an overall space to calm and desensitize. Students with autism, sensory processing disorder, ADHD, and
+						other disorders have access to the sensory room as needed to calm and regulate their emotions to be
+						successful in our inclusive rich environment.
+					</p>
+				</span>
+				<span class="hidden md:flex md:float-right flex-col">
+					<Image
+						src={classroom}
+						width={220}
+						alt="bluffs little thinkers classroom"
+						class="rounded-lg shadow-md shadow-black"
+					/>
+				</span>
 			</div>
-			<div class="flex items-center lg:w-3/5 mx-auto sm:flex-row flex-col">
-				<div class="w-32 h-32 sm:w-40 sm:h-40 sm:mr-10 inline-flex items-center justify-center rounded-md bg-indigo-100 text-indigo-500 flex-shrink-0">
-					<Picture
-							class="object-cover object-top rounded-md shadow-lg w-full h-auto bg-gray-400 dark:bg-slate-700"
-							src={playground}
-							widths={[400, 768]}
-							sizes="(max-width: 768px) 100vw, 432px"
-							alt="Astronaut"
-							aspectRatio="1:1"
-						/>
-				</div>
-				<div class="flex-grow sm:text-left text-center mt-6 sm:mt-0 bg-lime-300 rounded-lg p-8">
-					<h2 class="text-gray-900 text-lg title-font font-medium mb-2">The 400 Blows</h2>
-					<p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-					<a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
-						<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-							<path d="M5 12h14M12 5l7 7-7 7"></path>
-						</svg>
-					</a>
-				</div>
-			</div>
-		</div> -->
+		</div>
+	</div>
+
 </ContentPattern>
