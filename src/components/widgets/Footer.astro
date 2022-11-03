@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
-import { getHomePermalink } from '~/utils/permalinks';
+import { getHomePermalink, getPermalink } from '~/utils/permalinks';
 ---
 
 <footer>
@@ -72,10 +72,10 @@ import { getHomePermalink } from '~/utils/permalinks';
 								</li>
 							</ul>
 						</div>
-						<div class="text-center">
+						<div class="text-center mr-10">
 							<h6 class="text-2xl font-medium text-[#321A81]">Resources</h6>
 							<ul class="list-inside mt-4 space-y-4 text-[#321A81]">
-								<li>
+								<li class="border-b">
 									<a href="https://www.naeyc.org/" target="_blank" class="hover:text-[#097BB8] transition"
 										>NAEYC for families</a
 									>
@@ -96,11 +96,7 @@ import { getHomePermalink } from '~/utils/permalinks';
 									>
 								</li>
 								<li>
-									<a
-										href="https://www.facebook.com/bluffsthinkers/"
-										target="_blank"
-										class="hover:text-[#097BB8] transition">Careers with BLT</a
-									>
+									<a href={getPermalink('apply')} class="hover:text-[#097BB8] transition">Careers with BLT</a>
 								</li>
 							</ul>
 						</div>
@@ -110,7 +106,7 @@ import { getHomePermalink } from '~/utils/permalinks';
 							>&copy; Virgos Design
 							<span id="year">2022</span>
 						</span>
-						<span>All right reserved</span>
+						<span>All rights reserved</span>
 					</div>
 				</div>
 			</div>
