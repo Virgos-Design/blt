@@ -3,62 +3,6 @@ import Layout from '~/layouts/BaseLayout.astro';
 
 const fieldGroups = [
 	{
-		name: 'name',
-		prompt: 'What is your full name?',
-		fields: [
-			{
-				name: 'fname',
-				label: 'First',
-				type: 'text',
-				id: 'fname',
-				attr: { required: true, minlenth: '3', maxlength: '25' },
-			},
-			{
-				name: 'mname',
-				label: 'Middle',
-				type: 'text',
-				id: 'mname',
-				attr: { required: false, minlenth: '3', maxlength: '25' },
-			},
-			{
-				name: 'lname',
-				label: 'Last',
-				type: 'text',
-				id: 'lname',
-				attr: { required: true, minlenth: '3', maxlength: '25' },
-			},
-		],
-		//Follow up question "Do you go by any other names?"
-		//Radio Yes/No
-		//If yes, text input for allias
-		active: true,
-		default: true,
-	},
-	{
-		name: 'contact',
-		prompt: 'How may we contact you?',
-		fields: [
-			{ name: 'phone', label: 'Phone', type: 'tel', id: 'phone', attr: {required: true,} },
-			{ name: 'email', label: 'Email', type: 'email', id: 'email', attr: {required: true,} },
-		],
-		//Follow up question "Do you prefer email or phone contact?"
-		//Radio Phone/Email
-	},
-	{
-		name: 'address',
-		prompt: 'What is your home address?',
-		fields: [
-			{ name: 'add1', label: 'Street Address', type: 'text', id: 'add1', attr: { required: true, minlength: '7', maxlength: '40' } },
-			{ name: 'add2', label: 'Address Line 2', type: 'text', id: 'add2', attr: { required: false, minlength: '7', maxlength: '40' } },
-			{ name: 'city', label: 'City', type: 'text', id: 'city', attr: { required: true, minlength: '7', maxlength: '40' } },
-			{ name: 'state', label: 'State', type: 'text', id: 'state', attr: { required: true, minlength: '7', maxlength: '40' } },
-			{ name: 'zip', label: 'Zip Code', type: 'number', id: 'zip', attr: { required: true, minlength: '5', maxlength: '5' } },
-		],
-		//Follow up question if not in Sioux City, Sergeant Bluff, or South Sioux
-		//Do you have reliable transportation?
-		//Radio yes/no
-	},
-	{
 		name: 'age-verification',
 		prompt: 'Are you 18 years of age or older?',
 		fields: [
@@ -70,7 +14,7 @@ const fieldGroups = [
 	{
 		name: 'date-of-birth',
 		prompt: 'Please enter your date of birth.',
-		fields: [{ name: 'dateOfBirth', label: 'Birthdate', type: 'date', id: 'dob', attr: {required: true} }],
+		fields: [{ name: 'dateOfBirth', label: 'Birthdate', type: 'date', id: 'dob', attr: { required: true } }],
 	},
 	{
 		name: 'citizenship',
@@ -118,13 +62,20 @@ const fieldGroups = [
 ];
 
 const classes = {
-	text: 'w-full bg-blue-100 rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
-	tel: 'w-full bg-blue-100 rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
-	number: 'w-full bg-blue-100 rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
-	email:
-		'w-full bg-blue-100 rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
+	text: 'block w-full mt-1 bg-blue-100 rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
+	label: 'block text-md font-semibold',
 	button:
-		'shadow shadow-gray-500 text-white font-semibold bg-[#FF81A3] disabled:bg-pink-300 border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg',
+		'shadow shadow-gray-500 text-white font-semibold bg-[#FF81A3] disabled:bg-pink-300 border-0 py-2 px-3 focus:outline-none hover:bg-[#eb6085] rounded text-lg',
+	radio: 'h-4 w-4 mr-3 border-[#321A81] focus:border-[#321A81] text-[#321A81] focus:ring-2 focus:ring-[#321A81]',
+	cardBody: 'col-span-5 col-start-3 row-span-4 row-start-1 flex flex-col place-content-center mx-auto p-6 pt-8 pb-20 space-y-8 sm:pb-6',
+	cardPrompt: 'mb-2 text-xl md:text-2xl lg:text-3xl font-bold text-center',
+	cardGrid: 'grid grid-cols-6 gap-6',
+	span3: 'col-span-3',
+	span6: 'col-span-6',
+	span662: 'col-span-6 sm:col-span-6 lg:col-span-2',
+	span632: 'col-span-6 sm:col-span-3 lg:col-span-2',
+	span63: 'col-span-6 sm:col-span-3',
+	span64: 'col-span-6 sm:col-span-4',
 };
 ---
 
@@ -134,7 +85,7 @@ const classes = {
 		style={`background-color: #ffffff;
 		background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23BAE6FD' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`}
 	>
-		<div class="container max-w-5xl mx-auto p-4 md:p-8 lg:p-12">
+		<div class="relative container h-full max-w-5xl mx-auto p-4 md:p-8 lg:p-12">
 			<!-- progress -->
 			<progress class="progress progress-info w-full px-8" value="10" max="100"></progress>
 			<!-- Info view -->
@@ -149,47 +100,141 @@ const classes = {
 				action="/apply-success"
 				method="POST"
 				data-netlify="true"
-				class="bg-white my-7 p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
+				class="bg-white grid grid-cols-9 grid-rows-5 h-full my-7 p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
 			>
-				{
-					fieldGroups.map((group) => (
-						<div
-							id={`${group.name}-card`}
-							data-default={group.default}
-							class={`flex flex-col place-content-center mx-auto p-6 pt-8 pb-20 space-y-8 sm:w-7/12 sm:pb-6 ${
-								group.active ? 'active' : 'hidden'
-							} ${group.final && 'final'}`}
-						>
-						<p class={`mb-2 text-xl md:text-2xl lg:text-3xl font-bold text-center`}>{group.prompt}</p>
-							<div>
-								{group.fields.map((field) => {
-									let inputEl = (
-										<input id={field.id} name={field.name} {...field.attr} type={field.type} class={classes[field.type]} />
-									);
-
-									return (
-										<div class="mb-4">
-											<label for={field.name} class="mb-2 text-extrabold text-lg">{field.label}</label>
-											{inputEl}
-										</div>
-									);
-								})}
-							</div>
-						</div>
-					))
-				}
-				<div class="flex justify-between">
-					<button id="back-btn" type="button" class={classes.button}>Back</button>
-					<button id="next-btn" type="button" class={classes.button}>Next</button>
+			<div class="col-span-1 col-start-1 row-span-1 row-start-5 h-full flex items-end justify-items-center">
+				<button id="back-btn" type="button" class={classes.button}>Back</button>
+			</div>
+			<div class="col-span-1 col-start-9 row-span-1 row-start-5 h-full flex items-end">
+				<button id="next-btn" type="button" class={classes.button}>Next</button>
 					<button
 						id="submit-btn"
 						type="submit"
 						class="hidden shadow shadow-black text-white font-semibold bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
 						>Submit</button
 					>
+			</div>
+				<!-- name card -->
+				<div id="name-card" data-default class={`${classes.cardBody} active`}>
+					<p class={classes.cardPrompt}>What is your full name?</p>
+					<div class={classes.cardGrid}>
+						<div class={classes.span63}>
+							<label for="fname" class={classes.label}>First</label>
+							<input type="text" id="fname" name="fname" minlength="3" maxlength="25" class={classes.text} />
+						</div>
+						<div class={classes.span63}>
+							<label for="mname" class={classes.label}>Middle</label>
+							<input type="text" id="mname" name="mname" minlength="3" maxlength="25" class={classes.text} />
+						</div>
+						<div class={classes.span63}>
+							<label for="lname" class={classes.label}>Last</label>
+							<input type="text" id="lname" name="lname" minlength="3" maxlength="25" class={classes.text} />
+						</div>
+						<div class={classes.span63}>
+							<label for="lname" class={classes.label}>Preferred Name</label>
+							<input type="text" id="pname" name="pname" minlength="3" maxlength="25" class={classes.text} />
+						</div>
+					</div>
 				</div>
+				<!-- contact card -->
+				<div id="contact-card" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}>How may we contact you?</p>
+					<div class={classes.cardGrid}>
+						<div class={classes.span63}>
+							<label for="tel" class={classes.label}>Phone</label>
+							<input type="tel" id="phone" name="phone" class={classes.text} />
+						</div>
+						<div class={classes.span63}>
+							<label for="email" class={classes.label}>Email</label>
+							<input type="email" id="email" name="email" class={classes.text} />
+						</div>
+					</div>
+				</div>
+				<!-- address card -->
+				<div id="address-card" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}>What is your home address?</p>
+					<div class={classes.cardGrid}>
+						<div class={classes.span6}>
+							<label for="add1" class={classes.label}>Street Address</label>
+							<input type="text" id="add1" name="add1" class={classes.text} />
+						</div>
+						<div class={classes.span63}>
+							<label for="add2" class={classes.label}>Address Line 2</label>
+							<input type="text" id="add2" name="add2" class={classes.text} />
+						</div>
+						<div class={classes.span63}>
+							<label for="city" class={classes.label}>City</label>
+							<input type="text" id="city" name="city" class={classes.text} />
+						</div>
+						<div class={classes.span63}>
+							<label for="state" class={classes.label}>state</label>
+							<input type="text" id="state" name="state" class={classes.text} />
+						</div>
+						<div class={classes.span63}>
+							<label for="zip" class={classes.label}>Zipcode</label>
+							<input type="text" id="zip" name="zip" class={classes.text} />
+						</div>
+					</div>
+				</div>
+				<!-- prerequisites -->
+				<div id="prereqs" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}>Are you 18 years of age or older?</p>
+					<fieldset>
+						<div class={classes.cardGrid}>
+							<div class={`${classes.span3} flex justify-end items-center`}>
+								<input id="req-age-yes" name="req-age" type="radio" class={classes.radio} />
+								<label for="req-age-yes" class={classes.label}>Yes</label>
+							</div>
+							<div class={`${classes.span3} flex justify-start items-center`}>
+								<input id="req-age-no" name="req-age" type="radio" class={classes.radio} />
+								<label for="req-age-no" class={classes.label}>No</label>
+							</div>
+						</div>
+					</fieldset>
+					<p class={classes.cardPrompt}>Are you a citizen of or authorized to work in the U.S.?</p>
+					<fieldset>
+						<div class={classes.cardGrid}>
+							<div class={`${classes.span3} flex justify-end items-center`}>
+								<input id="push-everything" name="push-notifications" type="radio" class={classes.radio} />
+								<label for="push-everything" class={classes.label}>Yes</label>
+							</div>
+							<div class={`${classes.span3} flex justify-start items-center`}>
+								<input id="push-everything" name="push-notifications" type="radio" class={classes.radio} />
+								<label for="push-everything" class={classes.label}>No</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<!-- age verification -->
+				<div id="age-verify" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}>Are you 18 years of age or older?</p>
+					<div class={classes.cardGrid}></div>
+				</div>
+
+				<div id="" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}></p>
+					<div class={classes.cardGrid}></div>
+				</div>
+			
 			</form>
+				<!-- button group -->
+		<div class="flex justify-around">
+			
+			
 		</div>
+		</div>
+
+		<!-- 	
+			<div class="relative mb-4">
+				<label for="message" class="leading-7 text-md font-semibold text-gray-600">Message</label>
+				<textarea
+					id="message"
+					name="message"
+					class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+				></textarea>
+			</div> -->
+
+		
 	</div>
 </Layout>
 
