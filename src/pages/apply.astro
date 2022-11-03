@@ -6,21 +6,43 @@ const fieldGroups = [
 		name: 'name',
 		prompt: 'What is your name?',
 		fields: [
-			{ name: 'fname', label: 'First', reqired: true, type: 'text', id: 'fname', minlenth: '3', maxlength: '25' },
-			{ name: 'mname', label: 'Middle', required: false, type: 'text', id: 'mname', minlenth: '3', maxlength: '25' },
-			{ name: 'lname', label: 'Last', required: true, type: 'text', id: 'lname', minlenth: '3', maxlength: '25' },
+			{
+				name: 'fname',
+				label: 'First',
+				reqired: true,
+				type: 'text',
+				id: 'fname',
+				attr: { minlenth: '3', maxlength: '25' },
+			},
+			{
+				name: 'mname',
+				label: 'Middle',
+				required: false,
+				type: 'text',
+				id: 'mname',
+				attr: { minlenth: '3', maxlength: '25' },
+			},
+			{
+				name: 'lname',
+				label: 'Last',
+				required: true,
+				type: 'text',
+				id: 'lname',
+				attr: { minlenth: '3', maxlength: '25' },
+			},
 		],
 		//Follow up question "Do you go by any other names?"
 		//Radio Yes/No
 		//If yes, text input for allias
+		active: true,
 		default: true,
 	},
 	{
 		name: 'contact',
 		prompt: 'How may we contact you?',
 		fields: [
-			{ name: 'phone', label: 'Phone', required: true, type: 'tel', id: 'phone' },
-			{ name: 'email', label: 'Email', required: true, type: 'email', id: 'email' },
+			{ name: 'phone', label: 'Phone', required: true, type: 'tel', id: 'phone', attr: {} },
+			{ name: 'email', label: 'Email', required: true, type: 'email', id: 'email', attr: {} },
 		],
 		//Follow up question "Do you prefer email or phone contact?"
 		//Radio Phone/Email
@@ -29,11 +51,11 @@ const fieldGroups = [
 		name: 'address',
 		prompt: 'What is your home address?',
 		fields: [
-			{ name: 'add1', label: 'Street Address', type: 'text', id: 'add1', minlength: '7', maxlength: '40' },
-			{ name: 'add2', label: 'Address Line 2', type: 'text', id: 'add2', minlength: '7', maxlength: '40' },
-			{ name: 'city', label: 'City', type: 'text', id: 'city', minlength: '7', maxlength: '40' },
-			{ name: 'state', label: 'State', type: 'text', id: 'state', minlength: '7', maxlength: '40' },
-			{ name: 'zip', label: 'Zip Code', type: 'number', id: 'zip', minlength: '5', maxlength: '5' },
+			{ name: 'add1', label: 'Street Address', type: 'text', id: 'add1', attr: { minlength: '7', maxlength: '40' } },
+			{ name: 'add2', label: 'Address Line 2', type: 'text', id: 'add2', attr: { minlength: '7', maxlength: '40' } },
+			{ name: 'city', label: 'City', type: 'text', id: 'city', attr: { minlength: '7', maxlength: '40' } },
+			{ name: 'state', label: 'State', type: 'text', id: 'state', attr: { minlength: '7', maxlength: '40' } },
+			{ name: 'zip', label: 'Zip Code', type: 'number', id: 'zip', attr: { minlength: '5', maxlength: '5' } },
 		],
 		//Follow up question if not in Sioux City, Sergeant Bluff, or South Sioux
 		//Do you have reliable transportation?
@@ -43,22 +65,22 @@ const fieldGroups = [
 		name: 'age-verification',
 		prompt: 'Are you 18 years of age or older?',
 		fields: [
-			{ name: 'ageVerify', label: 'Yes', type: 'radio', id: 'over18', value: 'yes' },
-			{ name: 'ageVerify', label: 'No', type: 'radio', id: 'over18', value: 'no' },
+			{ name: 'ageVerify', label: 'Yes', type: 'radio', id: 'over18', attr: { value: 'yes' } },
+			{ name: 'ageVerify', label: 'No', type: 'radio', id: 'over18', attr: { value: 'no' } },
 		],
 		//If No, alert they are not old enough for employment
 	},
 	{
 		name: 'date-of-birth',
 		prompt: 'Please enter your date of birth.',
-		fields: [{ name: 'dateOfBirth', label: 'Birthdate', type: 'date', id: 'dob' }],
+		fields: [{ name: 'dateOfBirth', label: 'Birthdate', type: 'date', id: 'dob', attr: {} }],
 	},
 	{
 		name: 'citizenship',
 		prompt: 'Are you a citizen of the United States?',
 		fields: [
-			{ name: 'citizenship', label: 'Yes', type: 'radio', id: 'citizen', value: 'yes' },
-			{ name: 'citizenship', label: 'No', type: 'radio', id: 'citizen', value: 'no' },
+			{ name: 'citizenship', label: 'Yes', type: 'radio', id: 'citizen', attr: { value: 'yes' } },
+			{ name: 'citizenship', label: 'No', type: 'radio', id: 'citizen', attr: { value: 'no' } },
 		],
 	},
 	{
@@ -74,6 +96,7 @@ const fieldGroups = [
 					{ value: 'facebook', text: 'Facebook' },
 					{ value: 'employee', text: 'Employee' },
 				],
+				attr: {},
 			},
 		],
 		//Follow up if employee: Name of employee who referred you:
@@ -83,13 +106,28 @@ const fieldGroups = [
 		name: 'previous-childcare-exp',
 		prompt: 'Have you worked in childcare previously?',
 		fields: [
-			{ name: 'previousExp', label: 'Yes', type: 'radio', id: 'previousExp', value: 'yes' },
-			{ name: 'previousExp', label: 'No', type: 'radio', id: 'previousExp', value: 'no' },
+			{ name: 'previousExp', label: 'Yes', type: 'radio', id: 'previousExp', attr: { value: 'yes' } },
+			{ name: 'previousExp', label: 'No', type: 'radio', id: 'previousExp', attr: { value: 'no' } },
 		],
 		//Follow up if yes: What is the name and location of previous facility?
 		//text input
 	},
+	{
+		name: 'questions-comments',
+		prompt: 'Do you have any questions or comments about the application proccess?',
+		fields: [{ name: 'questions', label: 'Comments', type: 'text-area', id: 'questions', attr: {} }],
+		final: true,
+	},
 ];
+
+const classes = {
+	text: 'w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
+	tel: 'w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
+	email:
+		'w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
+	button:
+		'shadow shadow-gray-500 text-white font-semibold bg-[#FF81A3] disabled:bg-pink-300 border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg',
+};
 ---
 
 <Layout>
@@ -107,23 +145,33 @@ const fieldGroups = [
 				Form
 			</div>
 			<!-- Questions -->
-			<div
+			<form
+				name="application"
+				action="/apply-success"
+				method="POST"
+				data-netlify="true"
 				class="bg-white my-7 p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
 			>
 				{
 					fieldGroups.map((group) => (
 						<div
 							id={`${group.name}-card`}
+							data-default={group.default}
 							class={`flex flex-col place-content-center p-6 pt-8 pb-20 space-y-8 sm:w-7/12 sm:pb-6 ${
-								group.default || 'hidden'
-							}`}
+								group.active ? 'active' : 'hidden'
+							} ${group.final && 'final'}`}
 						>
 							{group.prompt}
 							<div>
 								{group.fields.map((field) => {
+									let inputEl = (
+										<input id={field.id} name={field.name} {...field.attr} type={field.type} class={classes.text} />
+									);
+
 									return (
 										<div>
 											<label for={field.name}>{field.label}</label>
+											{inputEl}
 										</div>
 									);
 								})}
@@ -131,7 +179,72 @@ const fieldGroups = [
 						</div>
 					))
 				}
-			</div>
+				<div class="flex justify-between">
+					<button id="back-btn" type="button" class={classes.button}>Back</button>
+					<button id="next-btn" type="button" class={classes.button}>Next</button>
+					<button
+						id="submit-btn"
+						type="submit"
+						class="hidden shadow shadow-black text-white font-semibold bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
+						>Submit</button
+					>
+				</div>
+			</form>
 		</div>
 	</div>
 </Layout>
+
+<script>
+	const backBtn = document.getElementById('back-btn');
+	const nextBtn = document.getElementById('next-btn');
+	const submitBtn = document.getElementById('submit-btn');
+
+	(function () {
+		let currentCard = document.getElementsByClassName('active')[0];
+		if (currentCard.hasAttribute('data-default')) {
+			backBtn.setAttribute('disabled', '');
+		}
+	})();
+
+	backBtn.addEventListener('click', () => {
+		console.log('back clicked');
+		let currentCard = document.getElementsByClassName('active')[0];
+		let previousCard = currentCard.previousElementSibling;
+		if (previousCard.hasAttribute('data-default')) {
+			backBtn.setAttribute('disabled', '');
+		}
+		if (currentCard.classList.contains('final')) {
+			if (nextBtn.classList.contains('hidden')) {
+				nextBtn.classList.remove('hidden');
+			}
+			if (!submitBtn.classList.contains('hidden')) {
+				submitBtn.classList.add('hidden');
+			}
+		}
+		if (previousCard != null) {
+			currentCard.classList.add('hidden');
+			currentCard.classList.remove('active');
+			previousCard.classList.add('active');
+			previousCard.classList.remove('hidden');
+		}
+	});
+
+	nextBtn.addEventListener('click', () => {
+		console.log('next clicked');
+		let currentCard = document.getElementsByClassName('active')[0];
+		let nextCard = currentCard.nextElementSibling;
+		if (currentCard.hasAttribute('data-default')) {
+			backBtn.removeAttribute('disabled');
+		}
+		if (nextCard.classList.contains('final')) {
+			nextBtn.classList.add('hidden');
+			submitBtn.classList.remove('hidden');
+		}
+		if (nextCard != null) {
+			currentCard.classList.add('hidden');
+			currentCard.classList.remove('active');
+			nextCard.classList.add('active');
+			nextCard.classList.remove('hidden');
+		}
+	});
+</script>

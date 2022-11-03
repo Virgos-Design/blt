@@ -1,0 +1,38 @@
+---
+import { getHomePermalink } from '~/utils/permalinks';
+import { Icon } from 'astro-icon';
+import ContentPattern from '~/components/widgets/ContentPattern.astro';
+import Layout from '~/layouts/BaseLayout.astro';
+---
+
+<Layout>
+	<ContentPattern title="Bluff's Little Thinkers" id="success" pattern="wiggles" color="pink">
+		<Fragment slot="lead"
+			>Thank you for applying with Bluff's Little Thinkers! <br /> We are reviewing your application.</Fragment
+		>
+		<div class="flex flex-col items-center justify-center px-5 mx-auto my-4">
+			<class class="max-w-md text-center">
+				<p class="text-2xl font-semibold md:text-2xl">
+					While you wait, please like and follow us on FaceBook to learn more about our facility.
+				</p>
+
+				<a
+					rel="noopener noreferrer"
+					href="https://www.facebook.com/bluffsthinkers/"
+					target="_blank"
+					class="btn text-white mt-4 bg-[#087BB8] hover:bg-blue-400 ml-4 tracking-wider"
+				>
+					<Icon name="prime:facebook" class="w-6 h-6 text-white icon-bold mr-2" />
+					Follow us!
+				</a>
+			</class>
+			<a
+				rel="noopener noreferrer"
+				href={getHomePermalink()}
+				class="btn text-white mt-8 bg-[#FF81A3] hover:bg-[#eb6085] ml-4 tracking-wider"
+			>
+				Back to homepage
+			</a>
+		</div>
+	</ContentPattern>
+</Layout>
