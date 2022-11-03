@@ -1,13 +1,15 @@
 ---
 import { Icon } from 'astro-icon';
-import ContentPattern from '~/components/widgets/ContentPattern.astro';
 import ContentColor from '~/components/widgets/ContentColor.astro';
-import Picture from '~/components/core/Picture.astro';
+import { Image } from '@astrojs/image/components';
+
+import classroom1 from '~/assets/images/facility/classroom_1.jpg';
 
 const items = [
 	{
 		icon: 'ant-design:trophy-filled',
 		color: 'FF81A3',
+		photoBorder: 'bg-[#FF81A3]',
 		title: 'Commitment to Excellence',
 		description:
 			'Bluff’s Little Thinkers is committed to providing high quality environments for all the children in their care. They achieve this by investing in the center to make it a welcoming and nurturing space. BLT goes above and beyond to meet the needs of all the children and families they serve. They make it a priority to provide EXCELLENT care and always have open communication with families providing a sense of home.',
@@ -15,6 +17,7 @@ const items = [
 	{
 		icon: 'mdi:shield-home',
 		color: '087BB8',
+		photoBorder: 'bg-[#087BB8]',
 		title: 'Security',
 		description:
 			'Safety and security is a top priority at BLT. Our center has 5 silent alarm buttons strategically placed within our facility that when activated, dispatch police and fire in case of any type of emergency. We also have a secured entrance with tinted windows, outdoor cameras, a fire system complete with pull stations and an AED machine for both pediatric and adult patients. All of our staff are trained and stay up to date in CPR, first aid and universal precautions. All staff are also mandatory reporters.',
@@ -22,6 +25,7 @@ const items = [
 	{
 		icon: 'fluent:building-retail-24-filled',
 		color: '2E8E00',
+		photoBorder: 'bg-[#2E8E00]',
 		title: 'Facility',
 		description:
 			'Bluff’s Little Thinkers has created their facility to be conducive to any child’s unique and/or special needs and abilities. Our facility is newly equipped with renovated classrooms, privacy fencing, roof, HVAC, safety and security advancements, gross motor equipment, resurfaced playgrounds, technology additions and a state of the art sensory room.',
@@ -29,6 +33,7 @@ const items = [
 	{
 		icon: 'mdi:account-group',
 		color: '321A81',
+		photoBorder: 'bg-[#321A81]',
 		title: 'Staff',
 		description:
 			'The staff and administration of BLT stay up to date on the latest strategies and curriculum available. Staff not only take part in regular training as mandated by the state of Iowa, but also additional training recommended by our administrative team. All classrooms utilize lesson plans and developmentally appropriate screenings to know more specifically what each child’s individual needs and level of development is to best facilitate their learning experience.',
@@ -41,7 +46,7 @@ const items = [
 		We strongly believe there's a thousand reasons to make us part of your family, but here's a few:
 	</Fragment>
 	<div class="flex flex-col px-4 md:px-8 gap-6 row-gap-10 lg:flex-row">
-		<div class="md:pt-6 lg:mt-12 xl:mt-0 md:pb-6 md:pr-8 max-w-3xl mx-auto">
+		<div class="md:py-6 lg:mt-12 xl:mt-0 md:pr-8 mx-auto">
 			{
 				items.map((item) => (
 					<div class="flex">
@@ -54,8 +59,16 @@ const items = [
 							<div class="w-0.5 h-full bg-[#087BB8]" />
 						</div>
 						<div class="pt-1 pb-8">
-							<p class={`mb-2 text-2xl md:text-3xl lg:text-4xl font-bold`}>{item.title}</p>
-							<p class="text-lg md:text-xl font-semibold">{item.description}</p>
+							<div class="w-full">
+								<p class={`mb-2 text-3xl md:text-3xl lg:text-4xl font-bold`}>{item.title}</p>
+								<Image
+									src={classroom1}
+									width={220}
+									alt="bluffs little thinkers classroom"
+									class={`sm:float-right rounded-xl sm:ml-4 mb-4 mt-10 lg:mt-0 object-cover p-1 shadow-md shadow-gray-500 ${item.photoBorder}`}
+								/>
+								<p class="text-lg md:text-xl font-semibold">{item.description}</p>
+							</div>
 						</div>
 					</div>
 				))
@@ -69,12 +82,38 @@ const items = [
 					</div>
 				</div>
 				<div class="pt-1">
-					<p class="mb-2 text-2xl md:text-3xl lg:text-4xl font-bold">Enroll Today!</p>
+					<p class="mb-2 text-3xl md:text-3xl lg:text-4xl font-bold">Enroll Today!</p>
 				</div>
 			</div>
 		</div>
 
-		<div class="photo-array">
+		<!-- <div id="why-blt-photo-array" class="md:mt-6 md:py-6 lg:mt-12 xl-mt-0 grid grid-cols-1 grid-rows-4">
+			<Image
+						src={classroom1}
+						width={250}
+						alt="bluffs little thinkers classroom"
+						class="rounded-lg mx-auto md:float-left md:mr-6 mb-2"
+					/>
+					<Image
+						src={classroom1}
+						width={250}
+						alt="bluffs little thinkers classroom"
+						class="rounded-lg mx-auto md:float-left md:mr-6 mb-2"
+					/>
+					<Image
+						src={classroom1}
+						width={250}
+						alt="bluffs little thinkers classroom"
+						class="rounded-lg mx-auto md:float-left md:mr-6 mb-2"
+					/>
+					<Image
+						src={classroom1}
+						width={250}
+						alt="bluffs little thinkers classroom"
+						class="rounded-lg mx-auto md:float-left md:mr-6 mb-2"
+					/>
+		</div> -->
+		<!-- <div class="photo-array">
 			<div class="xl:hidden grid grid-cols-5 grid-rows-4 gap-4 h-fit">
 				<div class="col-span-2 row-span-3">
 					A
@@ -133,27 +172,7 @@ const items = [
 						loading="lazy"
 					/>
 				</div>
-				<!-- <div class="col-span-2 row-span-3">
-				<img
-					src="images/redwhiteblue_girl.jpg"
-					class="rounded-xl shadow-md shadow-gray-500"
-					width="640"
-					height="960"
-					alt="shoes"
-					loading="lazy"
-				/>
 			</div>
-			<div class="col-span-3 row-span-3 row-start-2 col-start-3">
-				<img
-					src="images/bubbles_boy.jpg"
-					class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-					width="640"
-					height="640"
-					alt="shoe"
-					loading="lazy"
-				/>
-			</div> -->
-			</div>
-		</div>
+		</div> -->
 	</div>
 </ContentColor>
