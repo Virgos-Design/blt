@@ -1,12 +1,12 @@
 ---
 import { getHomePermalink } from '~/utils/permalinks';
 import { Icon } from 'astro-icon';
-import ContentPattern from '~/components/widgets/ContentPattern.astro';
+import PagePattern from '~/components/widgets/PagePattern.astro';
 import Layout from '~/layouts/BaseLayout.astro';
 ---
 
 <Layout>
-	<ContentPattern title="Bluff's Little Thinkers" id="success" pattern="wiggles" color="pink">
+	<PagePattern title="Bluff's Little Thinkers" id="success" pattern="wiggles" color="pink">
 		<Fragment slot="lead"
 			>Thank you for applying with Bluff's Little Thinkers! <br /> We are reviewing your application.</Fragment
 		>
@@ -34,5 +34,5 @@ import Layout from '~/layouts/BaseLayout.astro';
 				Back to homepage
 			</a>
 		</div>
-	</ContentPattern>
+	</PagePattern>
 </Layout>
