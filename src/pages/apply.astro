@@ -1,17 +1,15 @@
 ---
 import Layout from '~/layouts/BaseLayout.astro';
-import { colorize } from '~/utils/colorizer';
-const colTitle = colorize('Join our team!');
 import PagePattern from '~/components/widgets/PagePattern.astro';
 
 const classes = {
-	text: 'block w-full mt-1 bg-blue-100 rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
+	text: 'w-full mt-1 bg-blue-100 rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
 	label: 'block text-md font-semibold',
 	button:
 		'shadow shadow-gray-500 text-white font-semibold bg-[#FF81A3] disabled:bg-pink-300 border-0 py-2 px-3 focus:outline-none hover:bg-[#eb6085] rounded text-lg',
 	radio: 'h-4 w-4 mr-3 border-[#321A81] focus:border-[#321A81] text-[#321A81] focus:ring-2 focus:ring-[#321A81]',
 	cardBody:
-		'col-span-6 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 space-y-2',
+		'col-span-6 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto space-y-2',
 	cardPrompt: 'mb-2 text-xl md:text-2xl lg:text-3xl font-bold text-center',
 	cardGrid: 'grid grid-cols-6 gap-1 sm:gap-y-2 sm:gap-x-4 md:gap-4 lg:gap-6',
 	span2: 'col-span-2',
@@ -36,18 +34,8 @@ const classes = {
 				action="/apply-success"
 				method="POST"
 				data-netlify="true"
-				class="bg-white grid grid-cols-8 grid-rows-5 h-full p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-2 justify-center lg:items-center"
+				class="bg-white flex-col h-full p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-2 justify-center lg:items-center"
 			>
-				<div class="col-span-8 col-start-1 row-span-1 w-full flex items-center justify-between">
-					<button id="back-btn" type="button" class={classes.button}>Back</button>
-					<button id="next-btn" type="button" class={classes.button}>Next</button>
-					<button
-						id="submit-btn"
-						type="submit"
-						class="hidden shadow shadow-black text-white font-semibold bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
-						>Submit</button
-					>
-				</div>
 				<!-- name card -->
 				<div id="name-card" data-default class={`${classes.cardBody} active`}>
 					<p class={classes.cardPrompt}>What is your full name?</p>
@@ -300,6 +288,17 @@ const classes = {
 
 				<!-- form container end -->
 			</form>
+
+			<div class=" w-full flex flex-row items-center justify-between">
+				<button id="back-btn" type="button" class={classes.button}>Back</button>
+				<button id="next-btn" type="button" class={classes.button}>Next</button>
+				<button
+					id="submit-btn"
+					type="submit"
+					class="hidden shadow shadow-black text-white font-semibold bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
+					>Submit</button
+				>
+			</div>
 		</div>
 	</PagePattern>
 </Layout>
