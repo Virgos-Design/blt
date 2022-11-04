@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/BaseLayout.astro';
 import { colorize } from '~/utils/colorizer';
-const colTitle = colorize("Join our team!");
+const colTitle = colorize('Join our team!');
 
 const fieldGroups = [
 	{
@@ -70,7 +70,7 @@ const classes = {
 		'shadow shadow-gray-500 text-white font-semibold bg-[#FF81A3] disabled:bg-pink-300 border-0 py-2 px-3 focus:outline-none hover:bg-[#eb6085] rounded text-lg',
 	radio: 'h-4 w-4 mr-3 border-[#321A81] focus:border-[#321A81] text-[#321A81] focus:ring-2 focus:ring-[#321A81]',
 	cardBody:
-		'col-span-7 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 pt-8 pb-20 space-y-8 sm:pb-6',
+		'col-span-6 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 pt-8 pb-20 space-y-8 sm:pb-6',
 	cardPrompt: 'mb-2 text-xl md:text-2xl lg:text-3xl font-bold text-center',
 	cardGrid: 'grid grid-cols-6 gap-6',
 	span3: 'col-span-3',
@@ -90,10 +90,11 @@ const classes = {
 	>
 		<div class="relative container h-full max-w-5xl mx-auto p-4 md:p-8 lg:p-12">
 			<h1
-			class="text-6xl md:text-8xl font-extrabold tracking-wider text-center font-['AwesomeNewbie']"
-			set:html={colTitle}
-			style="text-shadow: 1px 1px 3px #6B7280;"
-			></h1>
+				class="text-6xl md:text-8xl font-extrabold tracking-wider text-center font-['AwesomeNewbie']"
+				set:html={colTitle}
+				style="text-shadow: 1px 1px 3px #6B7280;"
+			>
+			</h1>
 			<!-- Info view -->
 			<div
 				class="bg-white my-7 p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
@@ -107,12 +108,10 @@ const classes = {
 				action="/apply-success"
 				method="POST"
 				data-netlify="true"
-				class="bg-white grid grid-cols-9 grid-rows-5 h-full my-7 p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-6 justify-center md:space-y-0 lg:items-center"
+				class="bg-white grid grid-cols-8 grid-rows-5 h-full my-7 p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-6 justify-center md:space-y-0 lg:items-center"
 			>
-				<div class="col-span-1 col-start-1 row-span-1 row-start-5 h-full flex items-end justify-items-center">
+				<div class="col-span-8 col-start-1 row-span-1 w-full flex items-center justify-between">
 					<button id="back-btn" type="button" class={classes.button}>Back</button>
-				</div>
-				<div class="col-span-1 col-start-9 row-span-1 row-start-5 h-full flex items-end justify-items-center">
 					<button id="next-btn" type="button" class={classes.button}>Next</button>
 					<button
 						id="submit-btn"
@@ -174,7 +173,7 @@ const classes = {
 							<input type="text" id="city" name="city" class={classes.text} />
 						</div>
 						<div class={classes.span63}>
-							<label for="state" class={classes.label}>state</label>
+							<label for="state" class={classes.label}>State</label>
 							<input type="text" id="state" name="state" class={classes.text} />
 						</div>
 						<div class={classes.span63}>
@@ -214,19 +213,114 @@ const classes = {
 				</div>
 				<!-- age verification -->
 				<div id="age-verify" class={`${classes.cardBody} hidden`}>
-					<p class={classes.cardPrompt}>Are you 18 years of age or older?</p>
-					<div class={classes.cardGrid}></div>
+					<p class={classes.cardPrompt}>What is your date of birth?</p>
+					<div class={classes.cardGrid}>
+						<div class={classes.span6}>
+							<label for="dob" class={classes.label}>Date of birth</label>
+							<input type="date" id="dob" class={classes.text} name="dob" min="1950-01-01" max="2005-01-01" />
+						</div>
+					</div>
+				</div>
+				<!-- transportation -->
+				<div id="transportation" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}>Do you have reliable transportation?</p>
+					<fieldset>
+						<div class={classes.cardGrid}>
+							<div class={`${classes.span3} flex justify-end items-center`}>
+								<input id="trans-yes" name="transportation" type="radio" class={classes.radio} />
+								<label for="trans-yes" class={classes.label}>Yes</label>
+							</div>
+							<div class={`${classes.span3} flex justify-start items-center`}>
+								<input id="trans-no" name="transportation" type="radio" class={classes.radio} />
+								<label for="trans-no" class={classes.label}>No</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<!-- convictions -->
+				<div id="transportation" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}>Have you ever been convicted of a felony?</p>
+					<fieldset>
+						<div class={classes.cardGrid}>
+							<div class={`${classes.span3} flex justify-end items-center`}>
+								<input id="convict-yes" name="convictions" type="radio" class={classes.radio} />
+								<label for="convict-yes" class={classes.label}>Yes</label>
+							</div>
+							<div class={`${classes.span3} flex justify-start items-center`}>
+								<input id="convict-no" name="convictions" type="radio" class={classes.radio} />
+								<label for="convict-no" class={classes.label}>No</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<!-- prior experience -->
+				<div id="transportation" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}>Have you worked in childcare before?</p>
+					<fieldset>
+						<div class={classes.cardGrid}>
+							<div class={`${classes.span3} flex justify-end items-center`}>
+								<input id="childcare-yes" name="childcare" type="radio" class={classes.radio} />
+								<label for="childcare-yes" class={classes.label}>Yes</label>
+							</div>
+							<div class={`${classes.span3} flex justify-start items-center`}>
+								<input id="childcare-no" name="childcare" type="radio" class={classes.radio} />
+								<label for="childcare-no" class={classes.label}>No</label>
+							</div>
+						</div>
+					</fieldset>
+					<p class={classes.cardPrompt}>If so, at which facility?</p>
+					<div class={classes.cardGrid}>
+						<div class={classes.span6}>
+							<label for="previous-center" class={classes.label}>Name of center</label>
+							<input type="text" id="previous-center" name="previous-center" class={classes.text} />
+						</div>
+						<div class={classes.span63}>
+							<label for="previous-center-city" class={classes.label}>City</label>
+							<input type="text" id="previous-center-city" name="previous-center-city" class={classes.text} />
+						</div>
+						<div class={classes.span63}>
+							<label for="previous-center-state" class={classes.label}>State</label>
+							<input type="text" id="previous-center-state" name="previous-center-state" class={classes.text} />
+						</div>
+					</div>
+				</div>
+				<!-- referral -->
+				<div id="referral" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}>Where you referred to this position?</p>
+					<div class={classes.cardGrid}>
+						<div class={classes.span6}>
+							<label for="referrer" class={classes.label}>Name of referrer</label>
+							<input type="text" id="referrer" name="referrer" class={classes.text} />
+						</div>
+					</div>
+				</div>
+				<!-- hours -->
+				<div id="" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}>What type of hours are you seeking?</p>
+					<fieldset>
+						<div class={classes.cardGrid}>
+							<div class={`${classes.span3} flex justify-end items-center`}>
+								<input id="full-time" name="full-time" type="radio" class={classes.radio} />
+								<label for="full-time" class={classes.label}>Full-time</label>
+							</div>
+							<div class={`${classes.span3} flex justify-start items-center`}>
+								<input id="part-time" name="part-time" type="radio" class={classes.radio} />
+								<label for="part-time" class={classes.label}>Part-time</label>
+							</div>
+						</div>
+					</fieldset>
 				</div>
 
-				<div id="" class={`${classes.cardBody} hidden`}>
-					<p class={classes.cardPrompt}></p>
-					<div class={classes.cardGrid}></div>
-				</div>
+				<!-- form container end -->
 			</form>
-			<!-- button group -->
-			<div class="flex justify-around"></div>
 		</div>
 
+		<!-- template -->
+		<div id="" class={`${classes.cardBody} hidden`}>
+			<p class={classes.cardPrompt}></p>
+			<div class={classes.cardGrid}></div>
+		</div>
+		<!-- *end template -->
 		<!-- 	
 			<div class="relative mb-4">
 				<label for="message" class="leading-7 text-md font-semibold text-gray-600">Message</label>
@@ -278,6 +372,8 @@ const classes = {
 		console.log('next clicked');
 		let currentCard = document.getElementsByClassName('active')[0];
 		let nextCard = currentCard.nextElementSibling;
+		console.log('current: ', currentCard);
+		console.log('next: ', nextCard);
 		if (currentCard.hasAttribute('data-default')) {
 			backBtn.removeAttribute('disabled');
 		}
