@@ -2,66 +2,7 @@
 import Layout from '~/layouts/BaseLayout.astro';
 import { colorize } from '~/utils/colorizer';
 const colTitle = colorize('Join our team!');
-
-const fieldGroups = [
-	{
-		name: 'age-verification',
-		prompt: 'Are you 18 years of age or older?',
-		fields: [
-			{ name: 'ageVerify', label: 'Yes', type: 'radio', id: 'over18', attr: { value: 'yes' } },
-			{ name: 'ageVerify', label: 'No', type: 'radio', id: 'over18', attr: { value: 'no' } },
-		],
-		//If No, alert they are not old enough for employment
-	},
-	{
-		name: 'date-of-birth',
-		prompt: 'Please enter your date of birth.',
-		fields: [{ name: 'dateOfBirth', label: 'Birthdate', type: 'date', id: 'dob', attr: { required: true } }],
-	},
-	{
-		name: 'citizenship',
-		prompt: 'Are you a citizen of the United States?',
-		fields: [
-			{ name: 'citizenship', label: 'Yes', type: 'radio', id: 'citizen', attr: { value: 'yes' } },
-			{ name: 'citizenship', label: 'No', type: 'radio', id: 'citizen', attr: { value: 'no' } },
-		],
-	},
-	{
-		name: 'referral',
-		propmt: 'How did you hear about this position?',
-		fields: [
-			{
-				name: 'referral',
-				label: 'Source',
-				type: 'select',
-				id: 'referallSource',
-				options: [
-					{ value: 'facebook', text: 'Facebook' },
-					{ value: 'employee', text: 'Employee' },
-				],
-				attr: {},
-			},
-		],
-		//Follow up if employee: Name of employee who referred you:
-		//text input
-	},
-	{
-		name: 'previous-childcare-exp',
-		prompt: 'Have you worked in childcare previously?',
-		fields: [
-			{ name: 'previousExp', label: 'Yes', type: 'radio', id: 'previousExp', attr: { value: 'yes' } },
-			{ name: 'previousExp', label: 'No', type: 'radio', id: 'previousExp', attr: { value: 'no' } },
-		],
-		//Follow up if yes: What is the name and location of previous facility?
-		//text input
-	},
-	{
-		name: 'questions-comments',
-		prompt: 'Do you have any questions or comments about the application proccess?',
-		fields: [{ name: 'questions', label: 'Comments', type: 'text-area', id: 'questions', attr: {} }],
-		final: true,
-	},
-];
+import PagePattern from '~/components/widgets/PagePattern.astro';
 
 const classes = {
 	text: 'block w-full mt-1 bg-blue-100 rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out',
@@ -70,7 +11,7 @@ const classes = {
 		'shadow shadow-gray-500 text-white font-semibold bg-[#FF81A3] disabled:bg-pink-300 border-0 py-2 px-3 focus:outline-none hover:bg-[#eb6085] rounded text-lg',
 	radio: 'h-4 w-4 mr-3 border-[#321A81] focus:border-[#321A81] text-[#321A81] focus:ring-2 focus:ring-[#321A81]',
 	cardBody:
-		'col-span-6 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 space-y-6',
+		'col-span-6 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 space-y-2',
 	cardPrompt: 'mb-2 text-xl md:text-2xl lg:text-3xl font-bold text-center',
 	cardGrid: 'grid grid-cols-6 gap-6',
 	span2: 'col-span-2',
@@ -84,25 +25,15 @@ const classes = {
 ---
 
 <Layout>
-	<div
-		class="min-h-screen"
-		style={`background-color: #ffffff;
-		background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23BAE6FD' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`}
-	>
-		<div class="container h-full max-w-4xl mx-auto p-4 md:p-8 lg:p-12">
-			<h1
-				class="text-6xl md:text-8xl font-extrabold tracking-wider text-center font-['AwesomeNewbie']"
-				set:html={colTitle}
-				style="text-shadow: 1px 1px 3px #6B7280;"
-			>
-			</h1>
+	<PagePattern title="Join our team!" id="application" pattern="wiggles" color="pink">
+		<div class="container max-w-4xl mx-auto px-4 md:px-8 lg:px-12">
 			<!-- Questions -->
 			<form
 				name="application"
 				action="/apply-success"
 				method="POST"
 				data-netlify="true"
-				class="bg-white grid grid-cols-8 grid-rows-5 h-full my-7 p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-6 justify-center md:space-y-0 lg:items-center"
+				class="bg-white grid grid-cols-8 grid-rows-5 h-full p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-2 justify-center lg:items-center"
 			>
 				<div class="col-span-8 col-start-1 row-span-1 w-full flex items-center justify-between">
 					<button id="back-btn" type="button" class={classes.button}>Back</button>
@@ -330,17 +261,25 @@ const classes = {
 					<p class={classes.cardPrompt}>Do you have any college experience?</p>
 					<fieldset>
 						<div class={classes.cardGrid}>
-							<div class={`${classes.span2} flex justify-center items-center`}>
+							<div class={`${classes.span6} flex items-center`}>
 								<input id="college-none" name="college" type="radio" class={classes.radio} />
 								<label for="college-none" class={classes.label}>None</label>
 							</div>
-							<div class={`${classes.span2} flex justify-center items-center`}>
+							<div class={`${classes.span6} flex items-center`}>
 								<input id="college-some" name="college" type="radio" class={classes.radio} />
 								<label for="college-some" class={classes.label}>Some</label>
 							</div>
-							<div class={`${classes.span2} flex justify-center items-center`}>
+							<div class={`${classes.span6} flex items-center`}>
 								<input id="college-degree" name="college" type="radio" class={classes.radio} />
-								<label for="college-dgree" class={classes.label}>Diploma</label>
+								<label for="college-dgree" class={classes.label}>2 year degree</label>
+							</div>
+							<div class={`${classes.span6} flex items-center`}>
+								<input id="highschool-yes" name="highschool" type="radio" class={classes.radio} />
+								<label for="highschool-yes" class={classes.label}>4 year degree</label>
+							</div>
+							<div class={`${classes.span6} flex items-center`}>
+								<input id="highschool-yes" name="highschool" type="radio" class={classes.radio} />
+								<label for="highschool-yes" class={classes.label}>degree in progress</label>
 							</div>
 						</div>
 					</fieldset>
@@ -359,7 +298,7 @@ const classes = {
 				<!-- form container end -->
 			</form>
 		</div>
-	</div>
+	</PagePattern>
 </Layout>
 
 <script>
