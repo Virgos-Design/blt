@@ -67,7 +67,7 @@ const classes = {
 	button:
 		'shadow shadow-gray-500 text-white font-semibold bg-[#FF81A3] disabled:bg-pink-300 border-0 py-2 px-3 focus:outline-none hover:bg-[#eb6085] rounded text-lg',
 	radio: 'h-4 w-4 mr-3 border-[#321A81] focus:border-[#321A81] text-[#321A81] focus:ring-2 focus:ring-[#321A81]',
-	cardBody: 'col-span-5 col-start-3 row-span-4 row-start-1 flex flex-col place-content-center mx-auto p-6 pt-8 pb-20 space-y-8 sm:pb-6',
+	cardBody: 'col-span-7 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 pt-8 pb-20 space-y-8 sm:pb-6',
 	cardPrompt: 'mb-2 text-xl md:text-2xl lg:text-3xl font-bold text-center',
 	cardGrid: 'grid grid-cols-6 gap-6',
 	span3: 'col-span-3',
@@ -100,12 +100,12 @@ const classes = {
 				action="/apply-success"
 				method="POST"
 				data-netlify="true"
-				class="bg-white grid grid-cols-9 grid-rows-5 h-full my-7 p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
+				class="bg-white grid grid-cols-9 grid-rows-5 h-full my-7 p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-6 justify-center md:space-y-0 lg:items-center"
 			>
 			<div class="col-span-1 col-start-1 row-span-1 row-start-5 h-full flex items-end justify-items-center">
 				<button id="back-btn" type="button" class={classes.button}>Back</button>
 			</div>
-			<div class="col-span-1 col-start-9 row-span-1 row-start-5 h-full flex items-end">
+			<div class="col-span-1 col-start-9 row-span-1 row-start-5 h-full flex items-end justify-items-center">
 				<button id="next-btn" type="button" class={classes.button}>Next</button>
 					<button
 						id="submit-btn"
