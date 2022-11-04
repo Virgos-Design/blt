@@ -4,12 +4,17 @@ import ContentColor from '~/components/widgets/ContentColor.astro';
 import { Image } from '@astrojs/image/components';
 
 import classroom1 from '~/assets/images/facility/classroom_1.jpg';
+import commitment_pic from '~/assets/images/commitment.jpg';
+import security_pic from '~/assets/images/security.jpg';
+import staff_pic from '~/assets/images/staff.jpeg';
+import facility_pic from '~/assets/images/facility.jpeg';
 
 const items = [
 	{
 		icon: 'ant-design:trophy-filled',
 		color: 'FF81A3',
 		photoBorder: 'bg-[#FF81A3]',
+		photo: commitment_pic,
 		title: 'Commitment to Excellence',
 		description:
 			'At BLT, we are committed to providing high-quality environments for all children in our care. We achieve this by investing in the center to make it a welcoming and nurturing space. We go above and beyond to meet the needs of all of the children and families that we serve. It is our priority to provide EXCELLENT care and to always have open communication with families providing a sense of home.',
@@ -18,6 +23,7 @@ const items = [
 		icon: 'mdi:shield-home',
 		color: '087BB8',
 		photoBorder: 'bg-[#087BB8]',
+		photo: security_pic,
 		title: 'Security',
 		description:
 			'Safety and security are a top priority at BLT. Our center has five silent alarm buttons strategically placed within our facility. When activated, police and fire are dispatched in case of any emergency. We also have a secured entrance with tinted windows, outdoor cameras, a fire system complete with pull stations, and an AED machine for pediatric and adult patients. All BLT staff stay up to date in mandatory reporter, CPR, first aid, and universal precautions.', 
@@ -26,6 +32,7 @@ const items = [
 		icon: 'fluent:building-retail-24-filled',
 		color: '2E8E00',
 		photoBorder: 'bg-[#2E8E00]',
+		photo: facility_pic,
 		title: 'Facility',
 		description:
 			'BLT has designed a facility conducive to any child’s unique and/or special needs and abilities. Our facility is newly equipped with renovated classrooms, privacy fencing, roofing, HVAC, safety and security advancements, gross motor equipment, resurfaced playgrounds, technology additions, and a state-of-the-art sensory room.',
@@ -34,6 +41,7 @@ const items = [
 		icon: 'mdi:account-group',
 		color: '321A81',
 		photoBorder: 'bg-[#321A81]',
+		photo: staff_pic,
 		title: 'Staff',
 		description:
 			'The staff and administration of BLT stay up to date on the latest strategies and curriculum available. BLT staff takes part in regular training as mandated by the state of Iowa and as recommended by our administrative team. All classrooms utilize lesson plans and developmentally appropriate screenings to identify each child’s individual needs and level of development to best facilitate their learning experience.',
@@ -62,7 +70,7 @@ const items = [
 							<div class="w-full">
 								<p class={`mb-2 text-3xl md:text-3xl lg:text-4xl font-bold`}>{item.title}</p>
 								<Image
-									src={classroom1}
+									src={item.photo}
 									width={220}
 									alt="bluffs little thinkers classroom"
 									class={`sm:float-right rounded-xl sm:ml-4 my-auto  sm:mb-4 sm:mt-10 lg:mt-0 object-cover p-1 shadow-md shadow-gray-500 ${item.photoBorder}`}
