@@ -13,7 +13,7 @@ const classes = {
 	cardBody:
 		'col-span-6 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 space-y-2',
 	cardPrompt: 'mb-2 text-xl md:text-2xl lg:text-3xl font-bold text-center',
-	cardGrid: 'grid grid-cols-6 gap-6',
+	cardGrid: 'grid grid-cols-6 gap-1 sm:gap-y-2 sm:gap-x-4 md:gap-4 lg:gap-6',
 	span2: 'col-span-2',
 	span3: 'col-span-3',
 	span6: 'col-span-6',
@@ -25,7 +25,10 @@ const classes = {
 ---
 
 <Layout>
-	<PagePattern title="Join our team!" id="application" pattern="wiggles" color="pink">
+	<PagePattern title="Join our team" id="application" pattern="wiggles" color="pink">
+		<p class="text-2xl font-semibold md:text-2xl mb-4 text-center">
+			Apply today to join the Bluff's Little Thinkers family!
+		</p>
 		<div class="container max-w-4xl mx-auto px-4 md:px-8 lg:px-12">
 			<!-- Questions -->
 			<form
