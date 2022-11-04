@@ -8,18 +8,11 @@ const { meta = {} } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="h-auto scroll-smooth md:scroll-auto 2xl:text-[20px] bg-white">
+<html lang="en" class="scroll-smooth md:scroll-auto 2xl:text-[20px] bg-white">
 	<head>
 		<MetaTags {...meta} />
 	</head>
-	<body class="h-full antialiased text-blue-900 tracking-tight bg-white">
-		<script
-			async
-			defer
-			crossorigin="anonymous"
-			src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0"
-			nonce="EbHqNImH"
-		></script>
+	<body class="antialiased text-blue-900 tracking-tight">
 		<slot />
 		<BasicScripts />
 		<style is:global>
