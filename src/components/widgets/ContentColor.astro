@@ -29,14 +29,15 @@ let bg = bgGradients[color];
 let bottom = bottomColors[color];
 ---
 
-<div style="" class="-mt-24">
+<div class="-mt-28 w-full">
 	<svg xmlns="http://www.w3.org/2000/svg" class="w-full -mb-0.5" viewBox="0 0 1367.743 181.155">
 		<path
 			id="top-wave"
-			class={top}
+			class={`${top} w-full`}
+			width="100"
 			data-name="top-wave"
 			d="M0,0S166.91-56.211,405.877-49.5,715.838,14.48,955.869,26.854,1366,0,1366,0V115H0Z"
-			transform="translate(1.743 66.155)"></path>
+			transform="translate(-0.5 66.155)"></path>
 	</svg>
 </div>
 <section
@@ -60,10 +61,11 @@ let bottom = bottomColors[color];
 		<svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 1367.7 181.2">
 			<path
 				id="bottom-wave"
-				class={bottom}
+				class={`${bottom} w-full`}
+				width="100"
 				data-name="bottom-wave"
 				d="M1367.7,131.1c0,0-166.9,56.2-405.9,49.5s-310-64-550-76.4S1.7,131.1,1.7,131.1v-115h1366V131.1z"
-				transform="translate(0 -20.155)"></path>
+				transform="translate(-1 -20.155)"></path>
 		</svg>
 	</div>
 </section>

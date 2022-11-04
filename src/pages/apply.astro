@@ -70,9 +70,10 @@ const classes = {
 		'shadow shadow-gray-500 text-white font-semibold bg-[#FF81A3] disabled:bg-pink-300 border-0 py-2 px-3 focus:outline-none hover:bg-[#eb6085] rounded text-lg',
 	radio: 'h-4 w-4 mr-3 border-[#321A81] focus:border-[#321A81] text-[#321A81] focus:ring-2 focus:ring-[#321A81]',
 	cardBody:
-		'col-span-6 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 pt-8 pb-20 space-y-8 sm:pb-6',
+		'col-span-6 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 space-y-6',
 	cardPrompt: 'mb-2 text-xl md:text-2xl lg:text-3xl font-bold text-center',
 	cardGrid: 'grid grid-cols-6 gap-6',
+	span2: 'col-span-2',
 	span3: 'col-span-3',
 	span6: 'col-span-6',
 	span662: 'col-span-6 sm:col-span-6 lg:col-span-2',
@@ -88,20 +89,13 @@ const classes = {
 		style={`background-color: #ffffff;
 		background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23BAE6FD' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`}
 	>
-		<div class="relative container h-full max-w-5xl mx-auto p-4 md:p-8 lg:p-12">
+		<div class="container h-full max-w-4xl mx-auto p-4 md:p-8 lg:p-12">
 			<h1
 				class="text-6xl md:text-8xl font-extrabold tracking-wider text-center font-['AwesomeNewbie']"
 				set:html={colTitle}
 				style="text-shadow: 1px 1px 3px #6B7280;"
 			>
 			</h1>
-			<!-- Info view -->
-			<div
-				class="bg-white my-4 py-2 px-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
-			>
-				<!-- progress -->
-				<progress class="progress progress-info w-full px-8" value="10" max="100"></progress>
-			</div>
 			<!-- Questions -->
 			<form
 				name="application"
@@ -309,13 +303,11 @@ const classes = {
 							</div>
 						</div>
 					</fieldset>
-					<p class={classes.cardPrompt}>When are you availability?</p>
+					<p class={classes.cardPrompt}>When are you availabile?</p>
 					<div class={classes.cardGrid}>
 						<div class={classes.span6}>
 							<label for="availability" class={classes.label}>Availability</label>
-							<textarea id="availability" class={classes.text} name="availability" rows="5" cols="33"
-								>Monday-Friday: 8-5</textarea
-							>
+							<textarea id="availability" class={classes.text} name="availability" rows="5" cols="33"></textarea>
 						</div>
 					</div>
 				</div>
@@ -323,9 +315,43 @@ const classes = {
 				<!-- education -->
 				<div id="" class={`${classes.cardBody} hidden`}>
 					<p class={classes.cardPrompt}>Did you graduate high school?</p>
+					<fieldset>
+						<div class={classes.cardGrid}>
+							<div class={`${classes.span3} flex justify-end items-center`}>
+								<input id="highschool-yes" name="highschool" type="radio" class={classes.radio} />
+								<label for="highschool-yes" class={classes.label}>Yes</label>
+							</div>
+							<div class={`${classes.span3} flex justify-start items-center`}>
+								<input id="highschool-no" name="highschool" type="radio" class={classes.radio} />
+								<label for="highschool-no" class={classes.label}>No</label>
+							</div>
+						</div>
+					</fieldset>
+					<p class={classes.cardPrompt}>Do you have any college experience?</p>
+					<fieldset>
+						<div class={classes.cardGrid}>
+							<div class={`${classes.span2} flex justify-center items-center`}>
+								<input id="college-none" name="college" type="radio" class={classes.radio} />
+								<label for="college-none" class={classes.label}>None</label>
+							</div>
+							<div class={`${classes.span2} flex justify-center items-center`}>
+								<input id="college-some" name="college" type="radio" class={classes.radio} />
+								<label for="college-some" class={classes.label}>Some</label>
+							</div>
+							<div class={`${classes.span2} flex justify-center items-center`}>
+								<input id="college-degree" name="college" type="radio" class={classes.radio} />
+								<label for="college-dgree" class={classes.label}>Diploma</label>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<!-- comments -->
+				<div id="" class={`${classes.cardBody} hidden final`}>
+					<p class={classes.cardPrompt}>Do you have any questions or comments?</p>
 					<div class={classes.cardGrid}>
 						<div class={classes.span6}>
-						
+							<label for="feedback" class={classes.label}>Comments</label>
+							<textarea id="feedback" class={classes.text} name="feedback" rows="5" cols="33"></textarea>
 						</div>
 					</div>
 				</div>
@@ -333,22 +359,6 @@ const classes = {
 				<!-- form container end -->
 			</form>
 		</div>
-
-		<!-- template -->
-		<div id="" class={`${classes.cardBody} hidden`}>
-			<p class={classes.cardPrompt}></p>
-			<div class={classes.cardGrid}></div>
-		</div>
-		<!-- *end template -->
-		<!-- 	
-			<div class="relative mb-4">
-				<label for="message" class="leading-7 text-md font-semibold text-gray-600">Message</label>
-				<textarea
-					id="message"
-					name="message"
-					class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-				></textarea>
-			</div> -->
 	</div>
 </Layout>
 
