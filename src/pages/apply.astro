@@ -97,7 +97,7 @@ const classes = {
 			</h1>
 			<!-- Info view -->
 			<div
-				class="bg-white my-7 p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
+				class="bg-white my-4 py-2 px-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
 			>
 				<!-- progress -->
 				<progress class="progress progress-info w-full px-8" value="10" max="100"></progress>
@@ -309,6 +309,25 @@ const classes = {
 							</div>
 						</div>
 					</fieldset>
+					<p class={classes.cardPrompt}>When are you availability?</p>
+					<div class={classes.cardGrid}>
+						<div class={classes.span6}>
+							<label for="availability" class={classes.label}>Availability</label>
+							<textarea id="availability" class={classes.text} name="availability" rows="5" cols="33"
+								>Monday-Friday: 8-5</textarea
+							>
+						</div>
+					</div>
+				</div>
+
+				<!-- education -->
+				<div id="" class={`${classes.cardBody} hidden`}>
+					<p class={classes.cardPrompt}>Did you graduate high school?</p>
+					<div class={classes.cardGrid}>
+						<div class={classes.span6}>
+						
+						</div>
+					</div>
 				</div>
 
 				<!-- form container end -->
