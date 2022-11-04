@@ -1,5 +1,7 @@
 ---
 import Layout from '~/layouts/BaseLayout.astro';
+import { colorize } from '~/utils/colorizer';
+const colTitle = colorize("Join our team!");
 
 const fieldGroups = [
 	{
@@ -67,7 +69,8 @@ const classes = {
 	button:
 		'shadow shadow-gray-500 text-white font-semibold bg-[#FF81A3] disabled:bg-pink-300 border-0 py-2 px-3 focus:outline-none hover:bg-[#eb6085] rounded text-lg',
 	radio: 'h-4 w-4 mr-3 border-[#321A81] focus:border-[#321A81] text-[#321A81] focus:ring-2 focus:ring-[#321A81]',
-	cardBody: 'col-span-7 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 pt-8 pb-20 space-y-8 sm:pb-6',
+	cardBody:
+		'col-span-7 col-start-2 row-span-4 row-start-1 w-full flex flex-col place-content-center mx-auto p-6 pt-8 pb-20 space-y-8 sm:pb-6',
 	cardPrompt: 'mb-2 text-xl md:text-2xl lg:text-3xl font-bold text-center',
 	cardGrid: 'grid grid-cols-6 gap-6',
 	span3: 'col-span-3',
@@ -86,13 +89,17 @@ const classes = {
 		background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23BAE6FD' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");`}
 	>
 		<div class="relative container h-full max-w-5xl mx-auto p-4 md:p-8 lg:p-12">
-			<!-- progress -->
-			<progress class="progress progress-info w-full px-8" value="10" max="100"></progress>
+			<h1
+			class="text-6xl md:text-8xl font-extrabold tracking-wider text-center font-['AwesomeNewbie']"
+			set:html={colTitle}
+			style="text-shadow: 1px 1px 3px #6B7280;"
+			></h1>
 			<!-- Info view -->
 			<div
 				class="bg-white my-7 p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
 			>
-				Form
+				<!-- progress -->
+				<progress class="progress progress-info w-full px-8" value="10" max="100"></progress>
 			</div>
 			<!-- Questions -->
 			<form
@@ -102,18 +109,18 @@ const classes = {
 				data-netlify="true"
 				class="bg-white grid grid-cols-9 grid-rows-5 h-full my-7 p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-6 justify-center md:space-y-0 lg:items-center"
 			>
-			<div class="col-span-1 col-start-1 row-span-1 row-start-5 h-full flex items-end justify-items-center">
-				<button id="back-btn" type="button" class={classes.button}>Back</button>
-			</div>
-			<div class="col-span-1 col-start-9 row-span-1 row-start-5 h-full flex items-end justify-items-center">
-				<button id="next-btn" type="button" class={classes.button}>Next</button>
+				<div class="col-span-1 col-start-1 row-span-1 row-start-5 h-full flex items-end justify-items-center">
+					<button id="back-btn" type="button" class={classes.button}>Back</button>
+				</div>
+				<div class="col-span-1 col-start-9 row-span-1 row-start-5 h-full flex items-end justify-items-center">
+					<button id="next-btn" type="button" class={classes.button}>Next</button>
 					<button
 						id="submit-btn"
 						type="submit"
 						class="hidden shadow shadow-black text-white font-semibold bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
 						>Submit</button
 					>
-			</div>
+				</div>
 				<!-- name card -->
 				<div id="name-card" data-default class={`${classes.cardBody} active`}>
 					<p class={classes.cardPrompt}>What is your full name?</p>
@@ -215,13 +222,9 @@ const classes = {
 					<p class={classes.cardPrompt}></p>
 					<div class={classes.cardGrid}></div>
 				</div>
-			
 			</form>
-				<!-- button group -->
-		<div class="flex justify-around">
-			
-			
-		</div>
+			<!-- button group -->
+			<div class="flex justify-around"></div>
 		</div>
 
 		<!-- 	
@@ -233,8 +236,6 @@ const classes = {
 					class="w-full bg-white rounded border border-[#321A81] focus:border-[#321A81] focus:ring-2 focus:ring-[#321A81] h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
 				></textarea>
 			</div> -->
-
-		
 	</div>
 </Layout>
 
