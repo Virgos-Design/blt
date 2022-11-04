@@ -131,7 +131,7 @@ const classes = {
 							<input type="text" id="lname" name="lname" minlength="3" maxlength="25" class={classes.text} />
 						</div>
 						<div class={classes.span63}>
-							<label for="lname" class={classes.label}>Preferred Name</label>
+							<label for="pname" class={classes.label}>Preferred Name</label>
 							<input type="text" id="pname" name="pname" minlength="3" maxlength="25" class={classes.text} />
 						</div>
 					</div>
@@ -179,7 +179,7 @@ const classes = {
 				<!-- prerequisites -->
 				<div id="prereqs" class={`${classes.cardBody} hidden`}>
 					<p class={classes.cardPrompt}>Are you 18 years of age or older?</p>
-					<fieldset>
+					<fieldset name="over 18">
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
 								<input id="req-age-yes" name="req-age" type="radio" class={classes.radio} />
