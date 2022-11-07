@@ -34,7 +34,7 @@ const classes = {
 				action="/apply-success"
 				method="POST"
 				data-netlify="true"
-				class="bg-white flex-col h-full p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-2 justify-center lg:items-center"
+				class="bg-white flex-col h-auto p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-2 justify-center lg:items-center"
 			>
 				<!-- name card -->
 				<div id="name-card" data-default class={`${classes.cardBody} active`}>
@@ -286,19 +286,19 @@ const classes = {
 					</div>
 				</div>
 
+				<!-- Control buttons -->
+				<div class="w-full flex flex-row items-center justify-between pt-8">
+					<button id="back-btn" type="button" class={classes.button}>Back</button>
+					<button id="next-btn" type="button" class={classes.button}>Next</button>
+					<button
+						id="submit-btn"
+						type="submit"
+						class="hidden shadow shadow-black text-white font-semibold bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
+						>Submit</button
+					>
+				</div>
 				<!-- form container end -->
 			</form>
-
-			<div class=" w-full flex flex-row items-center justify-between pt-8">
-				<button id="back-btn" type="button" class={classes.button}>Back</button>
-				<button id="next-btn" type="button" class={classes.button}>Next</button>
-				<button
-					id="submit-btn"
-					type="submit"
-					class="hidden shadow shadow-black text-white font-semibold bg-[#FF81A3] border-0 py-2 px-6 focus:outline-none hover:bg-[#eb6085] rounded text-lg"
-					>Submit</button
-				>
-			</div>
 		</div>
 	</PagePattern>
 </Layout>
