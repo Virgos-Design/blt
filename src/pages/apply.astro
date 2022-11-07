@@ -34,8 +34,15 @@ const classes = {
 				action="/apply-success"
 				method="POST"
 				data-netlify="true"
+				data-netlify-recaptcha="true"
 				class="bg-white flex-col h-auto p-6 rounded-2xl shadow-md shadow-gray-500 md:gap-2 justify-center lg:items-center"
 			>
+				<!-- Honeypot -->
+				<p class="hidden">
+					<label>
+						Don’t fill this field if you are a human user: <input name="bot-field" />
+					</label>
+				</p>
 				<!-- name card -->
 				<div id="name-card" data-default class={`${classes.cardBody} active`}>
 					<p class={classes.cardPrompt}>What is your full name?</p>
@@ -288,6 +295,7 @@ const classes = {
 						</div>
 					</div>
 				</div>
+				<div data-netlify-recaptcha="true"></div>
 
 				<!-- Control buttons -->
 				<div class="w-full flex flex-row items-center justify-between pt-8">
