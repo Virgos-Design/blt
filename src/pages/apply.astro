@@ -30,7 +30,7 @@ const classes = {
 		<div class="h-full container max-w-4xl mx-auto px-4 md:px-8 lg:px-12">
 			<!-- Questions -->
 			<form
-				name="application"
+				name="Employment Application"
 				action="/apply-success"
 				method="POST"
 				data-netlify="true"
@@ -102,6 +102,7 @@ const classes = {
 				<div id="prereqs" class={`${classes.cardBody} hidden`}>
 					<p class={classes.cardPrompt}>Are you 18 years of age or older?</p>
 					<fieldset name="over 18">
+						<legend class="hidden">Over 18?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
 								<input id="req-age-yes" name="req-age" type="radio" class={classes.radio} />
