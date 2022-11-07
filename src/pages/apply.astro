@@ -105,8 +105,10 @@ const classes = {
 						<legend class="hidden">Over 18?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
-								<input id="req-age-yes" name="req-age" type="radio" class={classes.radio} />
-								<label for="req-age-yes" class={classes.label}>Yes</label>
+								<label for="req-age-yes" class={classes.label}>
+									<input id="req-age-yes" name="req-age" type="radio" class={classes.radio} />
+									Yes
+								</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
 								<input id="req-age-no" name="req-age" type="radio" class={classes.radio} />
