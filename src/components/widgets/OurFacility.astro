@@ -19,11 +19,11 @@ const classes = {
 		startLeft:
 			'transition duration-[5000ms] ease-in-out object-cover object-center rounded-lg mx-auto md:float-left md:mr-6 mb-2 p-1 bg-white',
 		itemLeft:
-			'transition duration-[5000ms] ease-in-out absolute inset-x-0 md:left-0 object-cover object-center rounded-lg mx-auto md:float-left md:mr-6 mb-2 p-1 bg-white opacity-0',
+			'transition duration-[5000ms] ease-in-out absolute inset-0 object-cover object-center rounded-lg mx-auto md:float-left md:mr-6 mb-2 p-1 bg-white opacity-0',
 		startRight:
 			'transition duration-[5000ms] ease-in-out object-cover object-center rounded-lg mx-auto md:float-right md:ml-6 mb-2 p-1 bg-white',
 		itemRight:
-			'transition duration-[5000ms] ease-in-out absolute inset-x-0 md:right-0 object-cover object-center rounded-lg mx-auto md:float-right md:ml-6 mb-2 p-1 bg-white opacity-0',
+			'transition duration-[5000ms] ease-in-out absolute inset-0 object-cover object-center rounded-lg mx-auto md:float-right md:ml-6 mb-2 p-1 bg-white opacity-0',
 	},
 };
 ---
@@ -40,7 +40,7 @@ const classes = {
 		<div
 			class="bg-[#FF81A3] p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
 		>
-			<div id="classroom-photo" class="relative">
+			<div id="classroom-photo" class="relative md:float-left">
 				<Image src={a3} width={320} height={240} alt="bluffs little thinkers classroom" class={classes.fade.itemLeft} />
 				<Image src={a2} width={320} height={240} alt="bluffs little thinkers classroom" class={classes.fade.itemLeft} />
 				<Image
@@ -69,7 +69,7 @@ const classes = {
 		<div
 			class="bg-[#2E8E00] p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
 		>
-			<div id="playground-photo" class="relative">
+			<div id="playground-photo" class="relative md:float-right">
 				<Image
 					src={b3}
 					width={320}
@@ -109,13 +109,7 @@ const classes = {
 		<div
 			class="bg-[#321A81] p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
 		>
-			<!-- <Image
-				src={sensory1}
-				width={320}
-				alt="bluffs little thinkers classroom"
-				class="rounded-lg mx-auto md:float-left md:mr-6 mb-4 p-1 bg-white"
-			/> -->
-			<div id="sensory-photo" class="relative">
+			<div id="sensory-photo" class="relative md:float-left">
 				<Image src={c3} width={320} height={240} alt="bluffs little thinkers sensory room" class={classes.fade.itemLeft} />
 				<Image src={c2} width={320} height={240} alt="bluffs little thinkers sensory room" class={classes.fade.itemLeft} />
 				<Image
