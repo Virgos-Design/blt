@@ -19,11 +19,11 @@ const classes = {
 		startLeft:
 			'transition duration-[5000ms] ease-in-out object-cover object-center rounded-lg mx-auto md:float-left md:mr-6 mb-2 p-1 bg-white',
 		itemLeft:
-			'transition duration-[5000ms] ease-in-out absolute left-0 object-cover object-center rounded-lg mx-auto md:float-left md:mr-6 mb-2 p-1 bg-white opacity-0',
+			'transition duration-[5000ms] ease-in-out absolute inset-x-0 md:left-0 object-cover object-center rounded-lg mx-auto md:float-left md:mr-6 mb-2 p-1 bg-white opacity-0',
 		startRight:
 			'transition duration-[5000ms] ease-in-out object-cover object-center rounded-lg mx-auto md:float-right md:ml-6 mb-2 p-1 bg-white',
 		itemRight:
-			'transition duration-[5000ms] ease-in-out absolute right-0 object-cover object-center rounded-lg mx-auto md:float-right md:ml-6 mb-2 p-1 bg-white opacity-0',
+			'transition duration-[5000ms] ease-in-out absolute inset-x-0 md:right-0 object-cover object-center rounded-lg mx-auto md:float-right md:ml-6 mb-2 p-1 bg-white opacity-0',
 	},
 };
 ---
@@ -210,8 +210,8 @@ const classes = {
 		const playground = document.getElementById('playground-photo');
 		const sensory = document.getElementById('sensory-photo');
 
-		photoFade(classroom);
-		photoFade(playground);
-	
+		setTimeout(() => photoFade(classroom), 2000);
+		setTimeout(() => photoFade(playground), 3500);
+		setTimeout(() => photoFade(sensory), 5000);
 	})();
 </script>
