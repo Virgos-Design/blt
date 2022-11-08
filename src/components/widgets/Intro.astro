@@ -12,6 +12,18 @@ const classes = {
 		item: 'transition duration-[5000ms] ease-in-out absolute inset-0 w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500 opacity-0',
 	},
 };
+
+import a1 from '~/assets/images/intro/square_1.jpeg';
+import a2 from '~/assets/images/intro/square_2.jpeg';
+import a3 from '~/assets/images/intro/square_3.jpeg';
+
+import b1 from '~/assets/images/intro/landscape_1.jpeg';
+import b2 from '~/assets/images/intro/landscape_2.jpeg';
+import b3 from '~/assets/images/intro/landscape_3.jpeg';
+
+import c1 from '~/assets/images/intro/portrait_1.jpeg';
+import c2 from '~/assets/images/intro/portrait_2.jpeg';
+import c3 from '~/assets/images/intro/portrait_3.jpeg';
 ---
 
 <ContentSection title="Welcome to Bluff's Little Thinkers" id="intro" pattern={bgPattern}>
@@ -55,21 +67,21 @@ const classes = {
 				<!-- portrait photo -->
 				<div id="portrait-photo" class="relative col-span-4 row-span-3 col-start-1 row-start-2">
 					<Image
-						src="/assets/images/a.jpeg"
+						src={c3}
 						width={310}
 						height={480}
 						alt="bluffs little thinkers classroom"
 						class={classes.fade.item}
 					/>
 					<Image
-						src="/assets/images/b2.jpeg"
+						src={c2}
 						width={310}
 						height={480}
 						alt="bluffs little thinkers classroom"
 						class={classes.fade.item}
 					/>
 					<Image
-						src="/assets/images/a.jpeg"
+						src={c1}
 						width={310}
 						height={480}
 						alt="bluffs little thinkers classroom"
@@ -79,21 +91,21 @@ const classes = {
 				<!-- square photo -->
 				<div id="square-photo" class="relative col-span-4 row-span-2 col-start-6">
 					<Image
-						src="/assets/images/b2.jpeg"
+						src={a3}
 						width={280}
 						height={280}
 						alt="bluffs little thinkers classroom"
 						class={classes.fade.item}
 					/>
 					<Image
-						src="/assets/images/a.jpeg"
+						src={a2}
 						width={280}
 						height={280}
 						alt="bluffs little thinkers classroom"
 						class={classes.fade.item}
 					/>
 					<Image
-						src="/assets/images/c.jpeg"
+						src={a1}
 						width={280}
 						height={280}
 						alt="bluffs little thinkers classroom"
@@ -103,27 +115,9 @@ const classes = {
 				</div>
 				<!-- landscape photo -->
 				<div id="landscape-photo" class="relative col-span-6 row-span-3">
-					<Image
-						src="/assets/images/a.jpeg"
-						width={357}
-						height={328}
-						alt="bluffs little thinkers classroom"
-						class={classes.fade.item}
-					/>
-					<Image
-						src="/assets/images/a.jpeg"
-						width={357}
-						height={328}
-						alt="bluffs little thinkers classroom"
-						class={classes.fade.item}
-					/>
-					<Image
-						src="/assets/images/a.jpeg"
-						width={357}
-						height={328}
-						alt="bluffs little thinkers classroom"
-						class={classes.fade.start}
-					/>
+					<Image src={b3} width={357} height={328} alt="bluffs little thinkers classroom" class={classes.fade.item} />
+					<Image src={b2} width={357} height={328} alt="bluffs little thinkers classroom" class={classes.fade.item} />
+					<Image src={b1} width={357} height={328} alt="bluffs little thinkers classroom" class={classes.fade.start} />
 				</div>
 			</div>
 		</div>
@@ -133,7 +127,7 @@ const classes = {
 <script>
 	function randomTimeout() {
 		/* return Math.floor(Math.random() * (max - min + 1) + min) */
-		const items = [1000, 1800, 2500, 3000, 3700]
+		const items = [1000, 1800, 2500, 3000, 3700];
 		return items[Math.floor(Math.random() * items.length)] + 4000;
 	}
 
@@ -145,12 +139,6 @@ const classes = {
 
 		function fade() {
 			setTimeout(function () {
-				if (curIndex == stop) {
-					curIndex = 0;
-				} else {
-					curIndex++;
-				}
-
 				children[curIndex].classList.add('opacity-0');
 
 				if (curIndex == stop) {
@@ -158,8 +146,14 @@ const classes = {
 				} else {
 					children[curIndex + 1].classList.remove('opacity-0');
 				}
-				console.log("delay: ", delay)
-				delay = 15000;
+
+				if (curIndex == stop) {
+					curIndex = 0;
+					delay = 15000;
+				} else {
+					curIndex++;
+				}
+
 				fade();
 			}, delay);
 		}
@@ -192,20 +186,13 @@ const classes = {
 		fade();
 	} */
 
-
-
 	(function () {
 		const squareFader = document.getElementById('square-photo');
 		const portraitFader = document.getElementById('portrait-photo');
 		const landscapeFader = document.getElementById('landscape-photo');
 
-		/* setTimeout(()=> photoFade(squareFader), 0) */
 		photoFade(squareFader);
-		setTimeout(()=> photoFade(landscapeFader), 5000)
-		setTimeout(()=> photoFade(portraitFader), 10000)
-		/* photoFade(squareFader);
-		photoFade(portraitFader);
-		photoFade(landscapeFader); */
-
+		setTimeout(() => photoFade(landscapeFader), 5000);
+		setTimeout(() => photoFade(portraitFader), 10000);
 	})();
 </script>
