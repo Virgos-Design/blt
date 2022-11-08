@@ -1,12 +1,31 @@
 ---
 import { Image } from '@astrojs/image/components';
 import ContentPattern from '~/components/widgets/ContentPattern.astro';
-import playground1 from '~/assets/images/facility/playground_1.jpg';
-import playground2 from '~/assets/images/facility/playground_2.jpeg';
-import sensory1 from '~/assets/images/facility/sensory_1.jpeg';
-import sensory2 from '~/assets/images/facility/sensory_2.jpeg';
-import classroom1 from '~/assets/images/facility/classroom_1.jpg';
-import classroom2 from '~/assets/images/facility/classroom_2.jpeg';
+
+import a1 from '~/assets/images/facility/classroom_1.jpeg';
+import a2 from '~/assets/images/facility/classroom_2.jpeg';
+import a3 from '~/assets/images/facility/classroom_3.jpeg';
+
+import b1 from '~/assets/images/facility/playground_1.jpeg';
+import b2 from '~/assets/images/facility/playground_2.jpeg';
+import b3 from '~/assets/images/facility/playground_3.jpeg';
+
+import c1 from '~/assets/images/facility/sensory_1.jpeg';
+import c2 from '~/assets/images/facility/sensory_2.jpeg';
+import c3 from '~/assets/images/facility/sensory_3.jpeg';
+
+const classes = {
+	fade: {
+		startLeft:
+			'transition duration-[5000ms] ease-in-out object-cover object-center rounded-lg mx-auto md:float-left md:mr-6 mb-2 p-1 bg-white',
+		itemLeft:
+			'transition duration-[5000ms] ease-in-out absolute left-0 object-cover object-center rounded-lg mx-auto md:float-left md:mr-6 mb-2 p-1 bg-white opacity-0',
+		startRight:
+			'transition duration-[5000ms] ease-in-out object-cover object-center rounded-lg mx-auto md:float-right md:ml-6 mb-2 p-1 bg-white',
+		itemRight:
+			'transition duration-[5000ms] ease-in-out absolute right-0 object-cover object-center rounded-lg mx-auto md:float-right md:ml-6 mb-2 p-1 bg-white opacity-0',
+	},
+};
 ---
 
 <ContentPattern title="Our Facility" id="facility" pattern="dots" color="pink">
@@ -21,12 +40,17 @@ import classroom2 from '~/assets/images/facility/classroom_2.jpeg';
 		<div
 			class="bg-[#FF81A3] p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
 		>
-			<Image
-				src={classroom1}
-				width={320}
-				alt="bluffs little thinkers classroom"
-				class="rounded-lg mx-auto md:float-left md:mr-6 mb-2 p-1 bg-white"
-			/>
+			<div id="classroom-photo" class="relative">
+				<Image src={a3} width={320} height={240} alt="bluffs little thinkers classroom" class={classes.fade.itemLeft} />
+				<Image src={a2} width={320} height={240} alt="bluffs little thinkers classroom" class={classes.fade.itemLeft} />
+				<Image
+					src={a1}
+					width={320}
+					height={240}
+					alt="bluffs little thinkers classroom"
+					class={classes.fade.startLeft}
+				/>
+			</div>
 			<span>
 				<h3 class="text-3xl my-2 font-bold text-white text-center">Newly Renovated Classrooms</h3>
 				<p class="text-lg text-blue-50 text-center md:text-start md:px-4 pb-2 md:pt-4">
@@ -38,14 +62,6 @@ import classroom2 from '~/assets/images/facility/classroom_2.jpeg';
 					environment additions.
 				</p>
 			</span>
-			<!-- <span class="hidden md:flex md:float-right mr-16 flex-col">
-					<Image
-						src={classroom2}
-						width={220}
-						alt="bluffs little thinkers classroom"
-						class="rounded-lg shadow-md shadow-black"
-					/>
-				</span> -->
 		</div>
 	</div>
 
@@ -53,12 +69,29 @@ import classroom2 from '~/assets/images/facility/classroom_2.jpeg';
 		<div
 			class="bg-[#2E8E00] p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
 		>
-			<Image
-				src={playground1}
-				width={320}
-				alt="bluffs little thinkers classroom"
-				class="rounded-lg mx-auto md:float-right md:ml-6 mb-2 p-1 bg-white"
-			/>
+			<div id="playground-photo" class="relative">
+				<Image
+					src={b3}
+					width={320}
+					height={240}
+					alt="bluffs little thinkers playground"
+					class={classes.fade.itemRight}
+				/>
+				<Image
+					src={b2}
+					width={320}
+					height={240}
+					alt="bluffs little thinkers playground"
+					class={classes.fade.itemRight}
+				/>
+				<Image
+					src={b1}
+					width={320}
+					height={240}
+					alt="bluffs little thinkers playground"
+					class={classes.fade.startRight}
+				/>
+			</div>
 			<span>
 				<h3 class="text-3xl my-2 font-bold text-white text-center">New Playground Equipment</h3>
 				<p class="text-lg text-green-100 text-center md:text-start md:px-4 pb-2 md:pt-4">
@@ -69,14 +102,6 @@ import classroom2 from '~/assets/images/facility/classroom_2.jpeg';
 					exercise as well as unstructured playtime that is essential for the development of self-regulation skills.
 				</p>
 			</span>
-			<!-- <span class="hidden md:flex md:float-right md:mr-24 flex-col">
-					<Image
-						src={playground2}
-						width={250}
-						alt="bluffs little thinkers classroom"
-						class="rounded-lg shadow-md shadow-black"
-					/>
-				</span> -->
 		</div>
 	</div>
 
@@ -84,12 +109,23 @@ import classroom2 from '~/assets/images/facility/classroom_2.jpeg';
 		<div
 			class="bg-[#321A81] p-6 rounded-2xl shadow-md shadow-gray-500 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center"
 		>
-			<Image
+			<!-- <Image
 				src={sensory1}
 				width={320}
 				alt="bluffs little thinkers classroom"
 				class="rounded-lg mx-auto md:float-left md:mr-6 mb-4 p-1 bg-white"
-			/>
+			/> -->
+			<div id="sensory-photo" class="relative">
+				<Image src={c3} width={320} height={240} alt="bluffs little thinkers sensory room" class={classes.fade.itemLeft} />
+				<Image src={c2} width={320} height={240} alt="bluffs little thinkers sensory room" class={classes.fade.itemLeft} />
+				<Image
+					src={c1}
+					width={320}
+					height={240}
+					alt="bluffs little thinkers sensory room"
+					class={classes.fade.startLeft}
+				/>
+			</div>
 			<span>
 				<h3 class="text-3xl my-2 font-bold text-white text-center">State-of-the-art Sensory Room</h3>
 				<p class="text-lg text-blue-100 text-center md:text-start md:px-4 pb-2 md:pt-4">
@@ -103,14 +139,79 @@ import classroom2 from '~/assets/images/facility/classroom_2.jpeg';
 					in our inclusive rich environment.
 				</p>
 			</span>
-			<!-- <span class="hidden md:flex md:float-right flex-col">
-					<Image
-						src={sensory2}
-						width={220}
-						alt="bluffs little thinkers classroom"
-						class="rounded-lg shadow-md shadow-black"
-					/>
-				</span> -->
 		</div>
 	</div>
 </ContentPattern>
+
+<script>
+	function randomTimeout() {
+		/* return Math.floor(Math.random() * (max - min + 1) + min) */
+		const items = [1000, 1800, 2500, 3000, 3700];
+		return items[Math.floor(Math.random() * items.length)] + 4000;
+	}
+
+	function photoFade(el) {
+		let curIndex = 0;
+		let children = el.children;
+		let stop = children.length - 1;
+		let delay = 0;
+
+		function fade() {
+			setTimeout(function () {
+				children[curIndex].classList.add('opacity-0');
+
+				if (curIndex == stop) {
+					children[0].classList.remove('opacity-0');
+				} else {
+					children[curIndex + 1].classList.remove('opacity-0');
+				}
+
+				if (curIndex == stop) {
+					curIndex = 0;
+					delay = 15000;
+				} else {
+					curIndex++;
+				}
+
+				fade();
+			}, delay);
+		}
+		fade();
+	}
+
+	/* function photoFade(el) {
+		let curIndex = 0;
+		let children = el.children;
+		let stop = children.length - 1;
+
+		function fade() {
+			setTimeout(function () {
+				if (curIndex == stop) {
+					curIndex = 0;
+				} else {
+					curIndex++;
+				}
+
+				children[curIndex].classList.add('opacity-0');
+
+				if (curIndex == stop) {
+					children[0].classList.remove('opacity-0');
+				} else {
+					children[curIndex + 1].classList.remove('opacity-0');
+				}
+				fade();
+			}, randomTimeout());
+		}
+		fade();
+	} */
+
+	(function () {
+		const classroom = document.getElementById('classroom-photo');
+		const playground = document.getElementById('playground-photo');
+		const sensory = document.getElementById('sensory-photo');
+
+		photoFade(classroom);
+		photoFade(playground);
+	
+	})();
+</script>
