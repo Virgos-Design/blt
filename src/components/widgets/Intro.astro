@@ -1,4 +1,5 @@
 ---
+import { Image } from '@astrojs/image/components';
 import ContentSection from '~/components/widgets/ContentSection.astro';
 
 var bgPattern = `background-color: #ffffff;
@@ -6,10 +7,11 @@ background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBo
 
 const classes = {
 	fade: {
-		start: "transition duration-[4000ms] ease-in-out absolute inset-0 w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500",
-		item: "transition duration-[4000ms] ease-in-out absolute inset-0 w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500 opacity-0"
-	}
-}
+		start:
+			'transition duration-[5000ms] ease-in-out absolute inset-0 w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500 active',
+		item: 'transition duration-[5000ms] ease-in-out absolute inset-0 w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500 opacity-0',
+	},
+};
 ---
 
 <ContentSection title="Welcome to Bluff's Little Thinkers" id="intro" pattern={bgPattern}>
@@ -25,7 +27,9 @@ const classes = {
 					age-appropriate playground.
 				</p>
 				<div class="flex flex-row md:flex-row-reverse flex-wrap justify-center gap-4 md:gap-6">
-					<a href="#about" class="btn text-white tracking-wide bg-[#FF81A3] hover:text-gray-600 hover:bg-pink-300 active:bg-pink-500"
+					<a
+						href="#about"
+						class="btn text-white tracking-wide bg-[#FF81A3] hover:text-gray-600 hover:bg-pink-300 active:bg-pink-500"
 						>About BLT</a
 					>
 					<a
@@ -35,7 +39,9 @@ const classes = {
 					>
 				</div>
 				<div class="flex flex-row-reverse flex-wrap justify-center gap-4 md:gap-6">
-					<a href="#prices" class="btn text-white tracking-wide bg-[#087BB8] hover:text-gray-600 hover:bg-blue-400 active:bg-blue-600"
+					<a
+						href="#prices"
+						class="btn text-white tracking-wide bg-[#087BB8] hover:text-gray-600 hover:bg-blue-400 active:bg-blue-600"
 						>Pricing</a
 					>
 					<a
@@ -47,7 +53,7 @@ const classes = {
 			</div>
 			<div class="grid grid-cols-10 grid-rows-5 gap-4 mx-auto md:mt-8 md:w-10/12 lg:w-6/12">
 				<!-- portrait photo -->
-				<div id=""class="relative col-span-4 row-span-3 row-start-2">
+				<div id="portrait-photo" class="relative col-span-4 row-span-3 row-start-2">
 					<img
 						src="/assets/images/a.jpeg"
 						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
@@ -55,37 +61,43 @@ const classes = {
 						height="480"
 						alt="child on playground"
 						loading="lazy"
+						data-visible
 					/>
 				</div>
 				<!-- square photo -->
-				<div id="portrait-photo" class="relative col-span-4 row-span-2 col-start-6">
-					<img
+				<div id="square-photo" class="relative col-span-4 row-span-2 col-start-6">
+					<Image
 						src="/assets/images/b2.jpeg"
+						width={280}
+						height={280}
+						alt="bluffs little thinkers classroom"
 						class={classes.fade.item}
-						width="280"
-						height="280"
-						alt="baby in grass"
-						loading="lazy"
 					/>
-					<img
+					<Image
 						src="/assets/images/a.jpeg"
+						width={280}
+						height={280}
+						alt="bluffs little thinkers classroom"
 						class={classes.fade.item}
-						width="280"
-						height="280"
-						alt="child on playground"
-						loading="lazy"
 					/>
-					<img
+					<Image
 						src="/assets/images/c.jpeg"
+						width={280}
+						height={280}
+						alt="bluffs little thinkers classroom"
 						class={classes.fade.start}
-						width="280"
-						height="280"
-						alt="girls smiling at eachother"
-						loading="lazy"
+						data-visible
 					/>
 				</div>
 				<!-- landscape photo -->
 				<div id="landscape-photo" class="relative col-span-6 row-span-3">
+					<Image
+						src="/assets/images/a.jpeg"
+						width={357}
+						height={328}
+						alt="bluffs little thinkers classroom"
+						class={classes.fade.item}
+					/>
 					<img
 						src="/assets/images/c.jpeg"
 						class={classes.fade.start}
@@ -93,6 +105,7 @@ const classes = {
 						height="328"
 						alt="girls smiling at eachother"
 						loading="lazy"
+						data-visible
 					/>
 				</div>
 			</div>
@@ -101,39 +114,73 @@ const classes = {
 </ContentSection>
 
 <script>
-	function randomTimeout(base, min, max) {
-		return Math.floor(Math.random() * (max - min + 1) + min) + base;
+	function randomTimeout() {
+		/* return Math.floor(Math.random() * (max - min + 1) + min) */
+		const items = [1000, 1800, 2500, 3000, 3700]
+		return items[Math.floor(Math.random() * items.length)] + 4000;
 	}
 
-	function fade(el) {
+	function photoFade(el) {
 		let curIndex = 0;
 		let children = el.children;
 		let stop = children.length - 1;
 
 		function fade() {
-			setTimeout(function() {
+			setTimeout(function () {
 				if (curIndex == stop) {
 					curIndex = 0;
 				} else {
-					curIndex++
+					curIndex++;
 				}
-				console.log("currentIndex ", curIndex)
-				children[curIndex].classList.add("opacity-0")
+
+				children[curIndex].classList.add('opacity-0');
+
 				if (curIndex == stop) {
-					children[0].classList.remove("opacity-0")
+					children[0].classList.remove('opacity-0');
 				} else {
-					children[(curIndex + 1)].classList.remove("opacity-0")
+					children[curIndex + 1].classList.remove('opacity-0');
 				}
-				fade()
-			}, randomTimeout(7000, 0, 2000))
+				fade();
+			}, randomTimeout());
 		}
-		fade()
+		fade();
 	}
 
-	(function(){
-		const portraitFader = document.getElementById("portrait-photo");
+	/* function photoFade(el) {
+		let curIndex = 0;
+		let children = el.children;
+		let stop = children.length - 1;
 
-		fade(portraitFader);
-		/* console.log("PF children", length) */
-	})()
+		function fade() {
+			setTimeout(function () {
+				if (curIndex == stop) {
+					curIndex = 0;
+				} else {
+					curIndex++;
+				}
+
+				children[curIndex].classList.add('opacity-0');
+
+				if (curIndex == stop) {
+					children[0].classList.remove('opacity-0');
+				} else {
+					children[curIndex + 1].classList.remove('opacity-0');
+				}
+				fade();
+			}, randomTimeout());
+		}
+		fade();
+	} */
+
+
+
+	(function () {
+		const squareFader = document.getElementById('square-photo');
+		const portraitFader = document.getElementById('portrait-photo');
+		const landscapeFader = document.getElementById('landscape-photo');
+
+		photoFade(squareFader);
+		photoFade(portraitFader);
+
+	})();
 </script>

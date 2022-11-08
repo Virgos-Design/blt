@@ -327,7 +327,6 @@ const classes = {
 	})();
 
 	backBtn.addEventListener('click', () => {
-		console.log('back clicked');
 		let currentCard = document.getElementsByClassName('active')[0];
 		let previousCard = currentCard.previousElementSibling;
 		if (previousCard.hasAttribute('data-default')) {
@@ -353,8 +352,7 @@ const classes = {
 		console.log('next clicked');
 		let currentCard = document.getElementsByClassName('active')[0];
 		let nextCard = currentCard.nextElementSibling;
-		console.log('current: ', currentCard);
-		console.log('next: ', nextCard);
+
 		if (currentCard.hasAttribute('data-default')) {
 			backBtn.removeAttribute('disabled');
 		}
