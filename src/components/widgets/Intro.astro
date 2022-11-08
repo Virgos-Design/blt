@@ -8,7 +8,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBo
 const classes = {
 	fade: {
 		start:
-			'transition duration-[5000ms] ease-in-out absolute inset-0 w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500 active',
+			'transition duration-[5000ms] ease-in-out w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500 active',
 		item: 'transition duration-[5000ms] ease-in-out absolute inset-0 w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500 opacity-0',
 	},
 };
@@ -53,15 +53,27 @@ const classes = {
 			</div>
 			<div class="grid grid-cols-10 grid-rows-5 gap-4 mx-auto md:mt-8 md:w-10/12 lg:w-6/12">
 				<!-- portrait photo -->
-				<div id="portrait-photo" class="relative col-span-4 row-span-3 row-start-2">
-					<img
+				<div id="portrait-photo" class="relative col-span-4 row-span-3 col-start-1 row-start-2">
+					<Image
 						src="/assets/images/a.jpeg"
-						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-						width="310"
-						height="480"
-						alt="child on playground"
-						loading="lazy"
-						data-visible
+						width={310}
+						height={480}
+						alt="bluffs little thinkers classroom"
+						class={classes.fade.item}
+					/>
+					<Image
+						src="/assets/images/b2.jpeg"
+						width={310}
+						height={480}
+						alt="bluffs little thinkers classroom"
+						class={classes.fade.item}
+					/>
+					<Image
+						src="/assets/images/a.jpeg"
+						width={310}
+						height={480}
+						alt="bluffs little thinkers classroom"
+						class={classes.fade.start}
 					/>
 				</div>
 				<!-- square photo -->
@@ -105,14 +117,12 @@ const classes = {
 						alt="bluffs little thinkers classroom"
 						class={classes.fade.item}
 					/>
-					<img
-						src="/assets/images/c.jpeg"
+					<Image
+						src="/assets/images/a.jpeg"
+						width={357}
+						height={328}
+						alt="bluffs little thinkers classroom"
 						class={classes.fade.start}
-						width="357"
-						height="328"
-						alt="girls smiling at eachother"
-						loading="lazy"
-						data-visible
 					/>
 				</div>
 			</div>
@@ -131,6 +141,7 @@ const classes = {
 		let curIndex = 0;
 		let children = el.children;
 		let stop = children.length - 1;
+		let delay = 0;
 
 		function fade() {
 			setTimeout(function () {
@@ -147,8 +158,10 @@ const classes = {
 				} else {
 					children[curIndex + 1].classList.remove('opacity-0');
 				}
+				console.log("delay: ", delay)
+				delay = 15000;
 				fade();
-			}, randomTimeout());
+			}, delay);
 		}
 		fade();
 	}
@@ -186,9 +199,13 @@ const classes = {
 		const portraitFader = document.getElementById('portrait-photo');
 		const landscapeFader = document.getElementById('landscape-photo');
 
+		/* setTimeout(()=> photoFade(squareFader), 0) */
 		photoFade(squareFader);
+		setTimeout(()=> photoFade(landscapeFader), 5000)
+		setTimeout(()=> photoFade(portraitFader), 10000)
+		/* photoFade(squareFader);
 		photoFade(portraitFader);
-		photoFade(landscapeFader);
+		photoFade(landscapeFader); */
 
 	})();
 </script>
