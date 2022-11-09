@@ -1,29 +1,27 @@
 ---
 import { Icon } from 'astro-icon';
-import Picture from '~/components/core/Picture.astro';
-import twenty18 from '~/assets/images/2018.png';
-import twenty19 from '~/assets/images/2019.png';
-import twenty20 from '~/assets/images/2020.png';
-import twenty21 from '~/assets/images/2021.png';
-import twenty22 from '~/assets/images/2022.png';
-
-import { getHomePermalink } from '~/utils/permalinks';
-
-import ToggleTheme from '~/components/core/ToggleTheme.astro';
+import { Image } from '@astrojs/image/components';
 import ToggleMenu from '~/components/core/ToggleMenu.astro';
+
+import heroImage from '~/assets/images/hero_image.jpeg';
+import twenty18 from '~/assets/images/awards/2018.png';
+import twenty19 from '~/assets/images/awards/2019.png';
+import twenty20 from '~/assets/images/awards/2020.png';
+import twenty21 from '~/assets/images/awards/2021.png';
+import twenty22 from '~/assets/images/awards/2022.png';
+
 ---
 
 <header id="page-header" class="fixed z-20 flex-none mx-auto w-full">
 	<div class="py-3 px-3 w-full lg:flex lg:justify-between lg:px-4">
 		<div class="flex justify-between">
-			<a id="brand" aria-label="logo" class="invisible items-center gap-3 flex" href={getHomePermalink()}>
+			<a id="brand" aria-label="logo" class="invisible items-center gap-3 flex" href="#">
 				<h1 class="sr-only">Bluff's Little Thinkers</h1>
 				<Icon name="icon" class="h-7 sm:hidden" />
 				<Icon name="monogram" class="h-10 sm:hidden" />
 				<Icon name="wordmark" class="hidden h-10 sm:block" />
 			</a>
 			<div class="flex items-center lg:hidden justify-self-end">
-				<!-- <ToggleTheme /> -->
 				<ToggleMenu />
 			</div>
 		</div>
@@ -73,14 +71,6 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 			</ul>
 			<div class="lg:self-center flex items-center mb-4 lg:mb-0 ml-2">
 				<div class="hidden items-center lg:flex">
-					<!-- <ToggleTheme iconClass="w-5 h-5" /> -->
-					<!-- <a
-						class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-						aria-label="RSS Feed"
-						href="/rss.xml"
-					>
-						<Icon name="tabler:rss" class="w-5 h-5" />
-					</a> -->
 					<a
 						href="https://www.facebook.com/bluffsthinkers/"
 						target="_blank"
@@ -95,8 +85,7 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 	</div>
 </header>
 <section id="hero" class="relative min-h-screen">
-	<img class="absolute inset-0 w-full h-full object-cover object-top" src="/images/building.jpg" alt="" />
-
+	<Image src={heroImage} alt="bluffs little thinkers" class="absolute inset-0 w-full h-full object-cover object-top" />
 	<div aria-hidden="true" class="absolute inset-0 w-full h-full bg-purple-400 bg-opacity-30 backdrop-blur-sm"></div>
 	<div class="relative container m-auto px-6 md:px-12 lg:px-6">
 		<div class="mb-12 pt-28 space-y-14 md:mb-16 md:pt-40 lg:w-8/12 lg:mx-auto">
@@ -114,19 +103,19 @@ import ToggleMenu from '~/components/core/ToggleMenu.astro';
 			<div class="m-auto mt-8 md:w-11/12 lg:w-8/12 xl:w-7/12">
 				<div class="flex flex-wrap justify-center gap-6">
 					<div class="flex items-center">
-						<Picture src={twenty18} class="" widths={[50, 85]} sizes="" aspectRatio="" alt="best in siouxland 2018" />
+						<Image src={twenty18} width={85} alt="best in siouxland 2018" />
 					</div>
 					<div class="flex items-center">
-						<Picture src={twenty19} class="" widths={[50, 85]} sizes="" aspectRatio="" alt="best in siouxland 2019" />
+						<Image src={twenty19} width={85} alt="best in siouxland 2019" />
 					</div>
 					<div class="flex items-center">
-						<Picture src={twenty20} class="" widths={[50, 85]} sizes="" aspectRatio="" alt="best in siouxland 2020" />
+						<Image src={twenty20} width={85} alt="best in siouxland 2020" />
 					</div>
 					<div class="flex items-center">
-						<Picture src={twenty21} class="" widths={[50, 85]} sizes="" aspectRatio="" alt="best in siouxland 2021" />
+						<Image src={twenty21} width={85} alt="best in siouxland 2021" />
 					</div>
 					<div class="flex items-center">
-						<Picture src={twenty22} class="" widths={[50, 85]} sizes="" aspectRatio="" alt="best in siouxland 2022" />
+						<Image src={twenty22} width={85} alt="best in siouxland 2022" />
 					</div>
 				</div>
 			</div>

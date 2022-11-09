@@ -1,15 +1,16 @@
 ---
 import { Icon } from 'astro-icon';
-import ContentColor from '~/components/widgets/ContentColor.astro';
 import { Image } from '@astrojs/image/components';
+import ContentColor from '~/components/widgets/ContentColor.astro';
 
-import classroom1 from '~/assets/images/facility/classroom_1.jpg';
-import commitment_pic from '~/assets/images/commitment.jpg';
-import security_pic from '~/assets/images/security.jpg';
-import staff_pic from '~/assets/images/staff3.jpg';
-import facility_pic from '~/assets/images/facility.jpeg';
-import kitchen_pic from '~/assets/images/kitchen.jpeg';
-import playground_kid from '~/assets/images/playground_kid.jpeg';
+import commitment_pic from '~/assets/images/why_blt/commitment.jpeg';
+import security_pic from '~/assets/images/why_blt/security.jpeg';
+import staff_pic from '~/assets/images/why_blt/staff.jpeg';
+import facility_pic from '~/assets/images/why_blt/facility.jpeg';
+import kitchen_pic from '~/assets/images/why_blt/kitchen.jpeg';
+import chalk_pic from '~/assets/images/why_blt/chalk.jpeg';
+import art_pic from '~/assets/images/why_blt/art.jpeg';
+import play_pic from '~/assets/images/why_blt/play.jpeg';
 
 const items = [
 	{
@@ -28,7 +29,7 @@ const items = [
 		photo: security_pic,
 		title: 'Security',
 		description:
-			'Safety and security are a top priority at BLT. Our center has five silent alarm buttons strategically placed within our facility. When activated, police and fire are dispatched in case of any emergency. We also have a secured entrance with tinted windows, outdoor cameras, a fire system complete with pull stations, and an AED machine for pediatric and adult patients. All BLT staff stay up to date in mandatory reporter, CPR, first aid, and universal precautions.', 
+			'Safety and security are a top priority at BLT. Our center has five silent alarm buttons strategically placed within our facility. When activated, police and fire are dispatched in case of any emergency. We also have a secured entrance with tinted windows, outdoor cameras, a fire system complete with pull stations, and an AED machine for pediatric and adult patients. All BLT staff stay up to date in mandatory reporter, CPR, first aid, and universal precautions.',
 	},
 	{
 		icon: 'fluent:building-retail-24-filled',
@@ -92,91 +93,35 @@ const items = [
 					</div>
 				</div>
 				<div class="pt-1">
-					<p class="mb-2 text-3xl md:text-3xl lg:text-4xl font-bold">Enroll Today!</p>
+					<p class="mb-2 text-3xl md:text-4xl lg:text-5xl font-bold">Enroll Today!</p>
 				</div>
 			</div>
 		</div>
-
-		<!-- <div class="photo-array">
-			<div class="xl:hidden grid grid-cols-5 grid-rows-4 gap-4 h-fit">
-				<div class="col-span-2 row-span-3">
-					A
-					<img
-						src="images/redwhiteblue_girl.jpg"
-						class="rounded-xl shadow-md shadow-gray-500"
-						width="640"
-						height="960"
-						alt="shoes"
-						loading="lazy"
-					/>
-				</div>
-				<div class="col-span-3 row-span-3 row-start-2 col-start-3">
-					B
-					<img
-						src="images/bubbles_boy.jpg"
-						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-						width="640"
-						height="640"
-						alt="shoe"
-						loading="lazy"
-					/>
-				</div>
-			</div>
-			<div class="hidden lg:grid grid-cols-5 grid-rows-4 gap-4 h-fit mt-20">
-				<div class="col-span-3 row-span-2">
-					C
-					<img
-						src="/images/scaled.jpg"
-						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-						width="640"
-						height="427"
-						alt="2"
-						loading="lazy"
-					/>
-				</div>
-				<div class="col-span-2 row-span-2">
-					D
-					<img
-						src="images/bubbles_boy.jpg"
-						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-						width="640"
-						height="640"
-						alt="shoe"
-						loading="lazy"
-					/>
-				</div>
-				<div class="col-span-3 row-span-2 row-start-3 col-start-2">
-					E
-					<img
-						src="/images/scaled.jpg"
-						class="w-full h-full object-cover object-top rounded-xl shadow-md shadow-gray-500"
-						width="640"
-						height="427"
-						alt="2"
-						loading="lazy"
-					/>
-				</div>
-			</div>
-		</div> -->
 	</div>
-	<div class="w-full">
-		<div class="max-w-lg md:max-w-xl mx-auto grid grid-cols-6 grid-rows-5 gap-4 h-fit">
-			<div class="col-span-3 row-span-3 row-start-2">
-				<Image
-									src={kitchen_pic}
-									width={300}
-									alt="bluffs little thinkers classroom"
-									class={`rounded-xl object-cover shadow-md shadow-gray-500`}
-								/>
+	<!-- bottom images -->
+	<div class="w-full mt-12 md:pb-12">
+		<div class="mx-auto flex flex-wrap gap-y-8 justify-around">
+			<div class="hidden md:block bg-gray-50 rounded-sm shadow-md shadow-gray-500 px-4 pt-3 pb-14 -rotate-6 hover:scale-110 hover:rotate-0 hover:z-10 hover:md:translate-x-12 hover:shadow-lg hover:shadow-gray-700 transition duration-600 ease-out">
+				<span class="shadow-inner shadow-black">
+					<Image src={chalk_pic} width={300} height={300} alt="girl doing sidewalk chalk" class={`bg-white shadow-inner`} />
+				</span>
 			</div>
-			<div class="col-span-3 row-span-5 flex justify-center">
-				<Image
-									src={playground_kid}
-									width={220}
-									alt="bluffs little thinkers classroom"
-									class={`rounded-xl object-cover shadow-md shadow-gray-500`}
-								/>
+			<div class="bg-gray-50 rounded-sm shadow-md shadow-gray-500 px-4 pt-3 pb-14 rotate-6 translate-y-6 z-[7] hover:scale-110 hover:rotate-0 hover:z-[15] hover:shadow-lg hover:shadow-gray-700 transition duration-600 ease-out">
+				<span class="shadow-inner shadow-black">
+					<Image src={kitchen_pic} width={300} height={300} alt="boys playing with kitchen set" class={`bg-white shadow-inner`} />
+				</span>
 			</div>
+			<div class="bg-gray-50 rounded-sm shadow-md shadow-gray-500 px-4 pt-3 pb-14 -translate-y-10 hover:scale-110 hover:rotate-0 hover:z-10 hover:shadow-lg hover:shadow-gray-700 transition duration-600 ease-out">
+				<span class="shadow-inner shadow-black">
+					<Image src={art_pic} width={300} height={300} alt="girl doing arts and crafts" class={`bg-white shadow-inner`} />
+				</span>
+			</div>
+			<div class="hidden md:block bg-gray-50 rounded-sm shadow-md shadow-gray-500 px-4 pt-3 pb-14 rotate-12 translate-y-6 hover:scale-110 hover:rotate-0 hover:z-10 hover:md:-translate-x-12 hover:shadow-lg hover:shadow-gray-700 transition duration-600 ease-out">
+				<span class="shadow-inner shadow-black">
+					<Image src={play_pic} width={300} height={300} alt="boy on scooter" class={`bg-white shadow-inner`} />
+				</span>
+			</div>
+			
 		</div>
 	</div>
 </ContentColor>
