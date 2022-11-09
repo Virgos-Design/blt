@@ -163,9 +163,10 @@ import twenty22 from '~/assets/images/awards/2022.png';
     elem.addEventListener("click", function() {
         if (!nav.classList.contains('hidden')){
 					navToggle.forEach((elem) => {
-						elem.classList.toggle('expanded');
+						elem.classList.remove('expanded');
+						document.body.classList.remove('overflow-hidden');
+						nav.classList.add('hidden');
 					});
-					nav.classList.toggle('hidden');
 				}
     });
 	});
