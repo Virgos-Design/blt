@@ -1,14 +1,16 @@
 ---
 import { Icon } from 'astro-icon';
-import ContentColor from '~/components/widgets/ContentColor.astro';
 import { Image } from '@astrojs/image/components';
+import ContentColor from '~/components/widgets/ContentColor.astro';
 
-import commitment_pic from '~/assets/images/commitment.jpg';
-import security_pic from '~/assets/images/security.jpg';
-import staff_pic from '~/assets/images/staff3.jpg';
-import facility_pic from '~/assets/images/facility.jpeg';
-import kitchen_pic from '~/assets/images/kitchen.jpeg';
-import playground_kid from '~/assets/images/playground_kid.jpeg';
+import commitment_pic from '~/assets/images/why_blt/commitment.jpeg';
+import security_pic from '~/assets/images/why_blt/security.jpeg';
+import staff_pic from '~/assets/images/why_blt/staff.jpeg';
+import facility_pic from '~/assets/images/why_blt/facility.jpeg';
+import kitchen_pic from '~/assets/images/why_blt/kitchen.jpeg';
+import chalk_pic from '~/assets/images/why_blt/chalk.jpeg';
+import art_pic from '~/assets/images/why_blt/art.jpeg';
+import play_pic from '~/assets/images/why_blt/play.jpeg';
 
 const items = [
 	{
@@ -16,7 +18,6 @@ const items = [
 		color: 'FF81A3',
 		photoBorder: 'bg-[#FF81A3]',
 		photo: commitment_pic,
-		/* photo: "~/assets/images/commitment.jpg", */
 		title: 'Commitment to Excellence',
 		description:
 			'At BLT, we are committed to providing high-quality environments for all children in our care. We achieve this by investing in the center to make it a welcoming and nurturing space. We go above and beyond to meet the needs of all of the children and families that we serve. It is our priority to provide EXCELLENT care and to always have open communication with families providing a sense of home.',
@@ -102,22 +103,22 @@ const items = [
 		<div class="mx-auto flex flex-wrap gap-y-8 justify-around">
 			<div class="hidden md:block bg-gray-50 rounded-sm shadow-md shadow-gray-500 px-4 pt-3 pb-14 -rotate-6 hover:scale-110 hover:rotate-0 hover:z-10 hover:md:translate-x-12 hover:shadow-lg hover:shadow-gray-700 transition duration-600 ease-out">
 				<span class="shadow-inner shadow-black">
-					<Image src={kitchen_pic} width={300} height={300} alt="bluffs little thinkers classroom" class={`bg-white shadow-inner`} />
+					<Image src={chalk_pic} width={300} height={300} alt="girl doing sidewalk chalk" class={`bg-white shadow-inner`} />
 				</span>
 			</div>
 			<div class="bg-gray-50 rounded-sm shadow-md shadow-gray-500 px-4 pt-3 pb-14 rotate-6 translate-y-6 z-[7] hover:scale-110 hover:rotate-0 hover:z-[15] hover:shadow-lg hover:shadow-gray-700 transition duration-600 ease-out">
 				<span class="shadow-inner shadow-black">
-					<Image src={kitchen_pic} width={300} height={300} alt="bluffs little thinkers classroom" class={`bg-white shadow-inner`} />
+					<Image src={kitchen_pic} width={300} height={300} alt="boys playing with kitchen set" class={`bg-white shadow-inner`} />
 				</span>
 			</div>
 			<div class="bg-gray-50 rounded-sm shadow-md shadow-gray-500 px-4 pt-3 pb-14 -translate-y-10 hover:scale-110 hover:rotate-0 hover:z-10 hover:shadow-lg hover:shadow-gray-700 transition duration-600 ease-out">
 				<span class="shadow-inner shadow-black">
-					<Image src={kitchen_pic} width={300} height={300} alt="bluffs little thinkers classroom" class={`bg-white shadow-inner`} />
+					<Image src={art_pic} width={300} height={300} alt="girl doing arts and crafts" class={`bg-white shadow-inner`} />
 				</span>
 			</div>
 			<div class="hidden md:block bg-gray-50 rounded-sm shadow-md shadow-gray-500 px-4 pt-3 pb-14 rotate-12 translate-y-6 hover:scale-110 hover:rotate-0 hover:z-10 hover:md:-translate-x-12 hover:shadow-lg hover:shadow-gray-700 transition duration-600 ease-out">
 				<span class="shadow-inner shadow-black">
-					<Image src={kitchen_pic} width={300} height={300} alt="bluffs little thinkers classroom" class={`bg-white shadow-inner`} />
+					<Image src={play_pic} width={300} height={300} alt="boy on scooter" class={`bg-white shadow-inner`} />
 				</span>
 			</div>
 			
