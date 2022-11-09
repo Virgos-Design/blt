@@ -45,7 +45,6 @@
   },
   "dependencies": {
     "@fontsource/quicksand": "^4.5.11",
-    "daisyui": "^2.31.0",
     "sharp": "^0.31.1"
   }
 }
