@@ -2,20 +2,6 @@
 ---
 
 <script is:inline>
-	// Set "light" theme as default
-	// if (!localStorage.theme) {
-	//   localStorage.theme = "light";
-	// }
-
-	/* if (
-		localStorage.theme === 'dark' ||
-		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-	) {
-		document.documentElement.classList.add('dark');
-	} else {
-		document.documentElement.classList.remove('dark');
-	} */
-
 	function attachEvent(selector, event, fn) {
 		const matches = document.querySelectorAll(selector);
 		if (matches && matches.length) {
@@ -25,24 +11,104 @@
 		}
 	}
 
+	const header = document.getElementById('header');
+	const nav = document.getElementById('nav');
+	const menuToggle = document.getElementById('menu-toggle');
+	const brand = document.getElementById('brand');
+	const hero = document.getElementById('hero');
+	const page = document.documentElement;
+	const navLinks = document.querySelectorAll('[data-nav-link]');
+	const navToggle = document.querySelectorAll('[data-aw-toggle-menu]');
+	const contact = document.getElementById('static-contact');
+
 	window.onload = function () {
 		attachEvent('[data-aw-toggle-menu]', 'click', function (elem) {
 			elem.classList.toggle('expanded');
 			document.body.classList.toggle('overflow-hidden');
-			document.getElementById('menu')?.classList.toggle('hidden');
+			header?.classList.toggle('h-screen');
+			header?.classList.toggle('bg-pink-200/60');
+			contact?.classList.toggle('invisible');
+			brand?.classList.toggle('invisible');
+			if (header?.classList.contains('h-screen')) {
+				document.querySelector('#header nav')?.classList.remove('hidden');
+				if (!header?.classList.contains('backdrop-blur-md')) {
+					header?.classList.add('backdrop-blur-md');
+				}
+			} else {
+				document.querySelector('#header nav')?.classList.add('hidden');
+			}
 		});
 
 		attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
 			document.documentElement.classList.toggle('dark');
 			localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
 		});
+
+		document.addEventListener('scroll', () => {
+			const d = hero.offsetHeight - (page.scrollTop + header.offsetHeight);
+			if (d < 0) {
+				brand.classList.add('visible');
+				brand.classList.remove('invisible');
+				header.classList.add('backdrop-blur-md', 'bg-white/30', 'border-b', 'border-white');
+				nav.classList.remove('text-white');
+				nav.classList.add('text-[#321A81]');
+				navLinks.forEach((elem) => {
+					elem.classList.add('lg:hover:scale-110');
+				});
+				menuToggle.classList.remove('text-white');
+				menuToggle.classList.add('text-[#321A81]');
+				contact.classList.remove('text-white');
+				contact.classList.add('text-[#321A81]');
+			} else {
+				brand.classList.add('invisible');
+				brand.classList.remove('visible');
+				header.classList.remove('backdrop-blur-md', 'bg-white/30', 'border-b', 'border-white');
+				nav.classList.remove('text-[#321A81]');
+				nav.classList.add('text-white');
+				navLinks.forEach((elem) => {
+					elem.classList.remove('lg:hover:scale-110');
+				});
+				menuToggle.classList.remove('text-[#321A81]');
+				menuToggle.classList.add('text-white');
+				contact.classList.remove('text-[#321A81]');
+				contact.classList.add('text-white');
+			}
+		});
+
+		navLinks.forEach(function (elem) {
+			elem.addEventListener('click', function () {
+				if (header?.classList.contains('h-screen')) {
+					navToggle.forEach((elem) => {
+						elem.classList.remove('expanded');
+					});
+					header?.classList.toggle('bg-pink-200/60');
+					document.body.classList.toggle('overflow-hidden');
+					header?.classList.toggle('h-screen');
+					document.querySelector('#header nav')?.classList.add('hidden');
+				}
+			});
+		});
 	};
+
 	window.onpageshow = function () {
+		console.log('FOOO!');
 		const elem = document.querySelector('[data-aw-toggle-menu]');
 		if (elem) {
 			elem.classList.remove('expanded');
 		}
 		document.body.classList.remove('overflow-hidden');
 		document.getElementById('menu')?.classList.add('hidden');
+
+		const d = hero.offsetHeight - (page.scrollTop + header.offsetHeight);
+
+		if (d < 0) {
+			header.classList.add('backdrop-blur-md', 'bg-white/30', 'border-b', 'border-white');
+			menuToggle.classList.remove('text-white');
+			menuToggle.classList.add('text-[#321A81]');
+			contact.classList.remove('text-white');
+			contact.classList.add('text-[#321A81]');
+			brand.classList.add('visible');
+			brand.classList.remove('invisible');
+		}
 	};
 </script>

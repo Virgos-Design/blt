@@ -23,7 +23,7 @@ const items = await Promise.all(
 			<span class="inline-block mb-1 sm:mb-4">Find out more content<br class="hidden md:block" /> in our Blog</span>
 		</h2>
 
-		<p class="text-gray-700 dark:text-slate-400 lg:text-sm lg:max-w-md">
+		<p class="text-gray-700 lg:text-sm lg:max-w-md">
 			The blog will be used to display AstroWind documentation. Each new article will be an important step that you will
 			need to know to be an expert in creating a website using Astro + Tailwind CSS The blog does not exist yet, but
 			very soon. Astro is a very interesting technology. Thanks.
@@ -36,7 +36,7 @@ const items = await Promise.all(
 				<article class="mb-6 transition">
 					<Picture
 						src={post.image}
-						class="object-cover w-full h-64 mb-6 rounded shadow-lg bg-gray-400 dark:bg-slate-700"
+						class="object-cover w-full h-64 mb-6 rounded shadow-lg bg-gray-400"
 						widths={[400, 900]}
 						sizes="(max-width: 900px) 400px, 900px"
 						alt={post.title}
@@ -50,7 +50,7 @@ const items = await Promise.all(
 							{post.title}
 						</a>
 					</h3>
-					<p class="text-gray-700 dark:text-gray-400">{post.excerpt || post.description}</p>
+					<p class="text-gray-700">{post.excerpt || post.description}</p>
 				</article>
 			))
 		}
