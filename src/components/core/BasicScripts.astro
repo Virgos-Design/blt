@@ -28,25 +28,25 @@
 			header?.classList.toggle('h-screen');
 			header?.classList.toggle('bg-pink-200/60');
 			contact?.classList.toggle('invisible');
-			
+
 			if (header?.classList.contains('h-screen')) {
 				document.querySelector('#header nav')?.classList.remove('hidden');
 				if (!header?.classList.contains('backdrop-blur-md')) {
 					header?.classList.add('backdrop-blur-md');
 				}
-				if(!brand?.classList.contains('invisible')){
-					brand.classList.add('invisible')
+				if (!brand?.classList.contains('invisible')) {
+					brand.classList.add('invisible');
 				}
 				const d = hero.offsetHeight - (page.scrollTop + header.offsetHeight);
 				if (d < 0) {
-					header.classList.remove('bg-white/30')
+					header.classList.remove('bg-white/30');
 				}
 			} else {
 				document.querySelector('#header nav')?.classList.add('hidden');
 				const d = hero.offsetHeight - (page.scrollTop + header.offsetHeight);
 				if (d < 0) {
-					brand.classList.remove('invisible')
-					header.classList.add('bg-white/30')
+					brand.classList.remove('invisible');
+					header.classList.add('bg-white/30');
 				}
 			}
 		});
@@ -93,8 +93,8 @@
 					contact?.classList.toggle('invisible');
 					const d = hero.offsetHeight - (page.scrollTop + header.offsetHeight);
 					if (d < 0) {
-					brand.classList.remove('invisible')
-				}
+						brand.classList.remove('invisible');
+					}
 				}
 			});
 		});
