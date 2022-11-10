@@ -19,9 +19,7 @@ const { prevUrl, nextUrl, prevText = 'Newer posts', nextText = 'Older posts' } =
 				</a>
 				<a
 					href={nextUrl}
-					class={`btn px-2 font-medium text-gray-600 hover:text-gray-900 shadow-none ${
-						!nextUrl ? 'invisible' : ''
-					}`}
+					class={`btn px-2 font-medium text-gray-600 hover:text-gray-900 shadow-none ${!nextUrl ? 'invisible' : ''}`}
 				>
 					<div class="flex flex-row align-middle">
 						<span class="mr-2">{nextText}</span>
