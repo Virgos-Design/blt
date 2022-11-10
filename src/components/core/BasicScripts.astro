@@ -59,7 +59,7 @@
 				nav.classList.remove('text-white');
 				nav.classList.add('text-[#321A81]');
 				navLinks.forEach((elem) => {
-					elem.classList.add('lg:hover:scale-110');
+					elem.classList.add('md:hover:scale-110');
 				});
 				menuToggle.classList.remove('text-white');
 				menuToggle.classList.add('text-[#321A81]');
@@ -71,7 +71,8 @@
 				nav.classList.remove('text-[#321A81]');
 				nav.classList.add('text-white');
 				navLinks.forEach((elem) => {
-					elem.classList.remove('lg:hover:scale-110');
+					elem.classList.remove('md:hover:scale-110');
+					elem.classList.remove('text-[#321A81]');
 				});
 				menuToggle.classList.remove('text-[#321A81]');
 				menuToggle.classList.add('text-white');
@@ -118,6 +119,11 @@
 			contact.classList.add('text-[#321A81]');
 			brand.classList.add('visible');
 			brand.classList.remove('invisible');
+			navLinks.forEach((elem) => {
+				elem.classList.remove('text-white');
+				elem.classList.add('text-[#321A81]');
+				elem.classList.add('md:hover:scale-110');
+			});
 		}
 	};
 </script>
