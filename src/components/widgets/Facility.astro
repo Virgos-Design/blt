@@ -5,14 +5,17 @@ import ContentPattern from '~/components/widgets/ContentPattern.astro';
 import a1 from '~/assets/images/facility/classroom_1.jpeg';
 import a2 from '~/assets/images/facility/classroom_2.jpeg';
 import a3 from '~/assets/images/facility/classroom_3.jpeg';
+import a4 from '~/assets/images/facility/classroom_4.jpeg';
 
 import b1 from '~/assets/images/facility/playground_1.jpeg';
 import b2 from '~/assets/images/facility/playground_2.jpeg';
 import b3 from '~/assets/images/facility/playground_3.jpeg';
+import b4 from '~/assets/images/facility/playground_4.jpeg';
 
 import c1 from '~/assets/images/facility/sensory_1.jpeg';
 import c2 from '~/assets/images/facility/sensory_2.jpeg';
 import c3 from '~/assets/images/facility/sensory_3.jpeg';
+import c4 from '~/assets/images/facility/sensory_4.jpeg';
 
 const classes = {
 	fade: {
@@ -44,6 +47,7 @@ const classes = {
 		</div>
 		<div class="relative p-6 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center">
 			<div id="classroom-photo" class="relative md:float-left">
+				<Image src={a4} width={320} height={240} alt="bluffs little thinkers classroom" class={classes.fade.itemLeft} />
 				<Image src={a3} width={320} height={240} alt="bluffs little thinkers classroom" class={classes.fade.itemLeft} />
 				<Image src={a2} width={320} height={240} alt="bluffs little thinkers classroom" class={classes.fade.itemLeft} />
 				<Image
@@ -76,6 +80,13 @@ const classes = {
 		</div>
 		<div class="relative p-6 space-y-6 md:gap-6 justify-center md:space-y-0 lg:items-center">
 			<div id="playground-photo" class="relative md:float-right">
+				<Image
+					src={b4}
+					width={320}
+					height={240}
+					alt="bluffs little thinkers playground"
+					class={classes.fade.itemRight}
+				/>
 				<Image
 					src={b3}
 					width={320}
@@ -120,6 +131,13 @@ const classes = {
 		<div class="relative p-6 rounded-2xl md:gap-6 justify-center md:space-y-0 lg:items-center">
 			<div id="sensory-photo" class="relative md:float-left">
 				<Image
+					src={c4}
+					width={320}
+					height={240}
+					alt="bluffs little thinkers sensory room"
+					class={classes.fade.itemLeft}
+				/>
+				<Image
 					src={c3}
 					width={320}
 					height={240}
@@ -159,12 +177,6 @@ const classes = {
 </ContentPattern>
 
 <script>
-	function randomTimeout() {
-		/* return Math.floor(Math.random() * (max - min + 1) + min) */
-		const items = [1000, 1800, 2500, 3000, 3700];
-		return items[Math.floor(Math.random() * items.length)] + 4000;
-	}
-
 	function photoFade(el) {
 		let curIndex = 0;
 		let children = el.children;
@@ -193,32 +205,6 @@ const classes = {
 		}
 		fade();
 	}
-
-	/* function photoFade(el) {
-		let curIndex = 0;
-		let children = el.children;
-		let stop = children.length - 1;
-
-		function fade() {
-			setTimeout(function () {
-				if (curIndex == stop) {
-					curIndex = 0;
-				} else {
-					curIndex++;
-				}
-
-				children[curIndex].classList.add('opacity-0');
-
-				if (curIndex == stop) {
-					children[0].classList.remove('opacity-0');
-				} else {
-					children[curIndex + 1].classList.remove('opacity-0');
-				}
-				fade();
-			}, randomTimeout());
-		}
-		fade();
-	} */
 
 	(function () {
 		const classroom = document.getElementById('classroom-photo');

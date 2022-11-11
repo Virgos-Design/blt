@@ -1,15 +1,15 @@
 ---
 import { SITE } from '~/config.mjs';
 import { getCanonical, getHomePermalink } from '~/utils/permalinks';
-import Layout from '~/layouts/SplashLayout.astro';
+import About from '~/components/widgets/About.astro';
+import Contact from '~/components/widgets/Contact.astro';
+import CTA from '~/components/widgets/CTA.astro';
+import Facility from '~/components/widgets/Facility.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Intro from '~/components/widgets/Intro.astro';
-import OurFacility from '~/components/widgets/OurFacility.astro';
-import WhyBLT from '~/components/widgets/WhyBLT.astro';
+import Layout from '~/layouts/SplashLayout.astro';
 import Prices from '~/components/widgets/Prices.astro';
-import Contact from '~/components/widgets/Contact.astro';
-import OurStory from '~/components/widgets/OurStory.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 
 const meta = {
 	title: SITE.title,
@@ -21,9 +21,9 @@ const meta = {
 <Layout {meta}>
 	<Hero slot="hero" />
 	<Intro />
-	<OurStory />
-	<OurFacility />
-	<WhyBLT />
+	<About />
+	<Facility />
+	<CTA />
 	<Prices />
 	<FAQs />
 	<Contact />

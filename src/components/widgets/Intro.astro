@@ -2,17 +2,6 @@
 import { Image } from '@astrojs/image/components';
 import ContentSection from '~/components/widgets/ContentSection.astro';
 
-var bgPattern = `background-color: #ffffff;
-background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e1b7fe' fill-opacity='0.83' fill-rule='evenodd'/%3E%3C/svg%3E");`;
-
-const classes = {
-	fade: {
-		start:
-			'transition duration-[5000ms] ease-in-out w-full h-full object-cover object-center rounded-xl shadow-md shadow-gray-500 active',
-		item: 'transition duration-[5000ms] ease-in-out absolute inset-0 w-full h-full object-cover object-center rounded-xl shadow-md shadow-gray-500 opacity-0',
-	},
-};
-
 import a1 from '~/assets/images/intro/square_1.jpeg';
 import a2 from '~/assets/images/intro/square_2.jpeg';
 import a3 from '~/assets/images/intro/square_3.jpeg';
@@ -24,6 +13,19 @@ import b3 from '~/assets/images/intro/landscape_3.jpeg';
 import c1 from '~/assets/images/intro/portrait_1.jpeg';
 import c2 from '~/assets/images/intro/portrait_2.jpeg';
 import c3 from '~/assets/images/intro/portrait_3.jpeg';
+
+var bgPattern = `background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e1b7fe' fill-opacity='0.83' fill-rule='evenodd'/%3E%3C/svg%3E");`;
+
+const classes = {
+	fade: {
+		start:
+			'transition duration-[3000ms] ease-in-out w-full h-full rounded-xl shadow-md shadow-gray-500 active',
+		item: 'transition duration-[3000ms] ease-in-out absolute inset-0 w-full h-full object-fit rounded-xl shadow-md shadow-gray-500 opacity-0',
+	},
+};
+
+
 ---
 
 <ContentSection title="Welcome to Bluff's Little Thinkers" id="intro" pattern={bgPattern}>
@@ -95,12 +97,6 @@ import c3 from '~/assets/images/intro/portrait_3.jpeg';
 </ContentSection>
 
 <script>
-	function randomTimeout() {
-		/* return Math.floor(Math.random() * (max - min + 1) + min) */
-		const items = [1000, 1800, 2500, 3000, 3700];
-		return items[Math.floor(Math.random() * items.length)] + 4000;
-	}
-
 	function photoFade(el) {
 		let curIndex = 0;
 		let children = el.children;
@@ -119,7 +115,7 @@ import c3 from '~/assets/images/intro/portrait_3.jpeg';
 
 				if (curIndex == stop) {
 					curIndex = 0;
-					delay = 15000;
+					delay = 9000;
 				} else {
 					curIndex++;
 				}
@@ -130,39 +126,13 @@ import c3 from '~/assets/images/intro/portrait_3.jpeg';
 		fade();
 	}
 
-	/* function photoFade(el) {
-		let curIndex = 0;
-		let children = el.children;
-		let stop = children.length - 1;
-
-		function fade() {
-			setTimeout(function () {
-				if (curIndex == stop) {
-					curIndex = 0;
-				} else {
-					curIndex++;
-				}
-
-				children[curIndex].classList.add('opacity-0');
-
-				if (curIndex == stop) {
-					children[0].classList.remove('opacity-0');
-				} else {
-					children[curIndex + 1].classList.remove('opacity-0');
-				}
-				fade();
-			}, randomTimeout());
-		}
-		fade();
-	} */
-
 	(function () {
 		const squareFader = document.getElementById('square-photo');
 		const portraitFader = document.getElementById('portrait-photo');
 		const landscapeFader = document.getElementById('landscape-photo');
 
 		photoFade(squareFader);
-		setTimeout(() => photoFade(landscapeFader), 5000);
-		setTimeout(() => photoFade(portraitFader), 10000);
+		setTimeout(() => photoFade(landscapeFader), 3000);
+		setTimeout(() => photoFade(portraitFader), 6000);
 	})();
 </script>
