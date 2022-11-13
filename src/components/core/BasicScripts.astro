@@ -40,6 +40,11 @@
 				const d = hero.offsetHeight - (page.scrollTop + header.offsetHeight);
 				if (d < 0) {
 					header.classList.remove('bg-white/30');
+				} else {
+					navLinks.forEach((elem) => {
+						elem.classList.add('hover:scale-110');
+						elem.classList.add('text-[#321A81]');
+					});
 				}
 			} else {
 				document.querySelector('#header nav')?.classList.add('hidden');
@@ -47,6 +52,11 @@
 				if (d < 0) {
 					brand.classList.remove('invisible');
 					header.classList.add('bg-white/30');
+				} else {
+					navLinks.forEach((elem) => {
+						elem.classList.remove('hover:scale-110');
+						elem.classList.remove('text-[#321A81]');
+					});
 				}
 			}
 		});
@@ -59,7 +69,7 @@
 				nav.classList.remove('text-white');
 				nav.classList.add('text-[#321A81]');
 				navLinks.forEach((elem) => {
-					elem.classList.add('md:hover:scale-110');
+					elem.classList.add('hover:scale-110');
 				});
 				menuToggle.classList.remove('text-white');
 				menuToggle.classList.add('text-[#321A81]');
@@ -71,7 +81,7 @@
 				nav.classList.remove('text-[#321A81]');
 				nav.classList.add('text-white');
 				navLinks.forEach((elem) => {
-					elem.classList.remove('md:hover:scale-110');
+					elem.classList.remove('hover:scale-110');
 					elem.classList.remove('text-[#321A81]');
 				});
 				menuToggle.classList.remove('text-[#321A81]');
@@ -122,7 +132,7 @@
 			navLinks.forEach((elem) => {
 				elem.classList.remove('text-white');
 				elem.classList.add('text-[#321A81]');
-				elem.classList.add('md:hover:scale-110');
+				elem.classList.add('hover:scale-110');
 			});
 		}
 	};
