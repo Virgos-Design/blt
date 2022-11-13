@@ -106,23 +106,23 @@ const classes = {
 				</div>
 				<!-- prerequisites -->
 				<div id="prereqs" class={`${classes.cardBody} hidden`}>
-					<p class={classes.cardPrompt}>Are you 18 years of age or older?</p>
 					<fieldset name="over 18">
-						<legend class="hidden">Over 18?</legend>
+						<legend class={classes.cardPrompt}>Are you 18 years of age or older?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
-								<input id="req-age-yes" name="req-age" type="radio" class={classes.radio} value="yes"/>
-								<label for="req-age-yes" class={classes.label}>Yes</label>
+								<label class={classes.label}>
+									<input name="over-eighteen" type="radio" class={classes.radio} value="yes"/>Yes
+								</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
-								<input id="req-age-no" name="req-age" type="radio" class={classes.radio} value="no" />
-								<label for="req-age-no" class={classes.label}>No</label>
+								<label class={classes.label}>
+									<input name="over-eighteen" type="radio" class={classes.radio} value="no" />No
+								</label>
 							</div>
 						</div>
 					</fieldset>
-					<p class={classes.cardPrompt}>Are you a citizen of or authorized to work in the U.S.?</p>
 					<fieldset>
-						<legend class="hidden">Citizen?</legend>
+						<legend class={classes.cardPrompt}>Are you a citizen of or authorized to work in the U.S.?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
 								<input id="authorized-yes" name="authorized-citizen" type="radio" class={classes.radio} value="yes" />
