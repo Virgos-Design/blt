@@ -111,27 +111,26 @@ const classes = {
 						<legend class="hidden">Over 18?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
-								<label for="req-age-yes" class={classes.label}>
-									<input id="req-age-yes" name="req-age-yes" type="radio" class={classes.radio} />
-									Yes
-								</label>
+								<input id="req-age-yes" name="req-age" type="radio" class={classes.radio} value="yes"/>
+								<label for="req-age-yes" class={classes.label}>Yes</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
-								<input id="req-age-no" name="req-age-no" type="radio" class={classes.radio} />
+								<input id="req-age-no" name="req-age" type="radio" class={classes.radio} value="no" />
 								<label for="req-age-no" class={classes.label}>No</label>
 							</div>
 						</div>
 					</fieldset>
 					<p class={classes.cardPrompt}>Are you a citizen of or authorized to work in the U.S.?</p>
 					<fieldset>
+						<legend class="hidden">Citizen?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
-								<input id="push-everything" name="push-notifications" type="radio" class={classes.radio} />
-								<label for="push-everything" class={classes.label}>Yes</label>
+								<input id="authorized-yes" name="authorized-citizen" type="radio" class={classes.radio} value="yes" />
+								<label for="authorized-yes" class={classes.label}>Yes</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
-								<input id="push-everything" name="push-notifications" type="radio" class={classes.radio} />
-								<label for="push-everything" class={classes.label}>No</label>
+							<input id="authorized-no" name="authorized-citizen" type="radio" class={classes.radio} value="no" />
+								<label for="authorized-no" class={classes.label}>No</label>
 							</div>
 						</div>
 					</fieldset>
@@ -270,16 +269,16 @@ const classes = {
 								<label for="college-some" class={classes.label}>Some</label>
 							</div>
 							<div class={`${classes.span6} flex items-center`}>
-								<input id="college-degree" name="college" type="radio" class={classes.radio} />
-								<label for="college-dgree" class={classes.label}>2 year degree</label>
+								<input id="college-two-year" name="college" type="radio" class={classes.radio} />
+								<label for="college-two-year" class={classes.label}>2 year degree</label>
 							</div>
 							<div class={`${classes.span6} flex items-center`}>
-								<input id="highschool-yes" name="highschool" type="radio" class={classes.radio} />
-								<label for="highschool-yes" class={classes.label}>4 year degree</label>
+								<input id="college-four-year" name="college" type="radio" class={classes.radio} />
+								<label for="college-four-year" class={classes.label}>4 year degree</label>
 							</div>
 							<div class={`${classes.span6} flex items-center`}>
-								<input id="highschool-yes" name="highschool" type="radio" class={classes.radio} />
-								<label for="highschool-yes" class={classes.label}>degree in progress</label>
+								<input id="college-in-progress" name="college" type="radio" class={classes.radio} />
+								<label for="college-in-progress" class={classes.label}>Degree in progress</label>
 							</div>
 						</div>
 					</fieldset>
