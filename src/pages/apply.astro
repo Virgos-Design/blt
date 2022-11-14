@@ -203,8 +203,9 @@ const classes = {
 					<p class={classes.cardPrompt}>If so, at which facility?</p>
 					<div class={classes.cardGrid}>
 						<div class={classes.span6}>
-							<label for="previous-center" class={classes.label}>Name of center</label>
-							<input type="text" id="previous-center" name="previous-center" class={classes.text} />
+							<label class={classes.label}>
+								<input type="text" name="previous-center" class={classes.text} /> Name of center
+							</label>
 						</div>
 						<div class={classes.span63}>
 							<label for="previous-center-city" class={classes.label}>City</label>
@@ -221,8 +222,8 @@ const classes = {
 					<p class={classes.cardPrompt}>Where you referred to this position?</p>
 					<div class={classes.cardGrid}>
 						<div class={classes.span6}>
-							<label for="referrer" class={classes.label}>Name of referrer</label>
-							<input type="text" id="referrer" name="referrer" class={classes.text} />
+							<label for="referred-by" class={classes.label}>Name of referrer</label>
+							<input type="text" id="referred-by" name="referred-by" class={classes.text} />
 						</div>
 					</div>
 				</div>
