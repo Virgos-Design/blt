@@ -5,7 +5,7 @@ export const SITE = {
 	basePathname: '/',
 
 	title: 'BLT | Siouxlands Premier Childcare Provider',
-	description: "Bluff's Little Thinkers is an amazing childcare facility located in Sergeant Bluff, Iowa.",
+	description: "Bluff’s Little Thinkers is a newly renovated licensed childcare facility located in Sergeant Bluff, Iowa.",
 
 	location: 'Sergeant Bluff, IA',
 	latlng: [-33.86785, 151.20732],
