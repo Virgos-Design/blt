@@ -15,7 +15,7 @@ import play_pic from '~/assets/images/cta/play.jpeg';
 const items = [
 	{
 		icon: 'ant-design:trophy-filled',
-		color: 'FF81A3',
+		iconColor: 'text-[#FF81A3]',
 		photoBorder: 'bg-[#FF81A3]',
 		photo: commitment_pic,
 		title: 'Commitment to Excellence',
@@ -24,7 +24,7 @@ const items = [
 	},
 	{
 		icon: 'mdi:shield-home',
-		color: '087BB8',
+		iconColor: 'text-[#087BB8]',
 		photoBorder: 'bg-[#087BB8]',
 		photo: security_pic,
 		title: 'Security',
@@ -33,7 +33,7 @@ const items = [
 	},
 	{
 		icon: 'fluent:building-retail-24-filled',
-		color: '2E8E00',
+		iconColor: 'text-[#2E8E00]',
 		photoBorder: 'bg-[#2E8E00]',
 		photo: facility_pic,
 		title: 'Facility',
@@ -42,7 +42,7 @@ const items = [
 	},
 	{
 		icon: 'mdi:account-group',
-		color: '321A81',
+		iconColor: 'text-[#321A81]',
 		photoBorder: 'bg-[#321A81]',
 		photo: staff_pic,
 		title: 'Staff',
@@ -64,7 +64,7 @@ const items = [
 						<div class="flex flex-col items-center mr-4">
 							<div>
 								<div class={`flex items-center justify-center w-12 h-12 rounded-full border-[#087BB8] border-2`}>
-									<Icon name={item.icon} class={`w-7 h-7 text-[#${item.color}] icon-bold`} />
+									<Icon name={item.icon} class={`w-7 h-7 ${item.iconColor} icon-bold`} />
 								</div>
 							</div>
 							<div class="w-0.5 h-full bg-[#087BB8]" />
