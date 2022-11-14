@@ -126,12 +126,7 @@ const classes = {
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
 								<label class={classes.label}>
-									<input
-										name="authorized-citizen"
-										type="radio"
-										class={classes.radio}
-										value="yes"
-									/>Yes
+									<input name="authorized-citizen" type="radio" class={classes.radio} value="yes" />Yes
 								</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
@@ -154,48 +149,54 @@ const classes = {
 				</div>
 				<!-- transportation -->
 				<div id="transportation" class={`${classes.cardBody} hidden`}>
-					<p class={classes.cardPrompt}>Do you have reliable transportation?</p>
 					<fieldset>
+						<legend class={classes.cardPrompt}>Do you have reliable transportation?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
-								<input id="trans-yes" name="transportation" type="radio" class={classes.radio} />
-								<label for="trans-yes" class={classes.label}>Yes</label>
+								<label class={classes.label}>
+									<input name="transportation" type="radio" class={classes.radio} value="yes" />Yes
+								</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
-								<input id="trans-no" name="transportation" type="radio" class={classes.radio} />
-								<label for="trans-no" class={classes.label}>No</label>
+								<label class={classes.label}>
+									<input name="transportation" type="radio" class={classes.radio} value="no" />No
+								</label>
 							</div>
 						</div>
 					</fieldset>
 				</div>
 				<!-- convictions -->
 				<div id="transportation" class={`${classes.cardBody} hidden`}>
-					<p class={classes.cardPrompt}>Have you ever been convicted of a felony?</p>
 					<fieldset>
+						<legend class={classes.cardPrompt}>Have you ever been convicted of a felony?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
-								<input id="convict-yes" name="convictions" type="radio" class={classes.radio} />
-								<label for="convict-yes" class={classes.label}>Yes</label>
+								<label class={classes.label}>
+									<input name="convictions" type="radio" class={classes.radio} value="yes" />Yes
+								</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
-								<input id="convict-no" name="convictions" type="radio" class={classes.radio} />
-								<label for="convict-no" class={classes.label}>No</label>
+								<label class={classes.label}>
+									<input name="convictions" type="radio" class={classes.radio} value="no" />No
+								</label>
 							</div>
 						</div>
 					</fieldset>
 				</div>
 				<!-- prior experience -->
 				<div id="transportation" class={`${classes.cardBody} hidden`}>
-					<p class={classes.cardPrompt}>Have you worked in childcare before?</p>
 					<fieldset>
+						<legend class={classes.cardPrompt}>Have you worked in childcare before?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
-								<input id="childcare-yes" name="childcare" type="radio" class={classes.radio} />
-								<label for="childcare-yes" class={classes.label}>Yes</label>
+								<label class={classes.label}>
+									<input name="childcare-experience" type="radio" class={classes.radio} value="yes" />Yes
+								</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
-								<input id="childcare-no" name="childcare" type="radio" class={classes.radio} />
-								<label for="childcare-no" class={classes.label}>No</label>
+								<label class={classes.label}>
+									<input name="childcare-experience" type="radio" class={classes.radio} value="no" />No
+								</label>
 							</div>
 						</div>
 					</fieldset>
@@ -227,16 +228,18 @@ const classes = {
 				</div>
 				<!-- hours -->
 				<div id="" class={`${classes.cardBody} hidden`}>
-					<p class={classes.cardPrompt}>What type of hours are you seeking?</p>
 					<fieldset>
+						<legend class={classes.cardPrompt}>What type of hours are you seeking?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
-								<input id="full-time" name="full-time" type="radio" class={classes.radio} />
-								<label for="full-time" class={classes.label}>Full-time</label>
+								<label class={classes.label}>
+									<input name="full-time" type="radio" class={classes.radio} value="full-time" />Full-time
+								</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
-								<input id="part-time" name="part-time" type="radio" class={classes.radio} />
-								<label for="part-time" class={classes.label}>Part-time</label>
+								<label class={classes.label}>
+									<input name="part-time" type="radio" class={classes.radio} value="part-time" />Part-time
+								</label>
 							</div>
 						</div>
 					</fieldset>
@@ -251,41 +254,48 @@ const classes = {
 
 				<!-- education -->
 				<div id="" class={`${classes.cardBody} hidden`}>
-					<p class={classes.cardPrompt}>Did you graduate high school?</p>
 					<fieldset>
+						<legend class={classes.cardPrompt}>Did you graduate high school?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
-								<input id="highschool-yes" name="highschool" type="radio" class={classes.radio} />
-								<label for="highschool-yes" class={classes.label}>Yes</label>
+								<label class={classes.label}>
+									<input name="highschool" type="radio" class={classes.radio} value="yes" /> Yes
+								</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
-								<input id="highschool-no" name="highschool" type="radio" class={classes.radio} />
-								<label for="highschool-no" class={classes.label}>No</label>
+								<label class={classes.label}>
+									<input name="highschool" type="radio" class={classes.radio} value="no" /> No
+								</label>
 							</div>
 						</div>
 					</fieldset>
-					<p class={classes.cardPrompt}>Do you have any college experience?</p>
 					<fieldset>
+						<legend class={classes.cardPrompt}>Do you have any college experience?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span6} flex items-center`}>
-								<input id="college-none" name="college" type="radio" class={classes.radio} />
-								<label for="college-none" class={classes.label}>None</label>
+								<label class={classes.label}>
+									<input name="college" type="radio" class={classes.radio} value="none"/> None
+								</label>
 							</div>
 							<div class={`${classes.span6} flex items-center`}>
-								<input id="college-some" name="college" type="radio" class={classes.radio} />
-								<label for="college-some" class={classes.label}>Some</label>
+								<label class={classes.label}>
+									<input name="college" type="radio" class={classes.radio} value="some" /> Some
+								</label>
 							</div>
 							<div class={`${classes.span6} flex items-center`}>
-								<input id="college-two-year" name="college" type="radio" class={classes.radio} />
-								<label for="college-two-year" class={classes.label}>2 year degree</label>
+								<label class={classes.label}>
+									<input name="college" type="radio" class={classes.radio} value="two-year" /> 2 year degree
+								</label>
 							</div>
 							<div class={`${classes.span6} flex items-center`}>
-								<input id="college-four-year" name="college" type="radio" class={classes.radio} />
-								<label for="college-four-year" class={classes.label}>4 year degree</label>
+								<label class={classes.label}>
+									<input name="college" type="radio" class={classes.radio} value="four-year" /> 4 year degree
+								</label>
 							</div>
 							<div class={`${classes.span6} flex items-center`}>
-								<input id="college-in-progress" name="college" type="radio" class={classes.radio} />
-								<label for="college-in-progress" class={classes.label}>Degree in progress</label>
+								<label class={classes.label}>
+									<input name="college" type="radio" class={classes.radio} value="in-progress"/> Degree in progress
+								</label>
 							</div>
 						</div>
 					</fieldset>
