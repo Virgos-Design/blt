@@ -1,7 +1,7 @@
 export const SITE = {
 	name: "Bluff's Little Thinkers",
 
-	origin: 'https://astrowind.vercel.app',
+	origin: 'https://bluffslittlethinkers.com',
 	basePathname: '/',
 
 	title: 'BLT | Siouxlands Premier Childcare Provider',
