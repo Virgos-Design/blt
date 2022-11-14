@@ -111,7 +111,7 @@ const classes = {
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
 								<label class={classes.label}>
-									<input name="over-eighteen" type="radio" class={classes.radio} value="yes"/>Yes
+									<input name="over-eighteen" type="radio" class={classes.radio} value="yes" />Yes
 								</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
@@ -121,16 +121,23 @@ const classes = {
 							</div>
 						</div>
 					</fieldset>
-					<fieldset>
+					<fieldset name="authorized/citizen">
 						<legend class={classes.cardPrompt}>Are you a citizen of or authorized to work in the U.S.?</legend>
 						<div class={classes.cardGrid}>
 							<div class={`${classes.span3} flex justify-end items-center`}>
-								<input id="authorized-yes" name="authorized-citizen" type="radio" class={classes.radio} value="yes" />
-								<label for="authorized-yes" class={classes.label}>Yes</label>
+								<label class={classes.label}>
+									<input
+										name="authorized-citizen"
+										type="radio"
+										class={classes.radio}
+										value="yes"
+									/>Yes
+								</label>
 							</div>
 							<div class={`${classes.span3} flex justify-start items-center`}>
-							<input id="authorized-no" name="authorized-citizen" type="radio" class={classes.radio} value="no" />
-								<label for="authorized-no" class={classes.label}>No</label>
+								<label class={classes.label}>
+									<input name="authorized-citizen" type="radio" class={classes.radio} value="no" />No
+								</label>
 							</div>
 						</div>
 					</fieldset>
