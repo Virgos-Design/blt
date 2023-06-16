@@ -101,6 +101,17 @@ const prices = [
 									<span class="mx-1 font-bold ">max enrollment - {card.max} </span>
 								</div>
 
+								<div class="flex flex-col items-center mx-6 tracking-wide">
+									<a
+										target="_blank"
+										data-nav-link
+										class="font-bold text-[#321A81] justify-center md:justify-none text-3xl md:text-xl px-4 py-3 flex items-center transition duration-150 ease-in-out"
+										href={card.waitlistLink}
+									>
+										Join our waitlist now!
+									</a>
+								</div>
+
 								<div class="absolute w-full px-6 inset-x-0 bottom-6 sm:static sm:px-0">
 									<div id="disclaimer">
 										{card.name == 'four-year' &&
